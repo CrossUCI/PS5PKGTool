@@ -2,6 +2,11 @@
 
 <img width="2560" height="1392" alt="image" src="https://github.com/pearlxcore/PS5PKGTool/blob/main/screenshot4.png" />
 
+[![Github All Releases](https://img.shields.io/github/downloads/pearlxcore/PS5PKGTool/total.svg)](https://github.com/pearlxcore/PS5PKGTool/releases/latest)
+[![License](https://img.shields.io/github/license/pearlxcore/PS5PKGTool.svg)](LICENSE)
+[![Stars](https://img.shields.io/github/stars/pearlxcore/PS5PKGTool.svg)](https://github.com/pearlxcore/PS5PKGTool)
+[![.NET](https://img.shields.io/badge/.NET-10-blue)]()
+
 A Windows app for managing your PS5 dump and image collection, reading PS5 packages, and building or converting images.
 
 Suggestions are welcome. Report bugs [here](https://github.com/pearlxcore/PS5PkgTool/issues).
