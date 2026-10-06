@@ -50,6 +50,7 @@ public static class AppSettingsNormalizer
         settings.ThumbnailCacheCount = Math.Clamp(settings.ThumbnailCacheCount, MinThumbnailCache, MaxThumbnailCache);
 
         settings.OutputDirectory = (settings.OutputDirectory ?? string.Empty).Trim();
+        settings.TempDirectory = NormalizeTempDirectory(settings.TempDirectory);
 
         // A passcode is either blank (meaning the built-in all-zero default) or exactly 32 printable
         // ASCII characters. Anything else is discarded rather than carried into a build.
@@ -112,6 +113,35 @@ public static class AppSettingsNormalizer
         catch (Exception ex) when (ex is ArgumentException or NotSupportedException or PathTooLongException)
         {
             return trimmed;
+        }
+    }
+
+    /// <summary>Normalizes and validates the temp directory. Returns empty string if invalid or not accessible.</summary>
+    private static string NormalizeTempDirectory(string? value)
+    {
+        string trimmed = (value ?? string.Empty).Trim();
+        if (trimmed.Length == 0) return string.Empty;
+        try
+        {
+            string fullPath = Path.GetFullPath(trimmed);
+            // Verify the directory exists or can be created
+            if (!Directory.Exists(fullPath))
+            {
+                try
+                {
+                    Directory.CreateDirectory(fullPath);
+                }
+                catch (Exception)
+                {
+                    // If we can't create it, return empty to fall back to system temp
+                    return string.Empty;
+                }
+            }
+            return fullPath;
+        }
+        catch (Exception ex) when (ex is ArgumentException or NotSupportedException or PathTooLongException)
+        {
+            return string.Empty;
         }
     }
 
