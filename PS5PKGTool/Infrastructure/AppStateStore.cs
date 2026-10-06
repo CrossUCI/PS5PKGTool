@@ -61,6 +61,8 @@ public sealed class AppSettings
     // Paths & outputs
     public string OutputDirectory { get; set; } = string.Empty;
     public bool OpenOutputAfterTask { get; set; }
+    /// <summary>Custom temporary directory for image extraction and builds (empty = system temp).</summary>
+    public string TempDirectory { get; set; } = string.Empty;
 
     // Tasks workspace
     /// <summary>Remembered vertical split between the task list and the details panel.</summary>
