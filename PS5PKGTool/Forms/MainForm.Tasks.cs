@@ -1,7 +1,7 @@
 using System.Diagnostics;
 using System.Text.Json;
-using DarkUI.Controls;
-using DarkUI.Forms;
+using PS5PKGTool.UI.Controls;
+
 using PS5PKGTool.Core.Backends;
 using PS5PKGTool.Core.Builders;
 using PS5PKGTool.Core.Services;
@@ -404,8 +404,14 @@ public partial class MainForm
         if (!present)
         {
             splitTasks.AddPanel(splitTasksPane2);
-            splitTasks.SetPanelSize(0, Math.Max(100, _settings.TaskSplitterDistance));
-            splitTasks.SetPanelSize(1, 100);
+            int restoredPaneHeight = splitTasks.Height;
+            if (restoredPaneHeight > 0)
+            {
+                int desiredDistance = _settings.TaskSplitterDistance > 0
+                    ? _settings.TaskSplitterDistance
+                    : restoredPaneHeight / 2;
+                splitTasks.SetPanelSize(0, desiredDistance);
+            }
         }
 
         int height = splitTasks.Height;
@@ -1005,16 +1011,19 @@ public partial class MainForm
             return null;
         bool overwrite = GetBool(fields, "overwrite");
         bool fromPackage = GetBool(fields, "package");
+        string tempDirectory = Get(fields, "temp");
         return async (progress, token) =>
         {
             var bridge = new Progress<Ps5ImageConversionProgress>(value =>
                 progress.Report(new PackageTaskProgress(value.Stage, 0, 0, value.Completed, value.Total, 0, 0,
                     string.Empty)));
             if (fromPackage)
-                await SonyPackageImageConversion.ConvertAsync(source, output, target, overwrite, bridge, token)
+                await SonyPackageImageConversion.ConvertAsync(source, output, target, overwrite, bridge, token,
+                        tempDirectory: tempDirectory)
                     .ConfigureAwait(false);
             else
-                await Ps5ImageConversionService.ConvertAsync(source, output, target, overwrite, bridge, token)
+                await Ps5ImageConversionService.ConvertAsync(source, output, target, overwrite, bridge, token,
+                        tempDirectory: tempDirectory)
                     .ConfigureAwait(false);
         };
     }

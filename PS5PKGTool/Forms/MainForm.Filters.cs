@@ -1,6 +1,6 @@
 using System.Globalization;
 using System.Text;
-using DarkUI.Controls;
+using PS5PKGTool.UI.Controls;
 using PS5PKGTool.Core.Models;
 
 namespace PS5PKGTool.Forms;
@@ -16,7 +16,7 @@ public partial class MainForm
 
     private void btnFilterClear_Click(object? sender, EventArgs e) => ClearFilters();
 
-    private static HashSet<string> SelectedValues(DarkCheckedComboBox combo)
+    private static HashSet<string> SelectedValues(AppCheckedComboBox combo)
     {
         var result = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
         foreach (object? item in combo.CheckedItems)
@@ -107,13 +107,13 @@ public partial class MainForm
     }
 
     /// <summary>Replaces a combo's checked set (used when restoring a saved view).</summary>
-    private static void SetCheckedItems(DarkCheckedComboBox combo, IEnumerable<string> values)
+    private static void SetCheckedItems(AppCheckedComboBox combo, IEnumerable<string> values)
     {
         combo.SetAllItemsChecked(false);
         foreach (string value in values) SetComboItem(combo, value);
     }
 
-    private static void SetComboItem(DarkCheckedComboBox combo, string value)
+    private static void SetComboItem(AppCheckedComboBox combo, string value)
     {
         for (int index = 0; index < combo.Items.Count; index++)
         {
@@ -165,7 +165,7 @@ public partial class MainForm
         btnFilterClear.Visible = active;
     }
 
-    private static void UpdateFilterCaption(DarkLabel label, string caption, DarkCheckedComboBox combo) =>
+    private static void UpdateFilterCaption(AppLabel label, string caption, AppCheckedComboBox combo) =>
         label.Text = combo.CheckedItems.Count > 0 ? $"{caption} ({combo.CheckedItems.Count})" : caption;
 
     private void RebuildFilterChips()
@@ -183,7 +183,7 @@ public partial class MainForm
         chipsFilter.ResumeLayout();
     }
 
-    private void AddChips(DarkCheckedComboBox combo)
+    private void AddChips(AppCheckedComboBox combo)
     {
         foreach (object? item in combo.CheckedItems)
         {
@@ -193,7 +193,7 @@ public partial class MainForm
         }
     }
 
-    private static void Uncheck(DarkCheckedComboBox combo, string value)
+    private static void Uncheck(AppCheckedComboBox combo, string value)
     {
         for (int index = 0; index < combo.Items.Count; index++)
         {

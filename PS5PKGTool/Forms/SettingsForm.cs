@@ -1,15 +1,15 @@
 using System.Diagnostics;
 using System.Text.Json;
 using System.Text.RegularExpressions;
-using DarkUI.Config;
-using DarkUI.Forms;
+
+
 using PS5PKGTool.Core.Backends;
 using PS5PKGTool.Core.Services;
 using PS5PKGTool.Infrastructure;
 
 namespace PS5PKGTool.Forms;
 
-public partial class SettingsForm : DarkUI.Forms.DarkForm
+public partial class SettingsForm : Form
 {
     /// <summary>Shared with AppStateStore so a file round-trips identically wherever it is read.</summary>
     private static readonly JsonSerializerOptions JsonOptions = new()
@@ -20,7 +20,6 @@ public partial class SettingsForm : DarkUI.Forms.DarkForm
 
     private static readonly int[] DensityRowHeights = [18, 22, 28];
 
-    private readonly string _originalTheme;
     private readonly Func<AppSettings, (bool Success, string? Error)>? _save;
     private string _initialSignature = string.Empty;
     private bool _dirtyHooked;
@@ -33,9 +32,6 @@ public partial class SettingsForm : DarkUI.Forms.DarkForm
         InitializeComponent();
         _save = save;
         Settings = AppSettingsNormalizer.Normalize(Clone(settings));
-        _originalTheme = Settings.Theme;
-
-        cboTheme.Items.AddRange(ThemeManager.Presets.Select(theme => theme.Name).ToArray());
         cboDensity.Items.AddRange(["Compact", "Normal", "Comfortable"]);
         cboDefaultGroup.Items.AddRange(["None", "Title ID", "Family (base + updates + DLC)", "Category", "Region", "Source format", "Required firmware"]);
         cboDefaultBackend.Items.AddRange(BackendRegistry.All.Select(backend => backend.DisplayName).ToArray());
@@ -74,7 +70,6 @@ public partial class SettingsForm : DarkUI.Forms.DarkForm
             chkRecursive.Checked = Settings.RecursiveScan;
             chkRefreshOnStartup.Checked = Settings.RefreshOnStartup;
 
-            SelectCombo(cboTheme, Settings.Theme);
             nudRowHeight.Value = Clamp(Settings.GridRowHeight, nudRowHeight);
             SyncDensityFromRowHeight();
             chkShowThumbnails.Checked = Settings.ShowThumbnails;
@@ -113,7 +108,6 @@ public partial class SettingsForm : DarkUI.Forms.DarkForm
         Settings.RecursiveScan = chkRecursive.Checked;
         Settings.RefreshOnStartup = chkRefreshOnStartup.Checked;
 
-        Settings.Theme = cboTheme.SelectedItem as string ?? Settings.Theme;
         Settings.GridRowHeight = (int)nudRowHeight.Value;
         Settings.ShowThumbnails = chkShowThumbnails.Checked;
         Settings.ShowGridLines = chkShowGridLines.Checked;
@@ -157,7 +151,7 @@ public partial class SettingsForm : DarkUI.Forms.DarkForm
         return true;
     }
 
-    // ---------------------------------------------------------------- theme / density
+    // ---------------------------------------------------------------- density
 
     private void ApplyDensityPreset()
     {
@@ -178,24 +172,6 @@ public partial class SettingsForm : DarkUI.Forms.DarkForm
         finally { _syncingDensity = false; }
     }
 
-    private void cboTheme_SelectedIndexChanged(object? sender, EventArgs e)
-    {
-        if (cboTheme.SelectedItem is string name)
-            ThemeManager.Apply(ResolveTheme(name));
-    }
-
-    protected override void OnFormClosing(FormClosingEventArgs e)
-    {
-        // Revert the live preview if the user did not confirm.
-        if (DialogResult != DialogResult.OK)
-            ThemeManager.Apply(ResolveTheme(_originalTheme));
-        base.OnFormClosing(e);
-    }
-
-    private static Theme ResolveTheme(string name) =>
-        ThemeManager.Presets.FirstOrDefault(candidate =>
-            string.Equals(candidate.Name, name, StringComparison.OrdinalIgnoreCase)) ?? ThemeManager.BuiltIn.Default;
-
     // ---------------------------------------------------------------- dirty tracking
 
     private void HookDirtyTracking()
@@ -206,7 +182,7 @@ public partial class SettingsForm : DarkUI.Forms.DarkForm
         {
             switch (control)
             {
-                case DarkUI.Controls.DarkNumericUpDown numeric: numeric.ValueChanged += OnDirtyChanged; break;
+                case PS5PKGTool.UI.Controls.AppNumericUpDown numeric: numeric.ValueChanged += OnDirtyChanged; break;
                 case CheckBox check: check.CheckedChanged += OnDirtyChanged; break;
                 case ComboBox combo: combo.SelectedIndexChanged += OnDirtyChanged; break;
                 case TextBox text: text.TextChanged += OnDirtyChanged; break;
@@ -440,7 +416,7 @@ public partial class SettingsForm : DarkUI.Forms.DarkForm
     {
         if (AppDialog.ShowWarning(
                 "Reset all preferences to their defaults?\n\nLibrary folders, manual sources, recent folders, saved views and window/column layout are kept. This does not clear caches.",
-                "Reset preferences", DarkDialogButton.YesNo) != DialogResult.Yes)
+                "Reset preferences", MessageBoxButtons.YesNo) != DialogResult.Yes)
             return;
 
         Settings = AppSettingsNormalizer.Normalize(new AppSettings
@@ -514,7 +490,7 @@ public partial class SettingsForm : DarkUI.Forms.DarkForm
             ? "The file matches the current preferences."
             : "Import these changes?\n\n" + string.Join(Environment.NewLine, changes.Take(20))
               + (changes.Count > 20 ? Environment.NewLine + $"… and {changes.Count - 20:N0} more" : string.Empty);
-        if (AppDialog.ShowWarning(message, "Import preferences", DarkDialogButton.YesNo) != DialogResult.Yes)
+        if (AppDialog.ShowWarning(message, "Import preferences", MessageBoxButtons.YesNo) != DialogResult.Yes)
             return;
 
         Settings = candidate;
@@ -535,7 +511,6 @@ public partial class SettingsForm : DarkUI.Forms.DarkForm
         AppendPathChange(changes, "Manual sources", before.ManualSources, after.ManualSources);
         AppendChange(changes, "Scan subfolders", before.RecursiveScan, after.RecursiveScan);
         AppendChange(changes, "Refresh on startup", before.RefreshOnStartup, after.RefreshOnStartup);
-        AppendChange(changes, "Theme", before.Theme, after.Theme);
         AppendChange(changes, "Grid row height", before.GridRowHeight, after.GridRowHeight);
         AppendChange(changes, "Show file preview pane", before.ShowFilePreview, after.ShowFilePreview);
         AppendChange(changes, "Default grouping", before.DefaultGroupBy, after.DefaultGroupBy);
@@ -591,7 +566,7 @@ public partial class SettingsForm : DarkUI.Forms.DarkForm
                 if (success) break;
                 if (AppDialog.ShowWarning(
                         $"The settings could not be saved:\n\n{saveError}\n\nYour changes are kept. Retry?",
-                        "Settings", DarkDialogButton.YesNo) != DialogResult.Yes)
+                        "Settings", MessageBoxButtons.YesNo) != DialogResult.Yes)
                     return;
             }
         }
@@ -626,12 +601,12 @@ public partial class SettingsForm : DarkUI.Forms.DarkForm
         _ => "None"
     };
 
-    private static void SelectCombo(DarkUI.Controls.DarkComboBox combo, string value)
+    private static void SelectCombo(PS5PKGTool.UI.Controls.AppComboBox combo, string value)
     {
         int index = combo.Items.IndexOf(value);
         combo.SelectedIndex = index >= 0 ? index : (combo.Items.Count > 0 ? 0 : -1);
     }
 
-    private static decimal Clamp(int value, DarkUI.Controls.DarkNumericUpDown control) =>
+    private static decimal Clamp(int value, PS5PKGTool.UI.Controls.AppNumericUpDown control) =>
         Math.Clamp(value, (int)control.Minimum, (int)control.Maximum);
 }

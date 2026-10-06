@@ -1,14 +1,13 @@
-using DarkUI.Forms;
+
 
 namespace PS5PKGTool.Forms;
 
-public partial class FilePreviewForm : DarkDialog
+public partial class FilePreviewForm : Form
 {
     private FilePreviewForm(string title)
     {
         InitializeComponent();
         Text = title;
-        DialogButtons = MessageBoxButtons.OK;
     }
 
     public static void ShowImage(IWin32Window owner, string title, byte[] imageBytes)

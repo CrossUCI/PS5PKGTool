@@ -1,6 +1,6 @@
 using System.Collections.Concurrent;
 using System.Diagnostics;
-using DarkUI.Config;
+
 using PS5PKGTool.Infrastructure;
 
 namespace PS5PKGTool.Forms;
@@ -78,7 +78,7 @@ public partial class MainForm
     {
         LogLevel.Warn => Color.FromArgb(230, 180, 80),
         LogLevel.Error => Color.FromArgb(240, 110, 110),
-        _ => Colors.LightText
+        _ => SystemColors.ControlText
     };
 
     private static string LogLevelText(LogLevel level) => level switch

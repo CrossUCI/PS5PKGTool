@@ -1,5 +1,5 @@
-using DarkUI.Controls;
-using DarkUI.Forms;
+using PS5PKGTool.UI.Controls;
+
 using PS5PKGTool.Core.Models;
 using PS5PKGTool.Core.Services;
 using PS5PKGTool.Infrastructure;
@@ -23,7 +23,7 @@ public partial class MainForm
             item.Click += (_, _) => RunRenameWithFormat(format, all);
             parent.DropDownItems.Add(item);
         }
-        parent.DropDownItems.Add(new DarkToolStripSeparator());
+        parent.DropDownItems.Add(new AppToolStripSeparator());
         var custom = new ToolStripMenuItem(Ps5RenameFormats.CustomLabel);
         custom.Click += (_, _) => RunRenameWithFormat(RenameFormatOrDefault(_settings.RenameFormat), all);
         parent.DropDownItems.Add(custom);
@@ -92,7 +92,7 @@ public partial class MainForm
         }
         if (IsLibraryFilterActive() && AppDialog.ShowWarning(
                 "A filter is active. Rename All will rename every item in the library, including the ones that are hidden.\n\nContinue?",
-                "Rename All", DarkDialogButton.YesNo) != DialogResult.Yes)
+                "Rename All", MessageBoxButtons.YesNo) != DialogResult.Yes)
             return;
         RenameGames(_games.ToList(), $"Rename all {_games.Count:N0} item(s)?", format);
     }
@@ -172,7 +172,7 @@ public partial class MainForm
             return false;
         }
         return AppDialog.ShowWarning(string.Join(Environment.NewLine, lines), "Rename",
-            DarkDialogButton.YesNo) == DialogResult.Yes;
+            MessageBoxButtons.YesNo) == DialogResult.Yes;
     }
 
     private void ApplyRenames(IReadOnlyList<(Ps5GameInfo Game, string BaseName)> plans)

@@ -5,93 +5,94 @@ namespace PS5PKGTool.Forms;
 partial class SettingsForm
 {
     private System.ComponentModel.IContainer? components = null;
-    private DarkUI.Controls.DarkTabControl tabsSettings = null!;
+    private PS5PKGTool.UI.Controls.AppTabControl tabsSettings = null!;
 
-    private DarkUI.Controls.DarkTabPage tabLibrary = null!;
-    private DarkUI.Controls.DarkLabel lblLibraryInfo = null!;
-    private DarkUI.Controls.DarkLabel lblFolders = null!;
-    private DarkUI.Controls.DarkListBox lstFolders = null!;
-    private DarkUI.Controls.DarkButton btnAdd = null!;
-    private DarkUI.Controls.DarkButton btnRemove = null!;
-    private DarkUI.Controls.DarkLabel lblManualSources = null!;
-    private DarkUI.Controls.DarkListBox lstManualSources = null!;
-    private DarkUI.Controls.DarkButton btnRemoveSource = null!;
-    private DarkUI.Controls.DarkCheckBox chkRecursive = null!;
-    private DarkUI.Controls.DarkCheckBox chkRefreshOnStartup = null!;
-    private DarkUI.Controls.DarkLabel lblLibraryNotice = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabLibrary = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblLibraryInfo = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblFolders = null!;
+    private PS5PKGTool.UI.Controls.AppListBox lstFolders = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnAdd = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnRemove = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblManualSources = null!;
+    private PS5PKGTool.UI.Controls.AppListBox lstManualSources = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnRemoveSource = null!;
+    private PS5PKGTool.UI.Controls.AppCheckBox chkRecursive = null!;
+    private PS5PKGTool.UI.Controls.AppCheckBox chkRefreshOnStartup = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblLibraryNotice = null!;
 
-    private DarkUI.Controls.DarkTabPage tabAppearance = null!;
-    private DarkUI.Controls.DarkLabel lblAppearanceInfo = null!;
-    private DarkUI.Controls.DarkLabel lblTheme = null!;
-    private DarkUI.Controls.DarkComboBox cboTheme = null!;
-    private DarkUI.Controls.DarkLabel lblRowHeight = null!;
-    private DarkUI.Controls.DarkNumericUpDown nudRowHeight = null!;
-    private DarkUI.Controls.DarkLabel lblDensity = null!;
-    private DarkUI.Controls.DarkComboBox cboDensity = null!;
-    private DarkUI.Controls.DarkCheckBox chkShowThumbnails = null!;
-    private DarkUI.Controls.DarkCheckBox chkShowGridLines = null!;
-    private DarkUI.Controls.DarkCheckBox chkShowFilePreview = null!;
-    private DarkUI.Controls.DarkLabel lblDefaultGroup = null!;
-    private DarkUI.Controls.DarkComboBox cboDefaultGroup = null!;
-    private DarkUI.Controls.DarkButton btnResetLayout = null!;
-    private DarkUI.Controls.DarkLabel lblAppearanceNotice = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabAppearance = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblAppearanceInfo = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblRowHeight = null!;
+    private PS5PKGTool.UI.Controls.AppNumericUpDown nudRowHeight = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblDensity = null!;
+    private PS5PKGTool.UI.Controls.AppComboBox cboDensity = null!;
+    private PS5PKGTool.UI.Controls.AppCheckBox chkShowThumbnails = null!;
+    private PS5PKGTool.UI.Controls.AppCheckBox chkShowGridLines = null!;
+    private PS5PKGTool.UI.Controls.AppCheckBox chkShowFilePreview = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblDefaultGroup = null!;
+    private PS5PKGTool.UI.Controls.AppComboBox cboDefaultGroup = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnResetLayout = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblAppearanceNotice = null!;
 
-    private DarkUI.Controls.DarkTabPage tabNaming = null!;
-    private DarkUI.Controls.DarkLabel lblNamingInfo = null!;
-    private DarkUI.Controls.DarkLabel lblRenameFormat = null!;
-    private DarkUI.Controls.DarkTextBox txtRenameFormat = null!;
-    private DarkUI.Controls.DarkLabel lblRenamePreset = null!;
-    private DarkUI.Controls.DarkComboBox cboRenamePreset = null!;
-    private DarkUI.Controls.DarkLabel lblRenameToken = null!;
-    private DarkUI.Controls.DarkComboBox cboRenameToken = null!;
-    private DarkUI.Controls.DarkButton btnInsertToken = null!;
-    private DarkUI.Controls.DarkLabel lblRenamePreview = null!;
-    private DarkUI.Controls.DarkLabel lblRenameUnknown = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabNaming = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblNamingInfo = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblRenameFormat = null!;
+    private PS5PKGTool.UI.Controls.AppTextBox txtRenameFormat = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblRenamePreset = null!;
+    private PS5PKGTool.UI.Controls.AppComboBox cboRenamePreset = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblRenameToken = null!;
+    private PS5PKGTool.UI.Controls.AppComboBox cboRenameToken = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnInsertToken = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblRenamePreview = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblRenameUnknown = null!;
 
-    private DarkUI.Controls.DarkTabPage tabFiles = null!;
-    private DarkUI.Controls.DarkLabel lblViewingInfo = null!;
-    private DarkUI.Controls.DarkLabel lblMaxPreview = null!;
-    private DarkUI.Controls.DarkNumericUpDown nudMaxPreviewMb = null!;
-    private DarkUI.Controls.DarkLabel lblHexPage = null!;
-    private DarkUI.Controls.DarkNumericUpDown nudHexPageKb = null!;
-    private DarkUI.Controls.DarkLabel lblThumbCache = null!;
-    private DarkUI.Controls.DarkNumericUpDown nudThumbnailCache = null!;
-    private DarkUI.Controls.DarkLabel lblThumbCacheHint = null!;
-    private DarkUI.Controls.DarkLabel lblViewingNotice = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabFiles = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblViewingInfo = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblMaxPreview = null!;
+    private PS5PKGTool.UI.Controls.AppNumericUpDown nudMaxPreviewMb = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblHexPage = null!;
+    private PS5PKGTool.UI.Controls.AppNumericUpDown nudHexPageKb = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblThumbCache = null!;
+    private PS5PKGTool.UI.Controls.AppNumericUpDown nudThumbnailCache = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblThumbCacheHint = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblViewingNotice = null!;
 
-    private DarkUI.Controls.DarkTabPage tabPaths = null!;
-    private DarkUI.Controls.DarkLabel lblPathsInfo = null!;
-    private DarkUI.Controls.DarkLabel lblOutputDir = null!;
-    private DarkUI.Controls.DarkTextBox txtOutputDirectory = null!;
-    private DarkUI.Controls.DarkButton btnBrowseOutput = null!;
-    private DarkUI.Controls.DarkLabel lblDefaultBackend = null!;
-    private DarkUI.Controls.DarkComboBox cboDefaultBackend = null!;
-    private DarkUI.Controls.DarkLabel lblPasscode = null!;
-    private DarkUI.Controls.DarkTextBox txtDebugPasscode = null!;
-    private DarkUI.Controls.DarkCheckBox chkShowPasscode = null!;
-    private DarkUI.Controls.DarkLabel lblPasscodeHint = null!;
-    private DarkUI.Controls.DarkCheckBox chkOpenOutputAfterTask = null!;
-    private DarkUI.Controls.DarkLabel lblOutputNotice = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabPaths = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblPathsInfo = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblOutputDir = null!;
+    private PS5PKGTool.UI.Controls.AppTextBox txtOutputDirectory = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnBrowseOutput = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblTempDirectory = null!;
+    private PS5PKGTool.UI.Controls.AppTextBox txtTempDirectory = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnBrowseTemp = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblDefaultBackend = null!;
+    private PS5PKGTool.UI.Controls.AppComboBox cboDefaultBackend = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblPasscode = null!;
+    private PS5PKGTool.UI.Controls.AppTextBox txtDebugPasscode = null!;
+    private PS5PKGTool.UI.Controls.AppCheckBox chkShowPasscode = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblPasscodeHint = null!;
+    private PS5PKGTool.UI.Controls.AppCheckBox chkOpenOutputAfterTask = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblOutputNotice = null!;
 
-    private DarkUI.Controls.DarkTabPage tabSafety = null!;
-    private DarkUI.Controls.DarkLabel lblSafetyInfo = null!;
-    private DarkUI.Controls.DarkCheckBox chkConfirmMove = null!;
-    private DarkUI.Controls.DarkCheckBox chkConfirmDelete = null!;
-    private DarkUI.Controls.DarkCheckBox chkPermanentDelete = null!;
-    private DarkUI.Controls.DarkLabel lblPermanentNotice = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabSafety = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblSafetyInfo = null!;
+    private PS5PKGTool.UI.Controls.AppCheckBox chkConfirmMove = null!;
+    private PS5PKGTool.UI.Controls.AppCheckBox chkConfirmDelete = null!;
+    private PS5PKGTool.UI.Controls.AppCheckBox chkPermanentDelete = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblPermanentNotice = null!;
 
-    private DarkUI.Controls.DarkTabPage tabDiagnostics = null!;
-    private DarkUI.Controls.DarkLabel lblMaintenanceInfo = null!;
-    private DarkUI.Controls.DarkButton btnExportSettings = null!;
-    private DarkUI.Controls.DarkCheckBox chkExportCredentials = null!;
-    private DarkUI.Controls.DarkButton btnImportSettings = null!;
-    private DarkUI.Controls.DarkButton btnResetSettings = null!;
-    private DarkUI.Controls.DarkButton btnClearCaches = null!;
-    private DarkUI.Controls.DarkButton btnOpenLogs = null!;
-    private DarkUI.Controls.DarkLabel lblMaintenanceNotice = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabDiagnostics = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblMaintenanceInfo = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnExportSettings = null!;
+    private PS5PKGTool.UI.Controls.AppCheckBox chkExportCredentials = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnImportSettings = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnResetSettings = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnClearCaches = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnOpenLogs = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblMaintenanceNotice = null!;
 
-    private DarkUI.Controls.DarkButton btnSave = null!;
-    private DarkUI.Controls.DarkButton btnCancel = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnSave = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnCancel = null!;
     private FolderBrowserDialog folderBrowserDialog = null!;
     private SaveFileDialog exportSettingsDialog = null!;
     private OpenFileDialog importSettingsDialog = null!;
@@ -106,85 +107,86 @@ partial class SettingsForm
     {
         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsForm));
         components = new System.ComponentModel.Container();
-        tabsSettings = new DarkUI.Controls.DarkTabControl();
-        tabLibrary = new DarkUI.Controls.DarkTabPage();
-        lblLibraryInfo = new DarkUI.Controls.DarkLabel();
-        lblFolders = new DarkUI.Controls.DarkLabel();
-        lstFolders = new DarkUI.Controls.DarkListBox();
-        btnAdd = new DarkUI.Controls.DarkButton();
-        btnRemove = new DarkUI.Controls.DarkButton();
-        lblManualSources = new DarkUI.Controls.DarkLabel();
-        lstManualSources = new DarkUI.Controls.DarkListBox();
-        btnRemoveSource = new DarkUI.Controls.DarkButton();
-        chkRecursive = new DarkUI.Controls.DarkCheckBox();
-        chkRefreshOnStartup = new DarkUI.Controls.DarkCheckBox();
-        lblLibraryNotice = new DarkUI.Controls.DarkLabel();
-        tabAppearance = new DarkUI.Controls.DarkTabPage();
-        lblAppearanceInfo = new DarkUI.Controls.DarkLabel();
-        lblTheme = new DarkUI.Controls.DarkLabel();
-        cboTheme = new DarkUI.Controls.DarkComboBox();
-        lblRowHeight = new DarkUI.Controls.DarkLabel();
-        nudRowHeight = new DarkUI.Controls.DarkNumericUpDown();
-        lblDensity = new DarkUI.Controls.DarkLabel();
-        cboDensity = new DarkUI.Controls.DarkComboBox();
-        chkShowThumbnails = new DarkUI.Controls.DarkCheckBox();
-        chkShowGridLines = new DarkUI.Controls.DarkCheckBox();
-        chkShowFilePreview = new DarkUI.Controls.DarkCheckBox();
-        lblDefaultGroup = new DarkUI.Controls.DarkLabel();
-        cboDefaultGroup = new DarkUI.Controls.DarkComboBox();
-        btnResetLayout = new DarkUI.Controls.DarkButton();
-        lblAppearanceNotice = new DarkUI.Controls.DarkLabel();
-        tabNaming = new DarkUI.Controls.DarkTabPage();
-        lblNamingInfo = new DarkUI.Controls.DarkLabel();
-        lblRenameFormat = new DarkUI.Controls.DarkLabel();
-        txtRenameFormat = new DarkUI.Controls.DarkTextBox();
-        lblRenamePreset = new DarkUI.Controls.DarkLabel();
-        cboRenamePreset = new DarkUI.Controls.DarkComboBox();
-        lblRenameToken = new DarkUI.Controls.DarkLabel();
-        cboRenameToken = new DarkUI.Controls.DarkComboBox();
-        btnInsertToken = new DarkUI.Controls.DarkButton();
-        lblRenamePreview = new DarkUI.Controls.DarkLabel();
-        lblRenameUnknown = new DarkUI.Controls.DarkLabel();
-        tabFiles = new DarkUI.Controls.DarkTabPage();
-        lblViewingInfo = new DarkUI.Controls.DarkLabel();
-        lblMaxPreview = new DarkUI.Controls.DarkLabel();
-        nudMaxPreviewMb = new DarkUI.Controls.DarkNumericUpDown();
-        lblHexPage = new DarkUI.Controls.DarkLabel();
-        nudHexPageKb = new DarkUI.Controls.DarkNumericUpDown();
-        lblThumbCache = new DarkUI.Controls.DarkLabel();
-        nudThumbnailCache = new DarkUI.Controls.DarkNumericUpDown();
-        lblThumbCacheHint = new DarkUI.Controls.DarkLabel();
-        lblViewingNotice = new DarkUI.Controls.DarkLabel();
-        tabPaths = new DarkUI.Controls.DarkTabPage();
-        lblPathsInfo = new DarkUI.Controls.DarkLabel();
-        lblOutputDir = new DarkUI.Controls.DarkLabel();
-        txtOutputDirectory = new DarkUI.Controls.DarkTextBox();
-        btnBrowseOutput = new DarkUI.Controls.DarkButton();
-        lblDefaultBackend = new DarkUI.Controls.DarkLabel();
-        cboDefaultBackend = new DarkUI.Controls.DarkComboBox();
-        lblPasscode = new DarkUI.Controls.DarkLabel();
-        txtDebugPasscode = new DarkUI.Controls.DarkTextBox();
-        chkShowPasscode = new DarkUI.Controls.DarkCheckBox();
-        lblPasscodeHint = new DarkUI.Controls.DarkLabel();
-        chkOpenOutputAfterTask = new DarkUI.Controls.DarkCheckBox();
-        lblOutputNotice = new DarkUI.Controls.DarkLabel();
-        tabSafety = new DarkUI.Controls.DarkTabPage();
-        lblSafetyInfo = new DarkUI.Controls.DarkLabel();
-        chkConfirmMove = new DarkUI.Controls.DarkCheckBox();
-        chkConfirmDelete = new DarkUI.Controls.DarkCheckBox();
-        chkPermanentDelete = new DarkUI.Controls.DarkCheckBox();
-        lblPermanentNotice = new DarkUI.Controls.DarkLabel();
-        tabDiagnostics = new DarkUI.Controls.DarkTabPage();
-        lblMaintenanceInfo = new DarkUI.Controls.DarkLabel();
-        btnExportSettings = new DarkUI.Controls.DarkButton();
-        chkExportCredentials = new DarkUI.Controls.DarkCheckBox();
-        btnImportSettings = new DarkUI.Controls.DarkButton();
-        btnResetSettings = new DarkUI.Controls.DarkButton();
-        btnClearCaches = new DarkUI.Controls.DarkButton();
-        btnOpenLogs = new DarkUI.Controls.DarkButton();
-        lblMaintenanceNotice = new DarkUI.Controls.DarkLabel();
-        btnSave = new DarkUI.Controls.DarkButton();
-        btnCancel = new DarkUI.Controls.DarkButton();
+        tabsSettings = new PS5PKGTool.UI.Controls.AppTabControl();
+        tabLibrary = new PS5PKGTool.UI.Controls.AppTabPage();
+        lblLibraryInfo = new PS5PKGTool.UI.Controls.AppLabel();
+        lblFolders = new PS5PKGTool.UI.Controls.AppLabel();
+        lstFolders = new PS5PKGTool.UI.Controls.AppListBox();
+        btnAdd = new PS5PKGTool.UI.Controls.AppButton();
+        btnRemove = new PS5PKGTool.UI.Controls.AppButton();
+        lblManualSources = new PS5PKGTool.UI.Controls.AppLabel();
+        lstManualSources = new PS5PKGTool.UI.Controls.AppListBox();
+        btnRemoveSource = new PS5PKGTool.UI.Controls.AppButton();
+        chkRecursive = new PS5PKGTool.UI.Controls.AppCheckBox();
+        chkRefreshOnStartup = new PS5PKGTool.UI.Controls.AppCheckBox();
+        lblLibraryNotice = new PS5PKGTool.UI.Controls.AppLabel();
+        tabAppearance = new PS5PKGTool.UI.Controls.AppTabPage();
+        lblAppearanceInfo = new PS5PKGTool.UI.Controls.AppLabel();
+        lblRowHeight = new PS5PKGTool.UI.Controls.AppLabel();
+        nudRowHeight = new PS5PKGTool.UI.Controls.AppNumericUpDown();
+        lblDensity = new PS5PKGTool.UI.Controls.AppLabel();
+        cboDensity = new PS5PKGTool.UI.Controls.AppComboBox();
+        chkShowThumbnails = new PS5PKGTool.UI.Controls.AppCheckBox();
+        chkShowGridLines = new PS5PKGTool.UI.Controls.AppCheckBox();
+        chkShowFilePreview = new PS5PKGTool.UI.Controls.AppCheckBox();
+        lblDefaultGroup = new PS5PKGTool.UI.Controls.AppLabel();
+        cboDefaultGroup = new PS5PKGTool.UI.Controls.AppComboBox();
+        btnResetLayout = new PS5PKGTool.UI.Controls.AppButton();
+        lblAppearanceNotice = new PS5PKGTool.UI.Controls.AppLabel();
+        tabNaming = new PS5PKGTool.UI.Controls.AppTabPage();
+        lblNamingInfo = new PS5PKGTool.UI.Controls.AppLabel();
+        lblRenameFormat = new PS5PKGTool.UI.Controls.AppLabel();
+        txtRenameFormat = new PS5PKGTool.UI.Controls.AppTextBox();
+        lblRenamePreset = new PS5PKGTool.UI.Controls.AppLabel();
+        cboRenamePreset = new PS5PKGTool.UI.Controls.AppComboBox();
+        lblRenameToken = new PS5PKGTool.UI.Controls.AppLabel();
+        cboRenameToken = new PS5PKGTool.UI.Controls.AppComboBox();
+        btnInsertToken = new PS5PKGTool.UI.Controls.AppButton();
+        lblRenamePreview = new PS5PKGTool.UI.Controls.AppLabel();
+        lblRenameUnknown = new PS5PKGTool.UI.Controls.AppLabel();
+        tabFiles = new PS5PKGTool.UI.Controls.AppTabPage();
+        lblViewingInfo = new PS5PKGTool.UI.Controls.AppLabel();
+        lblMaxPreview = new PS5PKGTool.UI.Controls.AppLabel();
+        nudMaxPreviewMb = new PS5PKGTool.UI.Controls.AppNumericUpDown();
+        lblHexPage = new PS5PKGTool.UI.Controls.AppLabel();
+        nudHexPageKb = new PS5PKGTool.UI.Controls.AppNumericUpDown();
+        lblThumbCache = new PS5PKGTool.UI.Controls.AppLabel();
+        nudThumbnailCache = new PS5PKGTool.UI.Controls.AppNumericUpDown();
+        lblThumbCacheHint = new PS5PKGTool.UI.Controls.AppLabel();
+        lblViewingNotice = new PS5PKGTool.UI.Controls.AppLabel();
+        tabPaths = new PS5PKGTool.UI.Controls.AppTabPage();
+        lblPathsInfo = new PS5PKGTool.UI.Controls.AppLabel();
+        lblOutputDir = new PS5PKGTool.UI.Controls.AppLabel();
+        txtOutputDirectory = new PS5PKGTool.UI.Controls.AppTextBox();
+        btnBrowseOutput = new PS5PKGTool.UI.Controls.AppButton();
+        lblTempDirectory = new PS5PKGTool.UI.Controls.AppLabel();
+        txtTempDirectory = new PS5PKGTool.UI.Controls.AppTextBox();
+        btnBrowseTemp = new PS5PKGTool.UI.Controls.AppButton();
+        lblDefaultBackend = new PS5PKGTool.UI.Controls.AppLabel();
+        cboDefaultBackend = new PS5PKGTool.UI.Controls.AppComboBox();
+        lblPasscode = new PS5PKGTool.UI.Controls.AppLabel();
+        txtDebugPasscode = new PS5PKGTool.UI.Controls.AppTextBox();
+        chkShowPasscode = new PS5PKGTool.UI.Controls.AppCheckBox();
+        lblPasscodeHint = new PS5PKGTool.UI.Controls.AppLabel();
+        chkOpenOutputAfterTask = new PS5PKGTool.UI.Controls.AppCheckBox();
+        lblOutputNotice = new PS5PKGTool.UI.Controls.AppLabel();
+        tabSafety = new PS5PKGTool.UI.Controls.AppTabPage();
+        lblSafetyInfo = new PS5PKGTool.UI.Controls.AppLabel();
+        chkConfirmMove = new PS5PKGTool.UI.Controls.AppCheckBox();
+        chkConfirmDelete = new PS5PKGTool.UI.Controls.AppCheckBox();
+        chkPermanentDelete = new PS5PKGTool.UI.Controls.AppCheckBox();
+        lblPermanentNotice = new PS5PKGTool.UI.Controls.AppLabel();
+        tabDiagnostics = new PS5PKGTool.UI.Controls.AppTabPage();
+        lblMaintenanceInfo = new PS5PKGTool.UI.Controls.AppLabel();
+        btnExportSettings = new PS5PKGTool.UI.Controls.AppButton();
+        chkExportCredentials = new PS5PKGTool.UI.Controls.AppCheckBox();
+        btnImportSettings = new PS5PKGTool.UI.Controls.AppButton();
+        btnResetSettings = new PS5PKGTool.UI.Controls.AppButton();
+        btnClearCaches = new PS5PKGTool.UI.Controls.AppButton();
+        btnOpenLogs = new PS5PKGTool.UI.Controls.AppButton();
+        lblMaintenanceNotice = new PS5PKGTool.UI.Controls.AppLabel();
+        btnSave = new PS5PKGTool.UI.Controls.AppButton();
+        btnCancel = new PS5PKGTool.UI.Controls.AppButton();
         folderBrowserDialog = new FolderBrowserDialog();
         exportSettingsDialog = new SaveFileDialog();
         importSettingsDialog = new OpenFileDialog();
@@ -220,7 +222,7 @@ partial class SettingsForm
         // 
         // tabLibrary
         // 
-        tabLibrary.BackColor = Color.FromArgb(60, 63, 65);
+        tabLibrary.BackColor = SystemColors.Control;
         tabLibrary.Controls.Add(lblLibraryInfo);
         tabLibrary.Controls.Add(lblFolders);
         tabLibrary.Controls.Add(lstFolders);
@@ -341,10 +343,8 @@ partial class SettingsForm
         // 
         // tabAppearance
         // 
-        tabAppearance.BackColor = Color.FromArgb(60, 63, 65);
+        tabAppearance.BackColor = SystemColors.Control;
         tabAppearance.Controls.Add(lblAppearanceInfo);
-        tabAppearance.Controls.Add(lblTheme);
-        tabAppearance.Controls.Add(cboTheme);
         tabAppearance.Controls.Add(lblRowHeight);
         tabAppearance.Controls.Add(nudRowHeight);
         tabAppearance.Controls.Add(lblDensity);
@@ -368,24 +368,7 @@ partial class SettingsForm
         lblAppearanceInfo.Name = "lblAppearanceInfo";
         lblAppearanceInfo.Size = new Size(656, 15);
         lblAppearanceInfo.TabIndex = 0;
-        lblAppearanceInfo.Text = "Theme and library grid display. Visual preferences apply when you save.";
-        // 
-        // lblTheme
-        // 
-        lblTheme.Location = new Point(16, 49);
-        lblTheme.Name = "lblTheme";
-        lblTheme.Size = new Size(170, 15);
-        lblTheme.TabIndex = 1;
-        lblTheme.Text = "Theme (live preview)";
-        // 
-        // cboTheme
-        // 
-        cboTheme.DropDownStyle = ComboBoxStyle.DropDownList;
-        cboTheme.Location = new Point(196, 45);
-        cboTheme.Name = "cboTheme";
-        cboTheme.Size = new Size(320, 23);
-        cboTheme.TabIndex = 2;
-        cboTheme.SelectedIndexChanged += cboTheme_SelectedIndexChanged;
+        lblAppearanceInfo.Text = "Library grid display and grouping. Visual preferences apply when you save.";
         // 
         // lblRowHeight
         // 
@@ -483,7 +466,7 @@ partial class SettingsForm
         // 
         // tabNaming
         // 
-        tabNaming.BackColor = Color.FromArgb(60, 63, 65);
+        tabNaming.BackColor = SystemColors.Control;
         tabNaming.Controls.Add(lblNamingInfo);
         tabNaming.Controls.Add(lblRenameFormat);
         tabNaming.Controls.Add(txtRenameFormat);
@@ -585,7 +568,7 @@ partial class SettingsForm
         // 
         // tabFiles
         // 
-        tabFiles.BackColor = Color.FromArgb(60, 63, 65);
+        tabFiles.BackColor = SystemColors.Control;
         tabFiles.Controls.Add(lblViewingInfo);
         tabFiles.Controls.Add(lblMaxPreview);
         tabFiles.Controls.Add(nudMaxPreviewMb);
@@ -681,11 +664,14 @@ partial class SettingsForm
         // 
         // tabPaths
         // 
-        tabPaths.BackColor = Color.FromArgb(60, 63, 65);
+        tabPaths.BackColor = SystemColors.Control;
         tabPaths.Controls.Add(lblPathsInfo);
         tabPaths.Controls.Add(lblOutputDir);
         tabPaths.Controls.Add(txtOutputDirectory);
         tabPaths.Controls.Add(btnBrowseOutput);
+        tabPaths.Controls.Add(lblTempDirectory);
+        tabPaths.Controls.Add(txtTempDirectory);
+        tabPaths.Controls.Add(btnBrowseTemp);
         tabPaths.Controls.Add(lblDefaultBackend);
         tabPaths.Controls.Add(cboDefaultBackend);
         tabPaths.Controls.Add(lblPasscode);
@@ -731,65 +717,82 @@ partial class SettingsForm
         btnBrowseOutput.TabIndex = 3;
         btnBrowseOutput.Text = "Browse...";
         btnBrowseOutput.Click += btnBrowseOutput_Click;
-        // 
+        // lblTempDirectory
+        lblTempDirectory.Location = new Point(16, 87);
+        lblTempDirectory.Name = "lblTempDirectory";
+        lblTempDirectory.Size = new Size(170, 15);
+        lblTempDirectory.TabIndex = 4;
+        lblTempDirectory.Text = "Temporary workspace folder";
+        // txtTempDirectory
+        txtTempDirectory.Location = new Point(196, 83);
+        txtTempDirectory.Name = "txtTempDirectory";
+        txtTempDirectory.Size = new Size(380, 23);
+        txtTempDirectory.TabIndex = 5;
+        // btnBrowseTemp
+        btnBrowseTemp.Location = new Point(584, 82);
+        btnBrowseTemp.Name = "btnBrowseTemp";
+        btnBrowseTemp.Size = new Size(80, 26);
+        btnBrowseTemp.TabIndex = 6;
+        btnBrowseTemp.Text = "Browse...";
+        btnBrowseTemp.Click += btnBrowseTemp_Click;
         // lblDefaultBackend
         // 
-        lblDefaultBackend.Location = new Point(16, 87);
+        lblDefaultBackend.Location = new Point(16, 125);
         lblDefaultBackend.Name = "lblDefaultBackend";
         lblDefaultBackend.Size = new Size(170, 15);
-        lblDefaultBackend.TabIndex = 4;
+        lblDefaultBackend.TabIndex = 7;
         lblDefaultBackend.Text = "Default builder";
         // 
         // cboDefaultBackend
         // 
         cboDefaultBackend.DropDownStyle = ComboBoxStyle.DropDownList;
-        cboDefaultBackend.Location = new Point(196, 83);
+        cboDefaultBackend.Location = new Point(196, 121);
         cboDefaultBackend.Name = "cboDefaultBackend";
         cboDefaultBackend.Size = new Size(320, 23);
-        cboDefaultBackend.TabIndex = 5;
+        cboDefaultBackend.TabIndex = 8;
         // 
         // lblPasscode
         // 
-        lblPasscode.Location = new Point(16, 125);
+        lblPasscode.Location = new Point(16, 163);
         lblPasscode.Name = "lblPasscode";
         lblPasscode.Size = new Size(170, 15);
-        lblPasscode.TabIndex = 6;
+        lblPasscode.TabIndex = 9;
         lblPasscode.Text = "Default debug passcode";
         // 
         // txtDebugPasscode
         // 
-        txtDebugPasscode.Location = new Point(196, 121);
+        txtDebugPasscode.Location = new Point(196, 159);
         txtDebugPasscode.Name = "txtDebugPasscode";
         txtDebugPasscode.Size = new Size(280, 23);
-        txtDebugPasscode.TabIndex = 7;
+        txtDebugPasscode.TabIndex = 10;
         txtDebugPasscode.UseSystemPasswordChar = true;
         txtDebugPasscode.TextChanged += txtDebugPasscode_TextChanged;
         // 
         // chkShowPasscode
         // 
         chkShowPasscode.AutoSize = true;
-        chkShowPasscode.Location = new Point(486, 123);
+        chkShowPasscode.Location = new Point(486, 161);
         chkShowPasscode.Name = "chkShowPasscode";
         chkShowPasscode.Size = new Size(60, 19);
-        chkShowPasscode.TabIndex = 8;
+        chkShowPasscode.TabIndex = 11;
         chkShowPasscode.Text = "Show";
         chkShowPasscode.CheckedChanged += chkShowPasscode_CheckedChanged;
         // 
         // lblPasscodeHint
         // 
-        lblPasscodeHint.Location = new Point(196, 150);
+        lblPasscodeHint.Location = new Point(196, 188);
         lblPasscodeHint.Name = "lblPasscodeHint";
         lblPasscodeHint.Size = new Size(470, 30);
-        lblPasscodeHint.TabIndex = 9;
+        lblPasscodeHint.TabIndex = 12;
         lblPasscodeHint.Text = "Blank uses the default all-zero passcode. Otherwise exactly 32 printable ASCII characters.";
         // 
         // chkOpenOutputAfterTask
         // 
         chkOpenOutputAfterTask.AutoSize = true;
-        chkOpenOutputAfterTask.Location = new Point(16, 192);
+        chkOpenOutputAfterTask.Location = new Point(16, 230);
         chkOpenOutputAfterTask.Name = "chkOpenOutputAfterTask";
         chkOpenOutputAfterTask.Size = new Size(400, 19);
-        chkOpenOutputAfterTask.TabIndex = 10;
+        chkOpenOutputAfterTask.TabIndex = 13;
         chkOpenOutputAfterTask.Text = "Open the output folder after a task succeeds";
         // 
         // lblOutputNotice
@@ -797,12 +800,12 @@ partial class SettingsForm
         lblOutputNotice.Location = new Point(16, 330);
         lblOutputNotice.Name = "lblOutputNotice";
         lblOutputNotice.Size = new Size(656, 15);
-        lblOutputNotice.TabIndex = 11;
+        lblOutputNotice.TabIndex = 14;
         lblOutputNotice.Text = "The output folder also seeds the Move and Save artwork dialogs. Builder changes apply to new jobs.";
         // 
         // tabSafety
         // 
-        tabSafety.BackColor = Color.FromArgb(60, 63, 65);
+        tabSafety.BackColor = SystemColors.Control;
         tabSafety.Controls.Add(lblSafetyInfo);
         tabSafety.Controls.Add(chkConfirmMove);
         tabSafety.Controls.Add(chkConfirmDelete);
@@ -859,7 +862,7 @@ partial class SettingsForm
         // 
         // tabDiagnostics
         // 
-        tabDiagnostics.BackColor = Color.FromArgb(60, 63, 65);
+        tabDiagnostics.BackColor = SystemColors.Control;
         tabDiagnostics.Controls.Add(lblMaintenanceInfo);
         tabDiagnostics.Controls.Add(btnExportSettings);
         tabDiagnostics.Controls.Add(chkExportCredentials);
@@ -969,7 +972,7 @@ partial class SettingsForm
         AcceptButton = btnSave;
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
-        BackColor = Color.FromArgb(60, 63, 65);
+        BackColor = SystemColors.Control;
         CancelButton = btnCancel;
         ClientSize = new Size(720, 460);
         Controls.Add(btnCancel);

@@ -1,4 +1,4 @@
-using DarkUI.Forms;
+
 using PS5PKGTool.Forms;
 using PS5PKGTool.Infrastructure;
 
@@ -33,7 +33,7 @@ internal static class Program
             catch (Exception ex)
             {
                 Logger.Exception("Shell integration", ex);
-                DarkMessageBox.ShowError(ex.Message, "Explorer integration");
+                MessageBox.Show(ex.Message, "Explorer integration", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return;
         }
@@ -61,7 +61,7 @@ internal static class Program
         using var singleInstance = new Mutex(true, SingleInstanceName, out bool createdNew);
         if (!createdNew)
         {
-            DarkMessageBox.ShowWarning("PS5 PKG Tool is already running.", "PS5 PKG Tool");
+            MessageBox.Show("PS5 PKG Tool is already running.", "PS5 PKG Tool", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             return;
         }
 
@@ -85,9 +85,9 @@ internal static class Program
         Logger.Exception(context, exception ?? new Exception("Unknown error"));
         try
         {
-            DarkMessageBox.ShowError(
+            MessageBox.Show(
                 (exception?.Message ?? "An unknown error occurred.") + $"\n\nA log was written to:\n{Logger.LogPath}",
-                "PS5 PKG Tool error");
+                "PS5 PKG Tool error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         catch (Exception)
         {

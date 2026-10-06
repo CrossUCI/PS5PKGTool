@@ -20,8 +20,6 @@ public static class AppSettingsNormalizer
     public static readonly string[] GroupKeys = ["", "family", "titleid", "category", "region", "source", "firmware"];
 
     public const string DefaultRenameFormat = "{TITLE} [{TITLE_ID}]";
-    public const string DefaultTheme = "Default (Charcoal)";
-
     public static AppSettings Normalize(AppSettings? settings)
     {
         settings ??= new AppSettings();
@@ -39,7 +37,6 @@ public static class AppSettingsNormalizer
             ? "Title"
             : settings.LibrarySortColumn.Trim();
 
-        settings.Theme = string.IsNullOrWhiteSpace(settings.Theme) ? DefaultTheme : settings.Theme.Trim();
         settings.GridRowHeight = Math.Clamp(settings.GridRowHeight, MinRowHeight, MaxRowHeight);
         settings.DefaultGroupBy = Array.IndexOf(GroupKeys, settings.DefaultGroupBy) >= 0 ? settings.DefaultGroupBy : string.Empty;
 

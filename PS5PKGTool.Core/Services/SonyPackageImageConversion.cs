@@ -27,7 +27,7 @@ public static class SonyPackageImageConversion
         Ps5ImageConversionTarget target, bool overwrite = false,
         IProgress<Ps5ImageConversionProgress>? progress = null, CancellationToken cancellationToken = default,
         ExfatBuildOptions? exfatOptions = null, FfpfscBuildOptions? ffpfscOptions = null,
-        FfpkgBuildOptions? ffpkgOptions = null)
+        FfpkgBuildOptions? ffpkgOptions = null, string? tempDirectory = null)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(packagePath);
         ArgumentException.ThrowIfNullOrWhiteSpace(outputPath);
@@ -41,14 +41,18 @@ public static class SonyPackageImageConversion
         if (string.Equals(packageFull, outputFull, StringComparison.OrdinalIgnoreCase))
             throw new IOException("The output path must be different from the source package.");
 
-        string tempRoot = Path.Combine(Path.GetTempPath(), "PS5PKGTool", "pkg-image",
+        string workspaceRoot = string.IsNullOrWhiteSpace(tempDirectory)
+            ? Path.GetTempPath()
+            : Path.GetFullPath(tempDirectory);
+        Directory.CreateDirectory(workspaceRoot);
+        string tempRoot = Path.Combine(workspaceRoot, "PS5PKGTool", "pkg-image",
             Guid.NewGuid().ToString("N"));
         string tree = Path.Combine(tempRoot, "tree");
         try
         {
             await ExtractCleanTreeAsync(game, tree, progress, cancellationToken).ConfigureAwait(false);
             return await Ps5ImageConversionService.ConvertAsync(tree, outputFull, target, overwrite, progress,
-                cancellationToken, exfatOptions, ffpfscOptions, ffpkgOptions).ConfigureAwait(false);
+                cancellationToken, exfatOptions, ffpfscOptions, ffpkgOptions, workspaceRoot).ConfigureAwait(false);
         }
         finally
         {

@@ -131,7 +131,6 @@ The app is written to `PS5PKGTool\bin\Release\net10.0-windows\PS5 PKG Tool.exe`.
 
 # Credit
 
-- [Robin Perris](https://github.com/RobinPerris/DarkUI)
 - [SvenGDK](https://github.com/SvenGDK/LibProsperoPKG)
 - [PSBrew / Renan Barreto](https://github.com/PSBrew/MkPFS)
 - [kerrdec97](https://github.com/kerrdec97/ps5-exfat-builder)

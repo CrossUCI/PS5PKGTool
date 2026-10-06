@@ -35,11 +35,6 @@ The `PS5PKGTool.Ufs2` filesystem implementation is based on
 License. Copyright (c) 2026, SvenGDK. The original copyright and license text are retained in
 `PS5PKGTool.Ufs2/LICENSE` and in the imported source files.
 
-## DarkUI
-
-The user interface is built on DarkUI, licensed under the MIT License.
-Copyright (c) 2017 Robin (Robin Perris). https://github.com/RobinPerris/DarkUI
-
 ## BCnEncoder.Net
 
 BCnEncoder.Net (and BCnEncoder.Net.ImageSharp) is distributed under the MIT License. It is used to

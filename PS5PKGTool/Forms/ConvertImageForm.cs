@@ -2,7 +2,7 @@ using PS5PKGTool.Ffpfsc;
 
 namespace PS5PKGTool.Forms;
 
-public partial class ConvertImageForm : DarkUI.Forms.DarkForm
+public partial class ConvertImageForm : Form
 {
     private static readonly (Ps5ImageConversionTarget Target, string Name, string Extension, string Filter)[] Targets =
     [

@@ -1,8 +1,8 @@
-using DarkUI.Forms;
+
 
 namespace PS5PKGTool.Forms;
 
-public partial class TextPromptForm : DarkForm
+public partial class TextPromptForm : Form
 {
     public TextPromptForm()
     {

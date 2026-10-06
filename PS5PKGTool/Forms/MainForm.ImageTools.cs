@@ -1,4 +1,4 @@
-using DarkUI.Forms;
+
 using PS5PKGTool.Core.Backends;
 using PS5PKGTool.Core.Builders;
 using PS5PKGTool.Core.Models;
@@ -51,7 +51,7 @@ public partial class MainForm
         return null;
     }
 
-    private DarkUI.Controls.DarkTabPage TabPageFor(ImageToolTarget target) => target switch
+    private PS5PKGTool.UI.Controls.AppTabPage TabPageFor(ImageToolTarget target) => target switch
     {
         ImageToolTarget.Exfat => tabTargetExfat,
         ImageToolTarget.Ffpkg => tabTargetFfpkg,
@@ -60,7 +60,7 @@ public partial class MainForm
     };
 
 
-    private readonly List<(DarkUI.Controls.DarkTabPage Page, (Control Control, Point Base)[] Items)> _centeredImageTabs = [];
+    private readonly List<(PS5PKGTool.UI.Controls.AppTabPage Page, (Control Control, Point Base)[] Items)> _centeredImageTabs = [];
 
     /// <summary>
     /// Centers the option controls on each target tab horizontally so they stay centered when the
@@ -74,7 +74,7 @@ public partial class MainForm
         RegisterCenteredTab(tabTargetDebug);
     }
 
-    private void RegisterCenteredTab(DarkUI.Controls.DarkTabPage page)
+    private void RegisterCenteredTab(PS5PKGTool.UI.Controls.AppTabPage page)
     {
         var items = new List<(Control, Point)>();
         foreach (Control control in page.Controls)
@@ -89,7 +89,7 @@ public partial class MainForm
         CenterImageTab(page);
     }
 
-    private void CenterImageTab(DarkUI.Controls.DarkTabPage page)
+    private void CenterImageTab(PS5PKGTool.UI.Controls.AppTabPage page)
     {
         var entry = _centeredImageTabs.FirstOrDefault(candidate => ReferenceEquals(candidate.Page, page));
         if (entry.Items is null || entry.Items.Length == 0) return;
@@ -464,6 +464,7 @@ public partial class MainForm
         if (cboImageAction.SelectedItem as string == ImageActionExtract)
         {
             folderBrowserDialog.Description = "Select the extraction folder";
+            SetDefaultOutputDirectory();
             if (folderBrowserDialog.ShowDialog(this) == DialogResult.OK)
                 box.Text = folderBrowserDialog.SelectedPath;
             return;
@@ -568,17 +569,19 @@ public partial class MainForm
         bool fromPackage = _imageSourceIsPackage;
         string sourceRoute = fromPackage ? "FPKG" : Directory.Exists(source) ? "dump" : ImageFormatLabel(source);
         string targetRoute = ImageTargetShortLabel(toolTarget);
+        string? tempDirectory = _settings.TempDirectory;
         lblImageStatus.Text = fromPackage
             ? "Queued: package conversion. See the Tasks tab."
             : "Queued: conversion. See the Tasks tab.";
         EnqueueTask(PackageTaskTypes.ImageConvert, $"Convert {Path.GetFileName(source)}",
             (progress, token) => ConvertImageAsync(source, output, target, overwrite, exfatOptions, ffpfscOptions,
-                ffpkgOptions, fromPackage, progress, token),
+                ffpkgOptions, fromPackage, tempDirectory, progress, token),
             sourcePath: source, outputPath: output,
             operation: "Convert", sourceFormat: sourceRoute, targetFormat: targetRoute,
             stagePlan: fromPackage ? PackageTaskPlans.ConvertPackage : PackageTaskPlans.ConvertImage,
             payload: Payload(("source", source), ("output", output), ("target", target.ToString()),
-                ("overwrite", overwrite.ToString()), ("package", fromPackage.ToString())),
+                ("overwrite", overwrite.ToString()), ("package", fromPackage.ToString()),
+                ("temp", tempDirectory)),
             onFinished: task => lblImageStatus.Text = task.Status == PackageTaskStatus.Completed
                 ? $"Converted to {Path.GetFileName(output)}."
                 : $"Conversion {StatusText(task.Status).ToLowerInvariant()}.");
@@ -594,7 +597,8 @@ public partial class MainForm
 
     private static Task ConvertImageAsync(string source, string output, Ps5ImageConversionTarget target,
         bool overwrite, ExfatBuildOptions? exfatOptions, FfpfscBuildOptions? ffpfscOptions,
-        FfpkgBuildOptions? ffpkgOptions, bool fromPackage, IProgress<PackageTaskProgress> progress,
+        FfpkgBuildOptions? ffpkgOptions, bool fromPackage, string? tempDirectory,
+        IProgress<PackageTaskProgress> progress,
         CancellationToken token)
     {
         var bridge = new Progress<Ps5ImageConversionProgress>(value =>
@@ -602,9 +606,9 @@ public partial class MainForm
                 string.Empty)));
         return fromPackage
             ? SonyPackageImageConversion.ConvertAsync(source, output, target, overwrite, bridge, token,
-                exfatOptions, ffpfscOptions, ffpkgOptions)
+                exfatOptions, ffpfscOptions, ffpkgOptions, tempDirectory)
             : Ps5ImageConversionService.ConvertAsync(source, output, target, overwrite, bridge, token,
-                exfatOptions, ffpfscOptions, ffpkgOptions);
+                exfatOptions, ffpfscOptions, ffpkgOptions, tempDirectory);
     }
 
     private void RunImageExtract()
@@ -798,7 +802,7 @@ public partial class MainForm
                 "Repair first restores a damaged boot region when the other copy is valid, then extracts every " +
                 "readable file, rebuilds the filesystem metadata beside the original, fully verifies the result, " +
                 "and only then replaces the original image.\n\n" + source,
-                "Repair exFAT image?", DarkDialogButton.YesNo) != DialogResult.Yes)
+                "Repair exFAT image?", MessageBoxButtons.YesNo) != DialogResult.Yes)
             return;
 
         ExfatRepairResult? outcome = null;
@@ -823,7 +827,7 @@ public partial class MainForm
         if (AppDialog.ShowWarning(
                 "This creates or refreshes the root ampr_emu.index. It can relocate the index, extend the root " +
                 "directory, and grow the image tail; all changes are restored if verification fails.\n\n" + source,
-                "Refresh AMPR index?", DarkDialogButton.YesNo) != DialogResult.Yes)
+                "Refresh AMPR index?", MessageBoxButtons.YesNo) != DialogResult.Yes)
             return;
 
         ExfatAmprRefreshResult? outcome = null;
@@ -848,7 +852,7 @@ public partial class MainForm
         if (AppDialog.ShowWarning(
                 "This extracts every readable file, rebuilds all FFPKG metadata beside the original, fully verifies " +
                 "the replacement, and only then swaps it into place. It requires substantial free disk space.\n\n" +
-                source, "Rebuild FFPKG image?", DarkDialogButton.YesNo) != DialogResult.Yes)
+                source, "Rebuild FFPKG image?", MessageBoxButtons.YesNo) != DialogResult.Yes)
             return;
 
         Ufs2VerificationResult? outcome = null;
@@ -920,8 +924,9 @@ public partial class MainForm
         cboImageDensity.SelectedIndex = 0;     // FFPKG: 256 KiB per inode
         nudImageMinFree.Value = 0;             // FFPKG: 0% reserved fragments
 
-        txtImageTemp.Text = Path.GetTempPath()
-            .TrimEnd(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar);
+        txtImageTemp.Text = string.IsNullOrWhiteSpace(_settings.TempDirectory)
+            ? Path.GetTempPath().TrimEnd(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar)
+            : _settings.TempDirectory;
     }
 
     /// <summary>Combo index of the backend id, falling back to the registry default.</summary>

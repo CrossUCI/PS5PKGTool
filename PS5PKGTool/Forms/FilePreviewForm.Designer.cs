@@ -6,7 +6,7 @@ partial class FilePreviewForm
 {
     private System.ComponentModel.IContainer? components = null;
     private PictureBox picturePreview = null!;
-    private DarkUI.Controls.DarkRichTextBox textPreview = null!;
+    private PS5PKGTool.UI.Controls.AppRichTextBox textPreview = null!;
 
     protected override void Dispose(bool disposing)
     {
@@ -23,7 +23,7 @@ partial class FilePreviewForm
         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FilePreviewForm));
         components = new System.ComponentModel.Container();
         picturePreview = new PictureBox();
-        textPreview = new DarkUI.Controls.DarkRichTextBox();
+        textPreview = new PS5PKGTool.UI.Controls.AppRichTextBox();
         ((System.ComponentModel.ISupportInitialize)picturePreview).BeginInit();
         SuspendLayout();
         // 

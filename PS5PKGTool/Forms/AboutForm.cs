@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace PS5PKGTool.Forms;
 
-public partial class AboutForm : DarkUI.Forms.DarkForm
+public partial class AboutForm : Form
 {
     private const string GitHubUrl = "https://github.com/pearlxcore/PS5PkgTool";
     private const string KoFiUrl = "https://ko-fi.com/R6R524N7X";

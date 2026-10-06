@@ -5,8 +5,8 @@ namespace PS5PKGTool.Forms;
 partial class TextReportForm
 {
     private System.ComponentModel.IContainer? components = null;
-    private DarkUI.Controls.DarkRichTextBox txtReport = null!;
-    private DarkUI.Controls.DarkButton btnClose = null!;
+    private PS5PKGTool.UI.Controls.AppRichTextBox txtReport = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnClose = null!;
 
     protected override void Dispose(bool disposing)
     {
@@ -17,8 +17,8 @@ partial class TextReportForm
     private void InitializeComponent()
     {
         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TextReportForm));
-        txtReport = new DarkUI.Controls.DarkRichTextBox();
-        btnClose = new DarkUI.Controls.DarkButton();
+        txtReport = new PS5PKGTool.UI.Controls.AppRichTextBox();
+        btnClose = new PS5PKGTool.UI.Controls.AppButton();
         SuspendLayout();
         // 
         // txtReport
@@ -48,7 +48,7 @@ partial class TextReportForm
         AcceptButton = btnClose;
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
-        BackColor = Color.FromArgb(60, 63, 65);
+        BackColor = SystemColors.Control;
         CancelButton = btnClose;
         ClientSize = new Size(760, 460);
         Controls.Add(txtReport);

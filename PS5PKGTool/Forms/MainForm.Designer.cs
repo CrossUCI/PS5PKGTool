@@ -5,7 +5,7 @@ namespace PS5PKGTool.Forms;
 partial class MainForm
 {
     private System.ComponentModel.IContainer? components = null;
-    private DarkUI.Controls.DarkMenuStrip menuMain = null!;
+    private PS5PKGTool.UI.Controls.AppMenuStrip menuMain = null!;
     private ToolStripMenuItem menuFile = null!;
     private ToolStripMenuItem menuAddFolder = null!;
     private ToolStripMenuItem menuOpenDump = null!;
@@ -14,25 +14,25 @@ partial class MainForm
     private ToolStripMenuItem menuSaveManifest = null!;
         private ToolStripMenuItem menuEmptyList = null!;
         private ToolStripMenuItem menuRemoveMissing = null!;
-    private DarkUI.Controls.DarkToolStripSeparator menuSeparator = null!;
+    private PS5PKGTool.UI.Controls.AppToolStripSeparator menuSeparator = null!;
     private ToolStripMenuItem menuSettings = null!;
     private ToolStripMenuItem menuExit = null!;
     private ToolStripMenuItem menuHelp = null!;
     private ToolStripMenuItem menuAbout = null!;
     private ToolStripMenuItem menuRecent = null!;
-    private DarkUI.Controls.DarkToolStripSeparator menuHelpSeparator = null!;
+    private PS5PKGTool.UI.Controls.AppToolStripSeparator menuHelpSeparator = null!;
     private ToolStripMenuItem menuHelpCheckUpdate = null!;
         private ToolStripMenuItem menuHelpKofi = null!;
         private ToolStripMenuItem menuHelpPayPal = null!;
-    private DarkUI.Controls.DarkContextMenu contextLibrary = null!;
+    private PS5PKGTool.UI.Controls.AppContextMenu contextLibrary = null!;
     private ToolStripMenuItem menuLibraryReveal = null!;
-    private DarkUI.Controls.DarkToolStripSeparator menuLibrarySeparator1 = null!;
+    private PS5PKGTool.UI.Controls.AppToolStripSeparator menuLibrarySeparator1 = null!;
     private ToolStripMenuItem menuLibraryCopy = null!;
     private ToolStripMenuItem menuLibraryCopyTitle = null!;
     private ToolStripMenuItem menuLibraryCopyTitleId = null!;
     private ToolStripMenuItem menuLibraryCopyContentId = null!;
     private ToolStripMenuItem menuLibraryCopyPath = null!;
-    private DarkUI.Controls.DarkToolStripSeparator menuLibrarySeparator2 = null!;
+    private PS5PKGTool.UI.Controls.AppToolStripSeparator menuLibrarySeparator2 = null!;
     private ToolStripMenuItem menuLibraryRename = null!;
     private ToolStripMenuItem menuLibraryRenameAll = null!;
     private ToolStripMenuItem menuLibraryRenameByPriority = null!;
@@ -45,7 +45,7 @@ partial class MainForm
     private ToolStripMenuItem menuLibraryGroupSource = null!;
     private ToolStripMenuItem menuLibraryGroupFirmware = null!;
     private ToolStripMenuItem menuLibraryDuplicates = null!;
-    private DarkUI.Controls.DarkToolStripSeparator menuLibrarySeparator3 = null!;
+    private PS5PKGTool.UI.Controls.AppToolStripSeparator menuLibrarySeparator3 = null!;
     private ToolStripMenuItem menuLibraryExport = null!;
     private ToolStripMenuItem menuLibraryCopyFileName = null!;
     private ToolStripMenuItem menuLibrarySaveArtwork = null!;
@@ -55,61 +55,61 @@ partial class MainForm
     private ToolStripMenuItem menuLibraryMoveCategory = null!;
     private ToolStripMenuItem menuLibraryMoveRegion = null!;
     private ToolStripMenuItem menuLibraryMoveSource = null!;
-    private DarkUI.Controls.DarkToolStripSeparator menuLibraryMoveSeparator = null!;
+    private PS5PKGTool.UI.Controls.AppToolStripSeparator menuLibraryMoveSeparator = null!;
     private ToolStripMenuItem menuLibraryMoveSingle = null!;
     private ToolStripMenuItem menuLibraryDelete = null!;
-    private DarkUI.Controls.DarkToolStripSeparator menuLibrarySeparator5 = null!;
+    private PS5PKGTool.UI.Controls.AppToolStripSeparator menuLibrarySeparator5 = null!;
     private ToolStripMenuItem menuLibraryGroupExport = null!;
     private ToolStripMenuItem menuLibraryGroupArtwork = null!;
-    private DarkUI.Controls.DarkSearchBox searchLibrary = null!;
-    private DarkUI.Controls.DarkLabel lblFilterCategory = null!;
-    private DarkUI.Controls.DarkCheckedComboBox cboFilterCategory = null!;
-    private DarkUI.Controls.DarkLabel lblFilterRegion = null!;
-    private DarkUI.Controls.DarkCheckedComboBox cboFilterRegion = null!;
-    private DarkUI.Controls.DarkLabel lblFilterFormat = null!;
-    private DarkUI.Controls.DarkCheckedComboBox cboFilterFormat = null!;
-    private DarkUI.Controls.DarkLabel lblFilterGroup = null!;
-    private DarkUI.Controls.DarkComboBox cboFilterGroup = null!;
-    private DarkUI.Controls.DarkButton btnFilterClear = null!;
-    private DarkUI.Controls.DarkChipsPanel chipsFilter = null!;
-    private DarkUI.Controls.DarkLabel lblFilterPreset = null!;
-    private DarkUI.Controls.DarkComboBox cboFilterPreset = null!;
-    private DarkUI.Controls.DarkLabel lblFilterEmpty = null!;
-    private DarkUI.Controls.DarkSplitContainer splitMain = null!;
-    private DarkUI.Controls.DarkSplitPane splitMainPane1 = null!;
-    private DarkUI.Controls.DarkSplitPane splitMainPane2 = null!;
-    private DarkUI.Controls.DarkDataGridView gridLibrary = null!;
-    private DarkUI.Controls.DarkTabControl tabsWorkspace = null!;
-    private DarkUI.Controls.DarkTabPage tabWorkspaceGeneral = null!;
-    private DarkUI.Controls.DarkTabPage tabWorkspaceTools = null!;
-        private DarkUI.Controls.DarkTabPage tabTasks = null!;
-        private DarkUI.Controls.DarkTabPage tabLog = null!;
-        private DarkUI.Controls.DarkLabel lblLogLevel = null!;
-        private DarkUI.Controls.DarkComboBox cboLogLevel = null!;
-        private DarkUI.Controls.DarkCheckBox chkLogAutoScroll = null!;
-        private DarkUI.Controls.DarkButton btnLogClear = null!;
-        private DarkUI.Controls.DarkButton btnLogOpenFolder = null!;
-        private DarkUI.Controls.DarkRichTextBox txtLogView = null!;
-    private DarkUI.Controls.DarkTableLayoutPanel tasksLayout = null!;
-    private DarkUI.Controls.DarkCheckBox chkTaskAutoStart = null!;
-    private DarkUI.Controls.DarkButton btnTaskStart = null!;
-    private DarkUI.Controls.DarkButton btnTaskCancel = null!;
-    private DarkUI.Controls.DarkButton btnTaskRetry = null!;
-    private DarkUI.Controls.DarkButton btnTaskRemove = null!;
-    private DarkUI.Controls.DarkButton btnTaskOpen = null!;
-    private DarkUI.Controls.DarkButton btnTaskClear = null!;
-    private DarkUI.Controls.DarkLabel lblTaskSummary = null!;
-    private DarkUI.Controls.DarkCheckBox chkTaskFollow = null!;
-    private DarkUI.Controls.DarkComboBox cboTaskFilter = null!;
-    private DarkUI.Controls.DarkSearchBox searchTasks = null!;
-    private DarkUI.Controls.DarkButton btnTaskToggleDetails = null!;
-    private DarkUI.Controls.DarkLabel lblTaskGroup = null!;
-    private DarkUI.Controls.DarkComboBox cboTaskGroup = null!;
-    private DarkUI.Controls.DarkSplitContainer splitTasks = null!;
-    private DarkUI.Controls.DarkSplitPane splitTasksPane1 = null!;
-    private DarkUI.Controls.DarkSplitPane splitTasksPane2 = null!;
-    private DarkUI.Controls.DarkSectionPanel sectionTasksList = null!;
-    private DarkUI.Controls.DarkDataGridView gridTasks = null!;
+    private PS5PKGTool.UI.Controls.AppSearchBox searchLibrary = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblFilterCategory = null!;
+    private PS5PKGTool.UI.Controls.AppCheckedComboBox cboFilterCategory = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblFilterRegion = null!;
+    private PS5PKGTool.UI.Controls.AppCheckedComboBox cboFilterRegion = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblFilterFormat = null!;
+    private PS5PKGTool.UI.Controls.AppCheckedComboBox cboFilterFormat = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblFilterGroup = null!;
+    private PS5PKGTool.UI.Controls.AppComboBox cboFilterGroup = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnFilterClear = null!;
+    private PS5PKGTool.UI.Controls.AppChipsPanel chipsFilter = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblFilterPreset = null!;
+    private PS5PKGTool.UI.Controls.AppComboBox cboFilterPreset = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblFilterEmpty = null!;
+    private PS5PKGTool.UI.Controls.AppSplitContainer splitMain = null!;
+    private PS5PKGTool.UI.Controls.AppSplitPane splitMainPane1 = null!;
+    private PS5PKGTool.UI.Controls.AppSplitPane splitMainPane2 = null!;
+    private PS5PKGTool.UI.Controls.AppDataGridView gridLibrary = null!;
+    private PS5PKGTool.UI.Controls.AppTabControl tabsWorkspace = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabWorkspaceGeneral = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabWorkspaceTools = null!;
+        private PS5PKGTool.UI.Controls.AppTabPage tabTasks = null!;
+        private PS5PKGTool.UI.Controls.AppTabPage tabLog = null!;
+        private PS5PKGTool.UI.Controls.AppLabel lblLogLevel = null!;
+        private PS5PKGTool.UI.Controls.AppComboBox cboLogLevel = null!;
+        private PS5PKGTool.UI.Controls.AppCheckBox chkLogAutoScroll = null!;
+        private PS5PKGTool.UI.Controls.AppButton btnLogClear = null!;
+        private PS5PKGTool.UI.Controls.AppButton btnLogOpenFolder = null!;
+        private PS5PKGTool.UI.Controls.AppRichTextBox txtLogView = null!;
+    private PS5PKGTool.UI.Controls.AppTableLayoutPanel tasksLayout = null!;
+    private PS5PKGTool.UI.Controls.AppCheckBox chkTaskAutoStart = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnTaskStart = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnTaskCancel = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnTaskRetry = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnTaskRemove = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnTaskOpen = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnTaskClear = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblTaskSummary = null!;
+    private PS5PKGTool.UI.Controls.AppCheckBox chkTaskFollow = null!;
+    private PS5PKGTool.UI.Controls.AppComboBox cboTaskFilter = null!;
+    private PS5PKGTool.UI.Controls.AppSearchBox searchTasks = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnTaskToggleDetails = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblTaskGroup = null!;
+    private PS5PKGTool.UI.Controls.AppComboBox cboTaskGroup = null!;
+    private PS5PKGTool.UI.Controls.AppSplitContainer splitTasks = null!;
+    private PS5PKGTool.UI.Controls.AppSplitPane splitTasksPane1 = null!;
+    private PS5PKGTool.UI.Controls.AppSplitPane splitTasksPane2 = null!;
+    private PS5PKGTool.UI.Controls.AppSectionPanel sectionTasksList = null!;
+    private PS5PKGTool.UI.Controls.AppDataGridView gridTasks = null!;
     private DataGridViewTextBoxColumn colTaskName = null!;
     private DataGridViewTextBoxColumn colTaskOperation = null!;
     private DataGridViewTextBoxColumn colTaskRoute = null!;
@@ -117,271 +117,271 @@ partial class MainForm
     private DataGridViewTextBoxColumn colTaskStage = null!;
     private DataGridViewTextBoxColumn colTaskProgress = null!;
     private DataGridViewTextBoxColumn colTaskElapsed = null!;
-    private DarkUI.Controls.DarkSectionPanel sectionTaskDetails = null!;
-    private DarkUI.Controls.DarkTableLayoutPanel taskDetailLayout = null!;
-    private DarkUI.Controls.DarkLabel lblTaskStage = null!;
-    private DarkUI.Controls.DarkLabel lblTaskCurrentCaption = null!;
-    private DarkUI.Controls.DarkLabel lblTaskOverallCaption = null!;
-    private DarkUI.Controls.DarkProgressBar barTaskCurrent = null!;
-    private DarkUI.Controls.DarkProgressBar barTaskOverall = null!;
-    private DarkUI.Controls.DarkLabel lblTaskMessage = null!;
-    private DarkUI.Controls.DarkLabel lblTaskMeta = null!;
-    private DarkUI.Controls.DarkLabel lblTaskResult = null!;
-    private DarkUI.Controls.DarkButton btnTaskDiagnostic = null!;
-    private DarkUI.Controls.DarkContextMenu contextTasks = null!;
+    private PS5PKGTool.UI.Controls.AppSectionPanel sectionTaskDetails = null!;
+    private PS5PKGTool.UI.Controls.AppTableLayoutPanel taskDetailLayout = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblTaskStage = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblTaskCurrentCaption = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblTaskOverallCaption = null!;
+    private PS5PKGTool.UI.Controls.AppProgressBar barTaskCurrent = null!;
+    private PS5PKGTool.UI.Controls.AppProgressBar barTaskOverall = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblTaskMessage = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblTaskMeta = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblTaskResult = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnTaskDiagnostic = null!;
+    private PS5PKGTool.UI.Controls.AppContextMenu contextTasks = null!;
     private ToolStripMenuItem menuTaskStart = null!;
     private ToolStripMenuItem menuTaskCancel = null!;
     private ToolStripMenuItem menuTaskRetry = null!;
     private ToolStripMenuItem menuTaskRemove = null!;
-    private DarkUI.Controls.DarkToolStripSeparator menuTaskSeparator1 = null!;
+    private PS5PKGTool.UI.Controls.AppToolStripSeparator menuTaskSeparator1 = null!;
     private ToolStripMenuItem menuTaskOpen = null!;
     private ToolStripMenuItem menuTaskShowSource = null!;
     private ToolStripMenuItem menuTaskReport = null!;
     private ToolStripMenuItem menuTaskClear = null!;
-    private DarkUI.Controls.DarkTabControl tabsDetails = null!;
-    private DarkUI.Controls.DarkTabPage tabOverview = null!;
-    private DarkUI.Controls.DarkButton btnOverviewCopyAll = null!;
-    private DarkUI.Controls.DarkButton btnOverviewCopySelected = null!;
-    private DarkUI.Controls.DarkDataGridView gridOverview = null!;
-    private DarkUI.Controls.DarkTabPage tabArtwork = null!;
-    private DarkUI.Controls.DarkButton btnArtworkSaveAll = null!;
-    private DarkUI.Controls.DarkContextMenu contextArtwork = null!;
+    private PS5PKGTool.UI.Controls.AppTabControl tabsDetails = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabOverview = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnOverviewCopyAll = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnOverviewCopySelected = null!;
+    private PS5PKGTool.UI.Controls.AppDataGridView gridOverview = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabArtwork = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnArtworkSaveAll = null!;
+    private PS5PKGTool.UI.Controls.AppContextMenu contextArtwork = null!;
     private ToolStripMenuItem menuArtworkSaveThis = null!;
     private ToolStripMenuItem menuArtworkSaveAll = null!;
-    private DarkUI.Controls.DarkSplitContainer splitArtwork = null!;
-    private DarkUI.Controls.DarkSplitPane splitArtworkPane1 = null!;
-    private DarkUI.Controls.DarkSplitPane splitArtworkPane2 = null!;
-    private DarkUI.Controls.DarkSectionPanel sectionIcon = null!;
+    private PS5PKGTool.UI.Controls.AppSplitContainer splitArtwork = null!;
+    private PS5PKGTool.UI.Controls.AppSplitPane splitArtworkPane1 = null!;
+    private PS5PKGTool.UI.Controls.AppSplitPane splitArtworkPane2 = null!;
+    private PS5PKGTool.UI.Controls.AppSectionPanel sectionIcon = null!;
     private PictureBox pictureIcon = null!;
-    private DarkUI.Controls.DarkSectionPanel sectionBackground = null!;
-    private DarkUI.Controls.DarkTabControl tabsBackgrounds = null!;
-    private DarkUI.Controls.DarkTabPage tabPic0 = null!;
+    private PS5PKGTool.UI.Controls.AppSectionPanel sectionBackground = null!;
+    private PS5PKGTool.UI.Controls.AppTabControl tabsBackgrounds = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabPic0 = null!;
     private PictureBox pictureBackground0 = null!;
-    private DarkUI.Controls.DarkTabPage tabPic1 = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabPic1 = null!;
     private PictureBox pictureBackground1 = null!;
-    private DarkUI.Controls.DarkTabPage tabPic2 = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabPic2 = null!;
     private PictureBox pictureBackground2 = null!;
-    private DarkUI.Controls.DarkTabPage tabTrophies = null!;
-    private DarkUI.Controls.DarkLabel lblTrophySummary = null!;
-    private DarkUI.Controls.DarkDataGridView gridTrophies = null!;
-    private DarkUI.Controls.DarkButton btnTrophySaveIcons = null!;
-    private DarkUI.Controls.DarkButton btnTrophyExportCsv = null!;
-    private DarkUI.Controls.DarkCheckBox chkTrophyPlatinum = null!;
-    private DarkUI.Controls.DarkCheckBox chkTrophyGold = null!;
-    private DarkUI.Controls.DarkCheckBox chkTrophySilver = null!;
-    private DarkUI.Controls.DarkCheckBox chkTrophyBronze = null!;
-    private DarkUI.Controls.DarkCheckBox chkTrophyShowHidden = null!;
-    private DarkUI.Controls.DarkSearchBox searchTrophy = null!;
-    private DarkUI.Controls.DarkContextMenu contextTrophies = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabTrophies = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblTrophySummary = null!;
+    private PS5PKGTool.UI.Controls.AppDataGridView gridTrophies = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnTrophySaveIcons = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnTrophyExportCsv = null!;
+    private PS5PKGTool.UI.Controls.AppCheckBox chkTrophyPlatinum = null!;
+    private PS5PKGTool.UI.Controls.AppCheckBox chkTrophyGold = null!;
+    private PS5PKGTool.UI.Controls.AppCheckBox chkTrophySilver = null!;
+    private PS5PKGTool.UI.Controls.AppCheckBox chkTrophyBronze = null!;
+    private PS5PKGTool.UI.Controls.AppCheckBox chkTrophyShowHidden = null!;
+    private PS5PKGTool.UI.Controls.AppSearchBox searchTrophy = null!;
+    private PS5PKGTool.UI.Controls.AppContextMenu contextTrophies = null!;
     private ToolStripMenuItem menuTrophySaveIcon = null!;
     private ToolStripMenuItem menuTrophySaveAllIcons = null!;
     private ToolStripMenuItem menuTrophyExportCsv = null!;
     private SaveFileDialog trophyCsvSaveDialog = null!;
-    private DarkUI.Controls.DarkTabPage tabActivities = null!;
-    private DarkUI.Controls.DarkLabel lblActivitiesSummary = null!;
-    private DarkUI.Controls.DarkButton btnUdsCopyAll = null!;
-    private DarkUI.Controls.DarkButton btnUdsCopySelected = null!;
-    private DarkUI.Controls.DarkSearchBox searchUds = null!;
-    private DarkUI.Controls.DarkTabControl tabsUds = null!;
-    private DarkUI.Controls.DarkTabPage tabUdsEvents = null!;
-    private DarkUI.Controls.DarkSplitContainer splitUdsEvents = null!;
-    private DarkUI.Controls.DarkSplitPane splitUdsEventsPane1 = null!;
-    private DarkUI.Controls.DarkSplitPane splitUdsEventsPane2 = null!;
-    private DarkUI.Controls.DarkDataGridView gridUdsEvents = null!;
-    private DarkUI.Controls.DarkDataGridView gridUdsEventProperties = null!;
-    private DarkUI.Controls.DarkTabPage tabUdsStats = null!;
-    private DarkUI.Controls.DarkDataGridView gridUdsStats = null!;
-    private DarkUI.Controls.DarkTabPage tabUdsEnums = null!;
-    private DarkUI.Controls.DarkDataGridView gridUdsEnums = null!;
-    private DarkUI.Controls.DarkTabPage tabUdsRules = null!;
-    private DarkUI.Controls.DarkDataGridView gridUdsRules = null!;
-    private DarkUI.Controls.DarkTabPage tabFiles = null!;
-    private DarkUI.Controls.DarkLabel lblFilesSummary = null!;
-    private DarkUI.Controls.DarkSectionPanel sectionFileBrowser = null!;
-    private DarkUI.Controls.DarkSplitContainer splitFileBrowser = null!;
-    private DarkUI.Controls.DarkSplitPane splitFileBrowserPane1 = null!;
-    private DarkUI.Controls.DarkSplitPane splitFileBrowserPane2 = null!;
-    private DarkUI.Controls.DarkTreeView treeFiles = null!;
-    private DarkUI.Controls.DarkSplitContainer splitFileContentPreview = null!;
-    private DarkUI.Controls.DarkSplitPane splitFileContentPreviewPane1 = null!;
-    private DarkUI.Controls.DarkSplitPane splitFileContentPreviewPane2 = null!;
-    private DarkUI.Controls.DarkPanel fileListPanel = null!;
-    private DarkUI.Controls.DarkSearchBox searchFileFilter = null!;
-    private DarkUI.Controls.DarkListView listFiles = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabActivities = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblActivitiesSummary = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnUdsCopyAll = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnUdsCopySelected = null!;
+    private PS5PKGTool.UI.Controls.AppSearchBox searchUds = null!;
+    private PS5PKGTool.UI.Controls.AppTabControl tabsUds = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabUdsEvents = null!;
+    private PS5PKGTool.UI.Controls.AppSplitContainer splitUdsEvents = null!;
+    private PS5PKGTool.UI.Controls.AppSplitPane splitUdsEventsPane1 = null!;
+    private PS5PKGTool.UI.Controls.AppSplitPane splitUdsEventsPane2 = null!;
+    private PS5PKGTool.UI.Controls.AppDataGridView gridUdsEvents = null!;
+    private PS5PKGTool.UI.Controls.AppDataGridView gridUdsEventProperties = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabUdsStats = null!;
+    private PS5PKGTool.UI.Controls.AppDataGridView gridUdsStats = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabUdsEnums = null!;
+    private PS5PKGTool.UI.Controls.AppDataGridView gridUdsEnums = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabUdsRules = null!;
+    private PS5PKGTool.UI.Controls.AppDataGridView gridUdsRules = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabFiles = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblFilesSummary = null!;
+    private PS5PKGTool.UI.Controls.AppSectionPanel sectionFileBrowser = null!;
+    private PS5PKGTool.UI.Controls.AppSplitContainer splitFileBrowser = null!;
+    private PS5PKGTool.UI.Controls.AppSplitPane splitFileBrowserPane1 = null!;
+    private PS5PKGTool.UI.Controls.AppSplitPane splitFileBrowserPane2 = null!;
+    private PS5PKGTool.UI.Controls.AppTreeView treeFiles = null!;
+    private PS5PKGTool.UI.Controls.AppSplitContainer splitFileContentPreview = null!;
+    private PS5PKGTool.UI.Controls.AppSplitPane splitFileContentPreviewPane1 = null!;
+    private PS5PKGTool.UI.Controls.AppSplitPane splitFileContentPreviewPane2 = null!;
+    private PS5PKGTool.UI.Controls.AppPanel fileListPanel = null!;
+    private PS5PKGTool.UI.Controls.AppSearchBox searchFileFilter = null!;
+    private PS5PKGTool.UI.Controls.AppListView listFiles = null!;
     private ColumnHeader colFileName = null!;
     private ColumnHeader colFileType = null!;
     private ColumnHeader colFilePath = null!;
     private ColumnHeader colFileSize = null!;
     private ImageList imageListFiles = null!;
-    private DarkUI.Controls.DarkContextMenu contextTreeFiles = null!;
+    private PS5PKGTool.UI.Controls.AppContextMenu contextTreeFiles = null!;
     private ToolStripMenuItem menuTreeExpand = null!;
     private ToolStripMenuItem menuTreeCollapse = null!;
     private ToolStripMenuItem menuTreeExpandAll = null!;
     private ToolStripMenuItem menuTreeCollapseAll = null!;
-    private DarkUI.Controls.DarkToolStripSeparator menuTreeSeparator = null!;
+    private PS5PKGTool.UI.Controls.AppToolStripSeparator menuTreeSeparator = null!;
     private ToolStripMenuItem menuTreeCopyPath = null!;
     private ToolStripMenuItem menuTreeExtract = null!;
     private ToolStripMenuItem menuFileCopyPath = null!;
     private ToolStripMenuItem menuFileCopyName = null!;
-    private DarkUI.Controls.DarkToolStripSeparator menuFileCopySeparator = null!;
-    private DarkUI.Controls.DarkContextMenu contextFiles = null!;
+    private PS5PKGTool.UI.Controls.AppToolStripSeparator menuFileCopySeparator = null!;
+    private PS5PKGTool.UI.Controls.AppContextMenu contextFiles = null!;
     private ToolStripMenuItem menuFileOpenContained = null!;
     private ToolStripMenuItem menuFileExtractContained = null!;
     private ToolStripMenuItem menuFileExtractSelected = null!;
-    private DarkUI.Controls.DarkToolStripSeparator menuFileContainerSeparator = null!;
+    private PS5PKGTool.UI.Controls.AppToolStripSeparator menuFileContainerSeparator = null!;
     private ToolStripMenuItem menuFileRevealContainer = null!;
-    private DarkUI.Controls.DarkButton btnFileExtractAll = null!;
-    private DarkUI.Controls.DarkButton btnFileCancel = null!;
-    private DarkUI.Controls.DarkSectionPanel sectionFileViewer = null!;
-    private DarkUI.Controls.DarkLabel lblFileViewerInfo = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnFileExtractAll = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnFileCancel = null!;
+    private PS5PKGTool.UI.Controls.AppSectionPanel sectionFileViewer = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblFileViewerInfo = null!;
     private PictureBox pictureFileViewer = null!;
-    private DarkUI.Controls.DarkRichTextBox txtFileViewer = null!;
-    private DarkUI.Controls.DarkRichTextBox txtHexViewer = null!;
+    private PS5PKGTool.UI.Controls.AppRichTextBox txtFileViewer = null!;
+    private PS5PKGTool.UI.Controls.AppRichTextBox txtHexViewer = null!;
     private System.Windows.Forms.Integration.ElementHost mediaFileHost = null!;
     private System.Windows.Controls.MediaElement mediaFileViewer = null!;
-    private DarkUI.Controls.DarkButton btnMediaLoad = null!;
-    private DarkUI.Controls.DarkButton btnMediaPlay = null!;
-    private DarkUI.Controls.DarkButton btnMediaPause = null!;
-    private DarkUI.Controls.DarkButton btnMediaStop = null!;
-    private DarkUI.Controls.DarkButton btnHexPrevious = null!;
-    private DarkUI.Controls.DarkButton btnHexNext = null!;
-    private DarkUI.Controls.DarkLabel lblHexPage = null!;
-    private DarkUI.Controls.DarkTabPage tabExecutable = null!;
-    private DarkUI.Controls.DarkLabel lblExecutableSummary = null!;
-    private DarkUI.Controls.DarkDataGridView gridModules = null!;
-    private DarkUI.Controls.DarkButton btnExecExtract = null!;
-    private DarkUI.Controls.DarkButton btnExecHash = null!;
-    private DarkUI.Controls.DarkButton btnExecCopyAll = null!;
-    private DarkUI.Controls.DarkButton btnExecCopySelected = null!;
-    private DarkUI.Controls.DarkSearchBox searchExecutable = null!;
-    private DarkUI.Controls.DarkTabControl tabsExecutable = null!;
-    private DarkUI.Controls.DarkTabPage tabExecModules = null!;
-    private DarkUI.Controls.DarkTabPage tabExecElf = null!;
-    private DarkUI.Controls.DarkSplitContainer splitExecElf = null!;
-    private DarkUI.Controls.DarkSplitPane splitExecElfPane1 = null!;
-    private DarkUI.Controls.DarkSplitPane splitExecElfPane2 = null!;
-    private DarkUI.Controls.DarkDataGridView gridElfPrograms = null!;
-    private DarkUI.Controls.DarkDataGridView gridElfSections = null!;
-    private DarkUI.Controls.DarkTabPage tabExecSelf = null!;
-    private DarkUI.Controls.DarkSplitContainer splitExecSelf = null!;
-    private DarkUI.Controls.DarkSplitPane splitExecSelfPane1 = null!;
-    private DarkUI.Controls.DarkSplitPane splitExecSelfPane2 = null!;
-    private DarkUI.Controls.DarkDataGridView gridSelfHeader = null!;
-    private DarkUI.Controls.DarkDataGridView gridSelfSegments = null!;
-    private DarkUI.Controls.DarkTabPage tabRaw = null!;
-    private DarkUI.Controls.DarkButton btnCopyRawJson = null!;
-    private DarkUI.Controls.DarkButton btnRawFormatted = null!;
-    private DarkUI.Controls.DarkButton btnRawOriginal = null!;
-    private DarkUI.Controls.DarkRichTextBox txtRawMetadata = null!;
-    private DarkUI.Controls.DarkTabPage tabPackage = null!;
-    private DarkUI.Controls.DarkTabControl tabsPackage = null!;
-    private DarkUI.Controls.DarkTabPage tabMetadata = null!;
-    private DarkUI.Controls.DarkTabControl tabsMetadata = null!;
-    private DarkUI.Controls.DarkTabPage tabPkgContainer = null!;
-    private DarkUI.Controls.DarkDataGridView gridPkgHeader = null!;
-    private DarkUI.Controls.DarkTabPage tabPkgSegments = null!;
-    private DarkUI.Controls.DarkDataGridView gridPkgSegments = null!;
-    private DarkUI.Controls.DarkTabPage tabPkgEntries = null!;
-    private DarkUI.Controls.DarkDataGridView gridPkgEntries = null!;
-    private DarkUI.Controls.DarkTabPage tabPkgSfo = null!;
-    private DarkUI.Controls.DarkDataGridView gridParamSfo = null!;
-    private DarkUI.Controls.DarkTabPage tabPkgKeystone = null!;
-    private DarkUI.Controls.DarkDataGridView gridKeystone = null!;
-    private DarkUI.Controls.DarkTabPage tabPkgSi = null!;
-    private DarkUI.Controls.DarkDataGridView gridSi = null!;
-    private DarkUI.Controls.DarkTabPage tabPkgPlayGo = null!;
-    private DarkUI.Controls.DarkLabel lblPlayGoSummary = null!;
-    private DarkUI.Controls.DarkTabControl tabsPlayGo = null!;
-    private DarkUI.Controls.DarkTabPage tabPlayGoChunks = null!;
-    private DarkUI.Controls.DarkDataGridView gridPlayGoChunks = null!;
-    private DarkUI.Controls.DarkTabPage tabPlayGoScenarios = null!;
-    private DarkUI.Controls.DarkDataGridView gridPlayGoScenarios = null!;
-    private DarkUI.Controls.DarkTabPage tabPlayGoFiles = null!;
-    private DarkUI.Controls.DarkDataGridView gridPlayGoFiles = null!;
-    private DarkUI.Controls.DarkTableLayoutPanel toolsLayout = null!;
-    private DarkUI.Controls.DarkSectionPanel sectionJob = null!;
-    private DarkUI.Controls.DarkTabControl tabsImageTargets = null!;
-    private DarkUI.Controls.DarkTabPage tabTargetExfat = null!;
-    private DarkUI.Controls.DarkTabPage tabTargetFfpkg = null!;
-    private DarkUI.Controls.DarkTabPage tabTargetFfpfsc = null!;
-    private DarkUI.Controls.DarkTabPage tabTargetDebug = null!;
-    private DarkUI.Controls.DarkTabPage tabTargetOptions = null!;
-    private DarkUI.Controls.DarkFooterBar toolsFooter = null!;
-    private DarkUI.Controls.DarkLabel lblImageSource = null!;
-    private DarkUI.Controls.DarkLabel lblImageSourcePath = null!;
-    private DarkUI.Controls.DarkLabel lblImageFormat = null!;
-    private DarkUI.Controls.DarkLabel lblImageAction = null!;
-    private DarkUI.Controls.DarkComboBox cboImageAction = null!;
-    private DarkUI.Controls.DarkLabel lblImageOutput = null!;
-    private DarkUI.Controls.DarkTextBox txtImageOutput = null!;
-    private DarkUI.Controls.DarkButton btnImageBrowseOutput = null!;
-    private DarkUI.Controls.DarkCheckBox chkImageOverwrite = null!;
-    private DarkUI.Controls.DarkLabel lblOutExfat = null!;
-    private DarkUI.Controls.DarkTextBox txtOutExfat = null!;
-    private DarkUI.Controls.DarkButton btnOutExfat = null!;
-    private DarkUI.Controls.DarkCheckBox chkOutExfat = null!;
-    private DarkUI.Controls.DarkLabel lblOutFfpkg = null!;
-    private DarkUI.Controls.DarkTextBox txtOutFfpkg = null!;
-    private DarkUI.Controls.DarkButton btnOutFfpkg = null!;
-    private DarkUI.Controls.DarkCheckBox chkOutFfpkg = null!;
-    private DarkUI.Controls.DarkLabel lblOutFfpfsc = null!;
-    private DarkUI.Controls.DarkTextBox txtOutFfpfsc = null!;
-    private DarkUI.Controls.DarkButton btnOutFfpfsc = null!;
-    private DarkUI.Controls.DarkCheckBox chkOutFfpfsc = null!;
-    private DarkUI.Controls.DarkLabel lblOutDebug = null!;
-    private DarkUI.Controls.DarkTextBox txtOutDebug = null!;
-    private DarkUI.Controls.DarkButton btnOutDebug = null!;
-    private DarkUI.Controls.DarkCheckBox chkOutDebug = null!;
-    private DarkUI.Controls.DarkLabel lblDbgPasscode = null!;
-    private DarkUI.Controls.DarkTextBox txtDbgPasscode = null!;
-    private DarkUI.Controls.DarkLabel lblImageCluster = null!;
-    private DarkUI.Controls.DarkComboBox cboImageCluster = null!;
-    private DarkUI.Controls.DarkLabel lblImageLevel = null!;
-    private DarkUI.Controls.DarkNumericUpDown nudImageLevel = null!;
-    private DarkUI.Controls.DarkLabel lblImageGain = null!;
-    private DarkUI.Controls.DarkNumericUpDown nudImageGain = null!;
-    private DarkUI.Controls.DarkCheckBox chkImageAmpr = null!;
-    private DarkUI.Controls.DarkButton btnImageRun = null!;
-    private DarkUI.Controls.DarkButton btnImageCancel = null!;
-    private DarkUI.Controls.DarkLabel lblImageStatus = null!;
-    private DarkUI.Controls.DarkLabel lblImageBlock = null!;
-    private DarkUI.Controls.DarkComboBox cboImageBlock = null!;
-    private DarkUI.Controls.DarkLabel lblImageFragment = null!;
-    private DarkUI.Controls.DarkComboBox cboImageFragment = null!;
-    private DarkUI.Controls.DarkLabel lblImageDensity = null!;
-    private DarkUI.Controls.DarkComboBox cboImageDensity = null!;
-    private DarkUI.Controls.DarkLabel lblImageMinFree = null!;
-    private DarkUI.Controls.DarkNumericUpDown nudImageMinFree = null!;
-    private DarkUI.Controls.DarkLabel lblImagePasscode = null!;
-    private DarkUI.Controls.DarkTextBox txtImagePasscode = null!;
-    private DarkUI.Controls.DarkLabel lblImageSdk = null!;
-    private DarkUI.Controls.DarkComboBox cboImageSdk = null!;
-    private DarkUI.Controls.DarkLabel lblImagePkgType = null!;
-    private DarkUI.Controls.DarkComboBox cboImagePkgType = null!;
-    private DarkUI.Controls.DarkLabel lblImageCompression = null!;
-    private DarkUI.Controls.DarkComboBox cboImageCompression = null!;
-    private DarkUI.Controls.DarkLabel lblImageKrakenLevel = null!;
-    private DarkUI.Controls.DarkComboBox cboImageKrakenLevel = null!;
-    private DarkUI.Controls.DarkLabel lblImageKrakenThreads = null!;
-    private DarkUI.Controls.DarkNumericUpDown nudImageKrakenThreads = null!;
-    private DarkUI.Controls.DarkLabel lblImagePlayGo = null!;
-    private DarkUI.Controls.DarkNumericUpDown nudImagePlayGoChunks = null!;
-    private DarkUI.Controls.DarkLabel lblImageDrm = null!;
-    private DarkUI.Controls.DarkComboBox cboImageDrm = null!;
-    private DarkUI.Controls.DarkCheckBox chkImageFakeSign = null!;
-    private DarkUI.Controls.DarkCheckBox chkImageRightSprx = null!;
-    private DarkUI.Controls.DarkCheckBox chkImageDeterministic = null!;
-    private DarkUI.Controls.DarkLabel lblImageBackend = null!;
-    private DarkUI.Controls.DarkComboBox cboImageBackend = null!;
-    private DarkUI.Controls.DarkCheckBox chkImageAdvancedOptions = null!;
-    private DarkUI.Controls.DarkLabel lblImageTemp = null!;
-    private DarkUI.Controls.DarkTextBox txtImageTemp = null!;
-    private DarkUI.Controls.DarkButton btnImageTempBrowse = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnMediaLoad = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnMediaPlay = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnMediaPause = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnMediaStop = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnHexPrevious = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnHexNext = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblHexPage = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabExecutable = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblExecutableSummary = null!;
+    private PS5PKGTool.UI.Controls.AppDataGridView gridModules = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnExecExtract = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnExecHash = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnExecCopyAll = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnExecCopySelected = null!;
+    private PS5PKGTool.UI.Controls.AppSearchBox searchExecutable = null!;
+    private PS5PKGTool.UI.Controls.AppTabControl tabsExecutable = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabExecModules = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabExecElf = null!;
+    private PS5PKGTool.UI.Controls.AppSplitContainer splitExecElf = null!;
+    private PS5PKGTool.UI.Controls.AppSplitPane splitExecElfPane1 = null!;
+    private PS5PKGTool.UI.Controls.AppSplitPane splitExecElfPane2 = null!;
+    private PS5PKGTool.UI.Controls.AppDataGridView gridElfPrograms = null!;
+    private PS5PKGTool.UI.Controls.AppDataGridView gridElfSections = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabExecSelf = null!;
+    private PS5PKGTool.UI.Controls.AppSplitContainer splitExecSelf = null!;
+    private PS5PKGTool.UI.Controls.AppSplitPane splitExecSelfPane1 = null!;
+    private PS5PKGTool.UI.Controls.AppSplitPane splitExecSelfPane2 = null!;
+    private PS5PKGTool.UI.Controls.AppDataGridView gridSelfHeader = null!;
+    private PS5PKGTool.UI.Controls.AppDataGridView gridSelfSegments = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabRaw = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnCopyRawJson = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnRawFormatted = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnRawOriginal = null!;
+    private PS5PKGTool.UI.Controls.AppRichTextBox txtRawMetadata = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabPackage = null!;
+    private PS5PKGTool.UI.Controls.AppTabControl tabsPackage = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabMetadata = null!;
+    private PS5PKGTool.UI.Controls.AppTabControl tabsMetadata = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabPkgContainer = null!;
+    private PS5PKGTool.UI.Controls.AppDataGridView gridPkgHeader = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabPkgSegments = null!;
+    private PS5PKGTool.UI.Controls.AppDataGridView gridPkgSegments = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabPkgEntries = null!;
+    private PS5PKGTool.UI.Controls.AppDataGridView gridPkgEntries = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabPkgSfo = null!;
+    private PS5PKGTool.UI.Controls.AppDataGridView gridParamSfo = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabPkgKeystone = null!;
+    private PS5PKGTool.UI.Controls.AppDataGridView gridKeystone = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabPkgSi = null!;
+    private PS5PKGTool.UI.Controls.AppDataGridView gridSi = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabPkgPlayGo = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblPlayGoSummary = null!;
+    private PS5PKGTool.UI.Controls.AppTabControl tabsPlayGo = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabPlayGoChunks = null!;
+    private PS5PKGTool.UI.Controls.AppDataGridView gridPlayGoChunks = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabPlayGoScenarios = null!;
+    private PS5PKGTool.UI.Controls.AppDataGridView gridPlayGoScenarios = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabPlayGoFiles = null!;
+    private PS5PKGTool.UI.Controls.AppDataGridView gridPlayGoFiles = null!;
+    private PS5PKGTool.UI.Controls.AppTableLayoutPanel toolsLayout = null!;
+    private PS5PKGTool.UI.Controls.AppSectionPanel sectionJob = null!;
+    private PS5PKGTool.UI.Controls.AppTabControl tabsImageTargets = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabTargetExfat = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabTargetFfpkg = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabTargetFfpfsc = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabTargetDebug = null!;
+    private PS5PKGTool.UI.Controls.AppTabPage tabTargetOptions = null!;
+    private PS5PKGTool.UI.Controls.AppFooterBar toolsFooter = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblImageSource = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblImageSourcePath = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblImageFormat = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblImageAction = null!;
+    private PS5PKGTool.UI.Controls.AppComboBox cboImageAction = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblImageOutput = null!;
+    private PS5PKGTool.UI.Controls.AppTextBox txtImageOutput = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnImageBrowseOutput = null!;
+    private PS5PKGTool.UI.Controls.AppCheckBox chkImageOverwrite = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblOutExfat = null!;
+    private PS5PKGTool.UI.Controls.AppTextBox txtOutExfat = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnOutExfat = null!;
+    private PS5PKGTool.UI.Controls.AppCheckBox chkOutExfat = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblOutFfpkg = null!;
+    private PS5PKGTool.UI.Controls.AppTextBox txtOutFfpkg = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnOutFfpkg = null!;
+    private PS5PKGTool.UI.Controls.AppCheckBox chkOutFfpkg = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblOutFfpfsc = null!;
+    private PS5PKGTool.UI.Controls.AppTextBox txtOutFfpfsc = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnOutFfpfsc = null!;
+    private PS5PKGTool.UI.Controls.AppCheckBox chkOutFfpfsc = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblOutDebug = null!;
+    private PS5PKGTool.UI.Controls.AppTextBox txtOutDebug = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnOutDebug = null!;
+    private PS5PKGTool.UI.Controls.AppCheckBox chkOutDebug = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblDbgPasscode = null!;
+    private PS5PKGTool.UI.Controls.AppTextBox txtDbgPasscode = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblImageCluster = null!;
+    private PS5PKGTool.UI.Controls.AppComboBox cboImageCluster = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblImageLevel = null!;
+    private PS5PKGTool.UI.Controls.AppNumericUpDown nudImageLevel = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblImageGain = null!;
+    private PS5PKGTool.UI.Controls.AppNumericUpDown nudImageGain = null!;
+    private PS5PKGTool.UI.Controls.AppCheckBox chkImageAmpr = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnImageRun = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnImageCancel = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblImageStatus = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblImageBlock = null!;
+    private PS5PKGTool.UI.Controls.AppComboBox cboImageBlock = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblImageFragment = null!;
+    private PS5PKGTool.UI.Controls.AppComboBox cboImageFragment = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblImageDensity = null!;
+    private PS5PKGTool.UI.Controls.AppComboBox cboImageDensity = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblImageMinFree = null!;
+    private PS5PKGTool.UI.Controls.AppNumericUpDown nudImageMinFree = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblImagePasscode = null!;
+    private PS5PKGTool.UI.Controls.AppTextBox txtImagePasscode = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblImageSdk = null!;
+    private PS5PKGTool.UI.Controls.AppComboBox cboImageSdk = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblImagePkgType = null!;
+    private PS5PKGTool.UI.Controls.AppComboBox cboImagePkgType = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblImageCompression = null!;
+    private PS5PKGTool.UI.Controls.AppComboBox cboImageCompression = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblImageKrakenLevel = null!;
+    private PS5PKGTool.UI.Controls.AppComboBox cboImageKrakenLevel = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblImageKrakenThreads = null!;
+    private PS5PKGTool.UI.Controls.AppNumericUpDown nudImageKrakenThreads = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblImagePlayGo = null!;
+    private PS5PKGTool.UI.Controls.AppNumericUpDown nudImagePlayGoChunks = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblImageDrm = null!;
+    private PS5PKGTool.UI.Controls.AppComboBox cboImageDrm = null!;
+    private PS5PKGTool.UI.Controls.AppCheckBox chkImageFakeSign = null!;
+    private PS5PKGTool.UI.Controls.AppCheckBox chkImageRightSprx = null!;
+    private PS5PKGTool.UI.Controls.AppCheckBox chkImageDeterministic = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblImageBackend = null!;
+    private PS5PKGTool.UI.Controls.AppComboBox cboImageBackend = null!;
+    private PS5PKGTool.UI.Controls.AppCheckBox chkImageAdvancedOptions = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblImageTemp = null!;
+    private PS5PKGTool.UI.Controls.AppTextBox txtImageTemp = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnImageTempBrowse = null!;
     private SaveFileDialog imageSaveDialog = null!;
-    private DarkUI.Controls.DarkStatusStrip statusMain = null!;
-    private DarkUI.Controls.DarkToolStripStatusLabel statusLabel = null!;
-    private DarkUI.Controls.DarkToolStripStatusLabel statusSpring = null!;
-    private DarkUI.Controls.DarkToolStripStatusLabel statusCount = null!;
+    private PS5PKGTool.UI.Controls.AppStatusStrip statusMain = null!;
+    private PS5PKGTool.UI.Controls.AppToolStripStatusLabel statusLabel = null!;
+    private PS5PKGTool.UI.Controls.AppToolStripStatusLabel statusSpring = null!;
+    private PS5PKGTool.UI.Controls.AppToolStripStatusLabel statusCount = null!;
     private FolderBrowserDialog folderBrowserDialog = null!;
     private OpenFileDialog packageOpenDialog = null!;
     private OpenFileDialog sourceImageOpenDialog = null!;
@@ -399,7 +399,7 @@ partial class MainForm
         components = new System.ComponentModel.Container();
         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
         imageListFiles = new ImageList(components);
-        menuMain = new DarkUI.Controls.DarkMenuStrip();
+        menuMain = new PS5PKGTool.UI.Controls.AppMenuStrip();
         menuFile = new ToolStripMenuItem();
         menuAddFolder = new ToolStripMenuItem();
         menuOpenDump = new ToolStripMenuItem();
@@ -409,18 +409,18 @@ partial class MainForm
         menuSaveManifest = new ToolStripMenuItem();
         menuEmptyList = new ToolStripMenuItem();
         menuRemoveMissing = new ToolStripMenuItem();
-        menuSeparator = new DarkUI.Controls.DarkToolStripSeparator();
+        menuSeparator = new PS5PKGTool.UI.Controls.AppToolStripSeparator();
         menuSettings = new ToolStripMenuItem();
         menuExit = new ToolStripMenuItem();
         menuHelp = new ToolStripMenuItem();
         menuAbout = new ToolStripMenuItem();
-        menuHelpSeparator = new DarkUI.Controls.DarkToolStripSeparator();
+        menuHelpSeparator = new PS5PKGTool.UI.Controls.AppToolStripSeparator();
         menuHelpCheckUpdate = new ToolStripMenuItem();
         menuHelpKofi = new ToolStripMenuItem();
         menuHelpPayPal = new ToolStripMenuItem();
-        contextLibrary = new DarkUI.Controls.DarkContextMenu();
+        contextLibrary = new PS5PKGTool.UI.Controls.AppContextMenu();
         menuLibraryReveal = new ToolStripMenuItem();
-        menuLibrarySeparator1 = new DarkUI.Controls.DarkToolStripSeparator();
+        menuLibrarySeparator1 = new PS5PKGTool.UI.Controls.AppToolStripSeparator();
         menuLibraryCopy = new ToolStripMenuItem();
         menuLibraryCopyTitle = new ToolStripMenuItem();
         menuLibraryCopyTitleId = new ToolStripMenuItem();
@@ -436,13 +436,13 @@ partial class MainForm
         menuLibraryMoveCategory = new ToolStripMenuItem();
         menuLibraryMoveRegion = new ToolStripMenuItem();
         menuLibraryMoveSource = new ToolStripMenuItem();
-        menuLibraryMoveSeparator = new DarkUI.Controls.DarkToolStripSeparator();
+        menuLibraryMoveSeparator = new PS5PKGTool.UI.Controls.AppToolStripSeparator();
         menuLibraryMoveSingle = new ToolStripMenuItem();
         menuLibraryDelete = new ToolStripMenuItem();
-        menuLibrarySeparator2 = new DarkUI.Controls.DarkToolStripSeparator();
+        menuLibrarySeparator2 = new PS5PKGTool.UI.Controls.AppToolStripSeparator();
         menuLibrarySaveArtwork = new ToolStripMenuItem();
         menuLibraryExport = new ToolStripMenuItem();
-        menuLibrarySeparator3 = new DarkUI.Controls.DarkToolStripSeparator();
+        menuLibrarySeparator3 = new PS5PKGTool.UI.Controls.AppToolStripSeparator();
         menuLibraryGroupBy = new ToolStripMenuItem();
         menuLibraryGroupNone = new ToolStripMenuItem();
         menuLibraryGroupFamily = new ToolStripMenuItem();
@@ -452,282 +452,282 @@ partial class MainForm
         menuLibraryGroupSource = new ToolStripMenuItem();
         menuLibraryGroupFirmware = new ToolStripMenuItem();
         menuLibraryDuplicates = new ToolStripMenuItem();
-        menuLibrarySeparator5 = new DarkUI.Controls.DarkToolStripSeparator();
+        menuLibrarySeparator5 = new PS5PKGTool.UI.Controls.AppToolStripSeparator();
         menuLibraryGroupExport = new ToolStripMenuItem();
         menuLibraryGroupArtwork = new ToolStripMenuItem();
-        searchLibrary = new DarkUI.Controls.DarkSearchBox();
-        lblFilterCategory = new DarkUI.Controls.DarkLabel();
-        cboFilterCategory = new DarkUI.Controls.DarkCheckedComboBox(components);
-        lblFilterRegion = new DarkUI.Controls.DarkLabel();
-        cboFilterRegion = new DarkUI.Controls.DarkCheckedComboBox(components);
-        lblFilterFormat = new DarkUI.Controls.DarkLabel();
-        cboFilterFormat = new DarkUI.Controls.DarkCheckedComboBox(components);
-        lblFilterGroup = new DarkUI.Controls.DarkLabel();
-        cboFilterGroup = new DarkUI.Controls.DarkComboBox();
-        btnFilterClear = new DarkUI.Controls.DarkButton();
-        chipsFilter = new DarkUI.Controls.DarkChipsPanel(components);
-        lblFilterPreset = new DarkUI.Controls.DarkLabel();
-        cboFilterPreset = new DarkUI.Controls.DarkComboBox();
-        lblFilterEmpty = new DarkUI.Controls.DarkLabel();
-        splitMain = new DarkUI.Controls.DarkSplitContainer();
-        splitMainPane1 = new DarkUI.Controls.DarkSplitPane();
-        gridLibrary = new DarkUI.Controls.DarkDataGridView();
-        splitMainPane2 = new DarkUI.Controls.DarkSplitPane();
-        tabsWorkspace = new DarkUI.Controls.DarkTabControl();
-        tabWorkspaceGeneral = new DarkUI.Controls.DarkTabPage();
-        tabsDetails = new DarkUI.Controls.DarkTabControl();
-        tabOverview = new DarkUI.Controls.DarkTabPage();
-        gridOverview = new DarkUI.Controls.DarkDataGridView();
-        btnOverviewCopySelected = new DarkUI.Controls.DarkButton();
-        btnOverviewCopyAll = new DarkUI.Controls.DarkButton();
-        tabArtwork = new DarkUI.Controls.DarkTabPage();
-        splitArtwork = new DarkUI.Controls.DarkSplitContainer();
-        splitArtworkPane1 = new DarkUI.Controls.DarkSplitPane();
-        sectionIcon = new DarkUI.Controls.DarkSectionPanel();
+        searchLibrary = new PS5PKGTool.UI.Controls.AppSearchBox();
+        lblFilterCategory = new PS5PKGTool.UI.Controls.AppLabel();
+        cboFilterCategory = new PS5PKGTool.UI.Controls.AppCheckedComboBox(components);
+        lblFilterRegion = new PS5PKGTool.UI.Controls.AppLabel();
+        cboFilterRegion = new PS5PKGTool.UI.Controls.AppCheckedComboBox(components);
+        lblFilterFormat = new PS5PKGTool.UI.Controls.AppLabel();
+        cboFilterFormat = new PS5PKGTool.UI.Controls.AppCheckedComboBox(components);
+        lblFilterGroup = new PS5PKGTool.UI.Controls.AppLabel();
+        cboFilterGroup = new PS5PKGTool.UI.Controls.AppComboBox();
+        btnFilterClear = new PS5PKGTool.UI.Controls.AppButton();
+        chipsFilter = new PS5PKGTool.UI.Controls.AppChipsPanel(components);
+        lblFilterPreset = new PS5PKGTool.UI.Controls.AppLabel();
+        cboFilterPreset = new PS5PKGTool.UI.Controls.AppComboBox();
+        lblFilterEmpty = new PS5PKGTool.UI.Controls.AppLabel();
+        splitMain = new PS5PKGTool.UI.Controls.AppSplitContainer();
+        splitMainPane1 = new PS5PKGTool.UI.Controls.AppSplitPane();
+        gridLibrary = new PS5PKGTool.UI.Controls.AppDataGridView();
+        splitMainPane2 = new PS5PKGTool.UI.Controls.AppSplitPane();
+        tabsWorkspace = new PS5PKGTool.UI.Controls.AppTabControl();
+        tabWorkspaceGeneral = new PS5PKGTool.UI.Controls.AppTabPage();
+        tabsDetails = new PS5PKGTool.UI.Controls.AppTabControl();
+        tabOverview = new PS5PKGTool.UI.Controls.AppTabPage();
+        gridOverview = new PS5PKGTool.UI.Controls.AppDataGridView();
+        btnOverviewCopySelected = new PS5PKGTool.UI.Controls.AppButton();
+        btnOverviewCopyAll = new PS5PKGTool.UI.Controls.AppButton();
+        tabArtwork = new PS5PKGTool.UI.Controls.AppTabPage();
+        splitArtwork = new PS5PKGTool.UI.Controls.AppSplitContainer();
+        splitArtworkPane1 = new PS5PKGTool.UI.Controls.AppSplitPane();
+        sectionIcon = new PS5PKGTool.UI.Controls.AppSectionPanel();
         pictureIcon = new PictureBox();
-        contextArtwork = new DarkUI.Controls.DarkContextMenu();
+        contextArtwork = new PS5PKGTool.UI.Controls.AppContextMenu();
         menuArtworkSaveThis = new ToolStripMenuItem();
         menuArtworkSaveAll = new ToolStripMenuItem();
-        splitArtworkPane2 = new DarkUI.Controls.DarkSplitPane();
-        sectionBackground = new DarkUI.Controls.DarkSectionPanel();
-        tabsBackgrounds = new DarkUI.Controls.DarkTabControl();
-        tabPic0 = new DarkUI.Controls.DarkTabPage();
+        splitArtworkPane2 = new PS5PKGTool.UI.Controls.AppSplitPane();
+        sectionBackground = new PS5PKGTool.UI.Controls.AppSectionPanel();
+        tabsBackgrounds = new PS5PKGTool.UI.Controls.AppTabControl();
+        tabPic0 = new PS5PKGTool.UI.Controls.AppTabPage();
         pictureBackground0 = new PictureBox();
-        tabPic1 = new DarkUI.Controls.DarkTabPage();
+        tabPic1 = new PS5PKGTool.UI.Controls.AppTabPage();
         pictureBackground1 = new PictureBox();
-        tabPic2 = new DarkUI.Controls.DarkTabPage();
+        tabPic2 = new PS5PKGTool.UI.Controls.AppTabPage();
         pictureBackground2 = new PictureBox();
-        btnArtworkSaveAll = new DarkUI.Controls.DarkButton();
-        tabTrophies = new DarkUI.Controls.DarkTabPage();
-        gridTrophies = new DarkUI.Controls.DarkDataGridView();
-        contextTrophies = new DarkUI.Controls.DarkContextMenu();
+        btnArtworkSaveAll = new PS5PKGTool.UI.Controls.AppButton();
+        tabTrophies = new PS5PKGTool.UI.Controls.AppTabPage();
+        gridTrophies = new PS5PKGTool.UI.Controls.AppDataGridView();
+        contextTrophies = new PS5PKGTool.UI.Controls.AppContextMenu();
         menuTrophySaveIcon = new ToolStripMenuItem();
         menuTrophySaveAllIcons = new ToolStripMenuItem();
         menuTrophyExportCsv = new ToolStripMenuItem();
-        lblTrophySummary = new DarkUI.Controls.DarkLabel();
-        searchTrophy = new DarkUI.Controls.DarkSearchBox();
-        chkTrophyShowHidden = new DarkUI.Controls.DarkCheckBox();
-        chkTrophyBronze = new DarkUI.Controls.DarkCheckBox();
-        chkTrophySilver = new DarkUI.Controls.DarkCheckBox();
-        chkTrophyGold = new DarkUI.Controls.DarkCheckBox();
-        chkTrophyPlatinum = new DarkUI.Controls.DarkCheckBox();
-        btnTrophyExportCsv = new DarkUI.Controls.DarkButton();
-        btnTrophySaveIcons = new DarkUI.Controls.DarkButton();
-        tabActivities = new DarkUI.Controls.DarkTabPage();
-        tabsUds = new DarkUI.Controls.DarkTabControl();
-        tabUdsEvents = new DarkUI.Controls.DarkTabPage();
-        splitUdsEvents = new DarkUI.Controls.DarkSplitContainer();
-        splitUdsEventsPane1 = new DarkUI.Controls.DarkSplitPane();
-        gridUdsEvents = new DarkUI.Controls.DarkDataGridView();
-        splitUdsEventsPane2 = new DarkUI.Controls.DarkSplitPane();
-        gridUdsEventProperties = new DarkUI.Controls.DarkDataGridView();
-        tabUdsStats = new DarkUI.Controls.DarkTabPage();
-        gridUdsStats = new DarkUI.Controls.DarkDataGridView();
-        tabUdsEnums = new DarkUI.Controls.DarkTabPage();
-        gridUdsEnums = new DarkUI.Controls.DarkDataGridView();
-        tabUdsRules = new DarkUI.Controls.DarkTabPage();
-        gridUdsRules = new DarkUI.Controls.DarkDataGridView();
-        lblActivitiesSummary = new DarkUI.Controls.DarkLabel();
-        searchUds = new DarkUI.Controls.DarkSearchBox();
-        btnUdsCopySelected = new DarkUI.Controls.DarkButton();
-        btnUdsCopyAll = new DarkUI.Controls.DarkButton();
-        tabFiles = new DarkUI.Controls.DarkTabPage();
-        sectionFileBrowser = new DarkUI.Controls.DarkSectionPanel();
-        splitFileBrowser = new DarkUI.Controls.DarkSplitContainer();
-        splitFileBrowserPane1 = new DarkUI.Controls.DarkSplitPane();
-        treeFiles = new DarkUI.Controls.DarkTreeView();
-        contextTreeFiles = new DarkUI.Controls.DarkContextMenu();
+        lblTrophySummary = new PS5PKGTool.UI.Controls.AppLabel();
+        searchTrophy = new PS5PKGTool.UI.Controls.AppSearchBox();
+        chkTrophyShowHidden = new PS5PKGTool.UI.Controls.AppCheckBox();
+        chkTrophyBronze = new PS5PKGTool.UI.Controls.AppCheckBox();
+        chkTrophySilver = new PS5PKGTool.UI.Controls.AppCheckBox();
+        chkTrophyGold = new PS5PKGTool.UI.Controls.AppCheckBox();
+        chkTrophyPlatinum = new PS5PKGTool.UI.Controls.AppCheckBox();
+        btnTrophyExportCsv = new PS5PKGTool.UI.Controls.AppButton();
+        btnTrophySaveIcons = new PS5PKGTool.UI.Controls.AppButton();
+        tabActivities = new PS5PKGTool.UI.Controls.AppTabPage();
+        tabsUds = new PS5PKGTool.UI.Controls.AppTabControl();
+        tabUdsEvents = new PS5PKGTool.UI.Controls.AppTabPage();
+        splitUdsEvents = new PS5PKGTool.UI.Controls.AppSplitContainer();
+        splitUdsEventsPane1 = new PS5PKGTool.UI.Controls.AppSplitPane();
+        gridUdsEvents = new PS5PKGTool.UI.Controls.AppDataGridView();
+        splitUdsEventsPane2 = new PS5PKGTool.UI.Controls.AppSplitPane();
+        gridUdsEventProperties = new PS5PKGTool.UI.Controls.AppDataGridView();
+        tabUdsStats = new PS5PKGTool.UI.Controls.AppTabPage();
+        gridUdsStats = new PS5PKGTool.UI.Controls.AppDataGridView();
+        tabUdsEnums = new PS5PKGTool.UI.Controls.AppTabPage();
+        gridUdsEnums = new PS5PKGTool.UI.Controls.AppDataGridView();
+        tabUdsRules = new PS5PKGTool.UI.Controls.AppTabPage();
+        gridUdsRules = new PS5PKGTool.UI.Controls.AppDataGridView();
+        lblActivitiesSummary = new PS5PKGTool.UI.Controls.AppLabel();
+        searchUds = new PS5PKGTool.UI.Controls.AppSearchBox();
+        btnUdsCopySelected = new PS5PKGTool.UI.Controls.AppButton();
+        btnUdsCopyAll = new PS5PKGTool.UI.Controls.AppButton();
+        tabFiles = new PS5PKGTool.UI.Controls.AppTabPage();
+        sectionFileBrowser = new PS5PKGTool.UI.Controls.AppSectionPanel();
+        splitFileBrowser = new PS5PKGTool.UI.Controls.AppSplitContainer();
+        splitFileBrowserPane1 = new PS5PKGTool.UI.Controls.AppSplitPane();
+        treeFiles = new PS5PKGTool.UI.Controls.AppTreeView();
+        contextTreeFiles = new PS5PKGTool.UI.Controls.AppContextMenu();
         menuTreeExpand = new ToolStripMenuItem();
         menuTreeCollapse = new ToolStripMenuItem();
         menuTreeExpandAll = new ToolStripMenuItem();
         menuTreeCollapseAll = new ToolStripMenuItem();
-        menuTreeSeparator = new DarkUI.Controls.DarkToolStripSeparator();
+        menuTreeSeparator = new PS5PKGTool.UI.Controls.AppToolStripSeparator();
         menuTreeCopyPath = new ToolStripMenuItem();
         menuTreeExtract = new ToolStripMenuItem();
-        splitFileBrowserPane2 = new DarkUI.Controls.DarkSplitPane();
-        splitFileContentPreview = new DarkUI.Controls.DarkSplitContainer();
-        splitFileContentPreviewPane1 = new DarkUI.Controls.DarkSplitPane();
-        fileListPanel = new DarkUI.Controls.DarkPanel();
-        searchFileFilter = new DarkUI.Controls.DarkSearchBox();
-        listFiles = new DarkUI.Controls.DarkListView();
-        contextFiles = new DarkUI.Controls.DarkContextMenu();
+        splitFileBrowserPane2 = new PS5PKGTool.UI.Controls.AppSplitPane();
+        splitFileContentPreview = new PS5PKGTool.UI.Controls.AppSplitContainer();
+        splitFileContentPreviewPane1 = new PS5PKGTool.UI.Controls.AppSplitPane();
+        fileListPanel = new PS5PKGTool.UI.Controls.AppPanel();
+        searchFileFilter = new PS5PKGTool.UI.Controls.AppSearchBox();
+        listFiles = new PS5PKGTool.UI.Controls.AppListView();
+        contextFiles = new PS5PKGTool.UI.Controls.AppContextMenu();
         menuFileOpenContained = new ToolStripMenuItem();
         menuFileExtractContained = new ToolStripMenuItem();
         menuFileExtractSelected = new ToolStripMenuItem();
-        menuFileCopySeparator = new DarkUI.Controls.DarkToolStripSeparator();
+        menuFileCopySeparator = new PS5PKGTool.UI.Controls.AppToolStripSeparator();
         menuFileCopyPath = new ToolStripMenuItem();
         menuFileCopyName = new ToolStripMenuItem();
-        menuFileContainerSeparator = new DarkUI.Controls.DarkToolStripSeparator();
+        menuFileContainerSeparator = new PS5PKGTool.UI.Controls.AppToolStripSeparator();
         menuFileRevealContainer = new ToolStripMenuItem();
-        splitFileContentPreviewPane2 = new DarkUI.Controls.DarkSplitPane();
-        sectionFileViewer = new DarkUI.Controls.DarkSectionPanel();
+        splitFileContentPreviewPane2 = new PS5PKGTool.UI.Controls.AppSplitPane();
+        sectionFileViewer = new PS5PKGTool.UI.Controls.AppSectionPanel();
         mediaFileHost = new System.Windows.Forms.Integration.ElementHost();
-        txtHexViewer = new DarkUI.Controls.DarkRichTextBox();
-        txtFileViewer = new DarkUI.Controls.DarkRichTextBox();
+        txtHexViewer = new PS5PKGTool.UI.Controls.AppRichTextBox();
+        txtFileViewer = new PS5PKGTool.UI.Controls.AppRichTextBox();
         pictureFileViewer = new PictureBox();
-        lblFileViewerInfo = new DarkUI.Controls.DarkLabel();
-        btnMediaLoad = new DarkUI.Controls.DarkButton();
-        btnMediaPlay = new DarkUI.Controls.DarkButton();
-        btnMediaPause = new DarkUI.Controls.DarkButton();
-        btnMediaStop = new DarkUI.Controls.DarkButton();
-        btnHexPrevious = new DarkUI.Controls.DarkButton();
-        btnHexNext = new DarkUI.Controls.DarkButton();
-        lblHexPage = new DarkUI.Controls.DarkLabel();
-        lblFilesSummary = new DarkUI.Controls.DarkLabel();
-        btnFileExtractAll = new DarkUI.Controls.DarkButton();
-        btnFileCancel = new DarkUI.Controls.DarkButton();
-        tabExecutable = new DarkUI.Controls.DarkTabPage();
-        tabsExecutable = new DarkUI.Controls.DarkTabControl();
-        tabExecModules = new DarkUI.Controls.DarkTabPage();
-        gridModules = new DarkUI.Controls.DarkDataGridView();
-        tabExecElf = new DarkUI.Controls.DarkTabPage();
-        splitExecElf = new DarkUI.Controls.DarkSplitContainer();
-        splitExecElfPane1 = new DarkUI.Controls.DarkSplitPane();
-        gridElfPrograms = new DarkUI.Controls.DarkDataGridView();
-        splitExecElfPane2 = new DarkUI.Controls.DarkSplitPane();
-        gridElfSections = new DarkUI.Controls.DarkDataGridView();
-        tabExecSelf = new DarkUI.Controls.DarkTabPage();
-        splitExecSelf = new DarkUI.Controls.DarkSplitContainer();
-        splitExecSelfPane1 = new DarkUI.Controls.DarkSplitPane();
-        gridSelfHeader = new DarkUI.Controls.DarkDataGridView();
-        splitExecSelfPane2 = new DarkUI.Controls.DarkSplitPane();
-        gridSelfSegments = new DarkUI.Controls.DarkDataGridView();
-        lblExecutableSummary = new DarkUI.Controls.DarkLabel();
-        searchExecutable = new DarkUI.Controls.DarkSearchBox();
-        btnExecCopySelected = new DarkUI.Controls.DarkButton();
-        btnExecCopyAll = new DarkUI.Controls.DarkButton();
-        btnExecExtract = new DarkUI.Controls.DarkButton();
-        btnExecHash = new DarkUI.Controls.DarkButton();
-        tabRaw = new DarkUI.Controls.DarkTabPage();
-        txtRawMetadata = new DarkUI.Controls.DarkRichTextBox();
-        btnRawFormatted = new DarkUI.Controls.DarkButton();
-        btnRawOriginal = new DarkUI.Controls.DarkButton();
-        btnCopyRawJson = new DarkUI.Controls.DarkButton();
-        tabPackage = new DarkUI.Controls.DarkTabPage();
-        tabsPackage = new DarkUI.Controls.DarkTabControl();
-        tabPkgContainer = new DarkUI.Controls.DarkTabPage();
-        gridPkgHeader = new DarkUI.Controls.DarkDataGridView();
-        tabPkgSegments = new DarkUI.Controls.DarkTabPage();
-        gridPkgSegments = new DarkUI.Controls.DarkDataGridView();
-        tabPkgEntries = new DarkUI.Controls.DarkTabPage();
-        gridPkgEntries = new DarkUI.Controls.DarkDataGridView();
-        tabMetadata = new DarkUI.Controls.DarkTabPage();
-        tabsMetadata = new DarkUI.Controls.DarkTabControl();
-        tabPkgSfo = new DarkUI.Controls.DarkTabPage();
-        gridParamSfo = new DarkUI.Controls.DarkDataGridView();
-        tabPkgKeystone = new DarkUI.Controls.DarkTabPage();
-        gridKeystone = new DarkUI.Controls.DarkDataGridView();
-        tabPkgPlayGo = new DarkUI.Controls.DarkTabPage();
-        tabsPlayGo = new DarkUI.Controls.DarkTabControl();
-        tabPlayGoChunks = new DarkUI.Controls.DarkTabPage();
-        gridPlayGoChunks = new DarkUI.Controls.DarkDataGridView();
-        tabPlayGoScenarios = new DarkUI.Controls.DarkTabPage();
-        gridPlayGoScenarios = new DarkUI.Controls.DarkDataGridView();
-        tabPlayGoFiles = new DarkUI.Controls.DarkTabPage();
-        gridPlayGoFiles = new DarkUI.Controls.DarkDataGridView();
-        lblPlayGoSummary = new DarkUI.Controls.DarkLabel();
-        tabPkgSi = new DarkUI.Controls.DarkTabPage();
-        gridSi = new DarkUI.Controls.DarkDataGridView();
-        tabWorkspaceTools = new DarkUI.Controls.DarkTabPage();
-        toolsLayout = new DarkUI.Controls.DarkTableLayoutPanel();
-        sectionJob = new DarkUI.Controls.DarkSectionPanel();
-        lblImageSourcePath = new DarkUI.Controls.DarkLabel();
-        lblImageFormat = new DarkUI.Controls.DarkLabel();
-        lblImageAction = new DarkUI.Controls.DarkLabel();
-        cboImageAction = new DarkUI.Controls.DarkComboBox();
-        lblImageSource = new DarkUI.Controls.DarkLabel();
-        tabsImageTargets = new DarkUI.Controls.DarkTabControl();
-        tabTargetExfat = new DarkUI.Controls.DarkTabPage();
-        lblOutExfat = new DarkUI.Controls.DarkLabel();
-        txtOutExfat = new DarkUI.Controls.DarkTextBox();
-        btnOutExfat = new DarkUI.Controls.DarkButton();
-        chkOutExfat = new DarkUI.Controls.DarkCheckBox();
-        lblImageCluster = new DarkUI.Controls.DarkLabel();
-        cboImageCluster = new DarkUI.Controls.DarkComboBox();
-        chkImageAmpr = new DarkUI.Controls.DarkCheckBox();
-        tabTargetFfpkg = new DarkUI.Controls.DarkTabPage();
-        lblOutFfpkg = new DarkUI.Controls.DarkLabel();
-        txtOutFfpkg = new DarkUI.Controls.DarkTextBox();
-        btnOutFfpkg = new DarkUI.Controls.DarkButton();
-        chkOutFfpkg = new DarkUI.Controls.DarkCheckBox();
-        lblImageBlock = new DarkUI.Controls.DarkLabel();
-        cboImageBlock = new DarkUI.Controls.DarkComboBox();
-        lblImageFragment = new DarkUI.Controls.DarkLabel();
-        cboImageFragment = new DarkUI.Controls.DarkComboBox();
-        lblImageDensity = new DarkUI.Controls.DarkLabel();
-        cboImageDensity = new DarkUI.Controls.DarkComboBox();
-        lblImageMinFree = new DarkUI.Controls.DarkLabel();
-        nudImageMinFree = new DarkUI.Controls.DarkNumericUpDown();
-        tabTargetFfpfsc = new DarkUI.Controls.DarkTabPage();
-        lblOutFfpfsc = new DarkUI.Controls.DarkLabel();
-        txtOutFfpfsc = new DarkUI.Controls.DarkTextBox();
-        btnOutFfpfsc = new DarkUI.Controls.DarkButton();
-        chkOutFfpfsc = new DarkUI.Controls.DarkCheckBox();
-        lblImageLevel = new DarkUI.Controls.DarkLabel();
-        nudImageLevel = new DarkUI.Controls.DarkNumericUpDown();
-        lblImageGain = new DarkUI.Controls.DarkLabel();
-        nudImageGain = new DarkUI.Controls.DarkNumericUpDown();
-        tabTargetDebug = new DarkUI.Controls.DarkTabPage();
-        lblOutDebug = new DarkUI.Controls.DarkLabel();
-        txtOutDebug = new DarkUI.Controls.DarkTextBox();
-        btnOutDebug = new DarkUI.Controls.DarkButton();
-        chkOutDebug = new DarkUI.Controls.DarkCheckBox();
-        lblDbgPasscode = new DarkUI.Controls.DarkLabel();
-        txtDbgPasscode = new DarkUI.Controls.DarkTextBox();
-        lblImageSdk = new DarkUI.Controls.DarkLabel();
-        cboImageSdk = new DarkUI.Controls.DarkComboBox();
-        lblImagePkgType = new DarkUI.Controls.DarkLabel();
-        cboImagePkgType = new DarkUI.Controls.DarkComboBox();
-        lblImageCompression = new DarkUI.Controls.DarkLabel();
-        cboImageCompression = new DarkUI.Controls.DarkComboBox();
-        lblImageKrakenLevel = new DarkUI.Controls.DarkLabel();
-        cboImageKrakenLevel = new DarkUI.Controls.DarkComboBox();
-        lblImagePlayGo = new DarkUI.Controls.DarkLabel();
-        nudImagePlayGoChunks = new DarkUI.Controls.DarkNumericUpDown();
-        lblImageKrakenThreads = new DarkUI.Controls.DarkLabel();
-        nudImageKrakenThreads = new DarkUI.Controls.DarkNumericUpDown();
-        lblImageTemp = new DarkUI.Controls.DarkLabel();
-        txtImageTemp = new DarkUI.Controls.DarkTextBox();
-        btnImageTempBrowse = new DarkUI.Controls.DarkButton();
-        lblImageDrm = new DarkUI.Controls.DarkLabel();
-        cboImageDrm = new DarkUI.Controls.DarkComboBox();
-        lblImageBackend = new DarkUI.Controls.DarkLabel();
-        cboImageBackend = new DarkUI.Controls.DarkComboBox();
-        chkImageFakeSign = new DarkUI.Controls.DarkCheckBox();
-        chkImageRightSprx = new DarkUI.Controls.DarkCheckBox();
-        chkImageDeterministic = new DarkUI.Controls.DarkCheckBox();
-        chkImageAdvancedOptions = new DarkUI.Controls.DarkCheckBox();
-        tabTargetOptions = new DarkUI.Controls.DarkTabPage();
-        lblImageOutput = new DarkUI.Controls.DarkLabel();
-        txtImageOutput = new DarkUI.Controls.DarkTextBox();
-        btnImageBrowseOutput = new DarkUI.Controls.DarkButton();
-        chkImageOverwrite = new DarkUI.Controls.DarkCheckBox();
-        lblImagePasscode = new DarkUI.Controls.DarkLabel();
-        txtImagePasscode = new DarkUI.Controls.DarkTextBox();
-        toolsFooter = new DarkUI.Controls.DarkFooterBar();
-        lblImageStatus = new DarkUI.Controls.DarkLabel();
-        btnImageRun = new DarkUI.Controls.DarkButton();
-        btnImageCancel = new DarkUI.Controls.DarkButton();
-        tabTasks = new DarkUI.Controls.DarkTabPage();
-        tasksLayout = new DarkUI.Controls.DarkTableLayoutPanel();
-        chkTaskAutoStart = new DarkUI.Controls.DarkCheckBox();
-        btnTaskStart = new DarkUI.Controls.DarkButton();
-        btnTaskCancel = new DarkUI.Controls.DarkButton();
-        btnTaskRetry = new DarkUI.Controls.DarkButton();
-        btnTaskRemove = new DarkUI.Controls.DarkButton();
-        btnTaskOpen = new DarkUI.Controls.DarkButton();
-        btnTaskClear = new DarkUI.Controls.DarkButton();
-        lblTaskGroup = new DarkUI.Controls.DarkLabel();
-        cboTaskGroup = new DarkUI.Controls.DarkComboBox();
-        cboTaskFilter = new DarkUI.Controls.DarkComboBox();
-        searchTasks = new DarkUI.Controls.DarkSearchBox();
-        btnTaskToggleDetails = new DarkUI.Controls.DarkButton();
-        chkTaskFollow = new DarkUI.Controls.DarkCheckBox();
-        lblTaskSummary = new DarkUI.Controls.DarkLabel();
-        splitTasks = new DarkUI.Controls.DarkSplitContainer();
-        splitTasksPane1 = new DarkUI.Controls.DarkSplitPane();
-        sectionTasksList = new DarkUI.Controls.DarkSectionPanel();
-        gridTasks = new DarkUI.Controls.DarkDataGridView();
+        lblFileViewerInfo = new PS5PKGTool.UI.Controls.AppLabel();
+        btnMediaLoad = new PS5PKGTool.UI.Controls.AppButton();
+        btnMediaPlay = new PS5PKGTool.UI.Controls.AppButton();
+        btnMediaPause = new PS5PKGTool.UI.Controls.AppButton();
+        btnMediaStop = new PS5PKGTool.UI.Controls.AppButton();
+        btnHexPrevious = new PS5PKGTool.UI.Controls.AppButton();
+        btnHexNext = new PS5PKGTool.UI.Controls.AppButton();
+        lblHexPage = new PS5PKGTool.UI.Controls.AppLabel();
+        lblFilesSummary = new PS5PKGTool.UI.Controls.AppLabel();
+        btnFileExtractAll = new PS5PKGTool.UI.Controls.AppButton();
+        btnFileCancel = new PS5PKGTool.UI.Controls.AppButton();
+        tabExecutable = new PS5PKGTool.UI.Controls.AppTabPage();
+        tabsExecutable = new PS5PKGTool.UI.Controls.AppTabControl();
+        tabExecModules = new PS5PKGTool.UI.Controls.AppTabPage();
+        gridModules = new PS5PKGTool.UI.Controls.AppDataGridView();
+        tabExecElf = new PS5PKGTool.UI.Controls.AppTabPage();
+        splitExecElf = new PS5PKGTool.UI.Controls.AppSplitContainer();
+        splitExecElfPane1 = new PS5PKGTool.UI.Controls.AppSplitPane();
+        gridElfPrograms = new PS5PKGTool.UI.Controls.AppDataGridView();
+        splitExecElfPane2 = new PS5PKGTool.UI.Controls.AppSplitPane();
+        gridElfSections = new PS5PKGTool.UI.Controls.AppDataGridView();
+        tabExecSelf = new PS5PKGTool.UI.Controls.AppTabPage();
+        splitExecSelf = new PS5PKGTool.UI.Controls.AppSplitContainer();
+        splitExecSelfPane1 = new PS5PKGTool.UI.Controls.AppSplitPane();
+        gridSelfHeader = new PS5PKGTool.UI.Controls.AppDataGridView();
+        splitExecSelfPane2 = new PS5PKGTool.UI.Controls.AppSplitPane();
+        gridSelfSegments = new PS5PKGTool.UI.Controls.AppDataGridView();
+        lblExecutableSummary = new PS5PKGTool.UI.Controls.AppLabel();
+        searchExecutable = new PS5PKGTool.UI.Controls.AppSearchBox();
+        btnExecCopySelected = new PS5PKGTool.UI.Controls.AppButton();
+        btnExecCopyAll = new PS5PKGTool.UI.Controls.AppButton();
+        btnExecExtract = new PS5PKGTool.UI.Controls.AppButton();
+        btnExecHash = new PS5PKGTool.UI.Controls.AppButton();
+        tabRaw = new PS5PKGTool.UI.Controls.AppTabPage();
+        txtRawMetadata = new PS5PKGTool.UI.Controls.AppRichTextBox();
+        btnRawFormatted = new PS5PKGTool.UI.Controls.AppButton();
+        btnRawOriginal = new PS5PKGTool.UI.Controls.AppButton();
+        btnCopyRawJson = new PS5PKGTool.UI.Controls.AppButton();
+        tabPackage = new PS5PKGTool.UI.Controls.AppTabPage();
+        tabsPackage = new PS5PKGTool.UI.Controls.AppTabControl();
+        tabPkgContainer = new PS5PKGTool.UI.Controls.AppTabPage();
+        gridPkgHeader = new PS5PKGTool.UI.Controls.AppDataGridView();
+        tabPkgSegments = new PS5PKGTool.UI.Controls.AppTabPage();
+        gridPkgSegments = new PS5PKGTool.UI.Controls.AppDataGridView();
+        tabPkgEntries = new PS5PKGTool.UI.Controls.AppTabPage();
+        gridPkgEntries = new PS5PKGTool.UI.Controls.AppDataGridView();
+        tabMetadata = new PS5PKGTool.UI.Controls.AppTabPage();
+        tabsMetadata = new PS5PKGTool.UI.Controls.AppTabControl();
+        tabPkgSfo = new PS5PKGTool.UI.Controls.AppTabPage();
+        gridParamSfo = new PS5PKGTool.UI.Controls.AppDataGridView();
+        tabPkgKeystone = new PS5PKGTool.UI.Controls.AppTabPage();
+        gridKeystone = new PS5PKGTool.UI.Controls.AppDataGridView();
+        tabPkgPlayGo = new PS5PKGTool.UI.Controls.AppTabPage();
+        tabsPlayGo = new PS5PKGTool.UI.Controls.AppTabControl();
+        tabPlayGoChunks = new PS5PKGTool.UI.Controls.AppTabPage();
+        gridPlayGoChunks = new PS5PKGTool.UI.Controls.AppDataGridView();
+        tabPlayGoScenarios = new PS5PKGTool.UI.Controls.AppTabPage();
+        gridPlayGoScenarios = new PS5PKGTool.UI.Controls.AppDataGridView();
+        tabPlayGoFiles = new PS5PKGTool.UI.Controls.AppTabPage();
+        gridPlayGoFiles = new PS5PKGTool.UI.Controls.AppDataGridView();
+        lblPlayGoSummary = new PS5PKGTool.UI.Controls.AppLabel();
+        tabPkgSi = new PS5PKGTool.UI.Controls.AppTabPage();
+        gridSi = new PS5PKGTool.UI.Controls.AppDataGridView();
+        tabWorkspaceTools = new PS5PKGTool.UI.Controls.AppTabPage();
+        toolsLayout = new PS5PKGTool.UI.Controls.AppTableLayoutPanel();
+        sectionJob = new PS5PKGTool.UI.Controls.AppSectionPanel();
+        lblImageSourcePath = new PS5PKGTool.UI.Controls.AppLabel();
+        lblImageFormat = new PS5PKGTool.UI.Controls.AppLabel();
+        lblImageAction = new PS5PKGTool.UI.Controls.AppLabel();
+        cboImageAction = new PS5PKGTool.UI.Controls.AppComboBox();
+        lblImageSource = new PS5PKGTool.UI.Controls.AppLabel();
+        tabsImageTargets = new PS5PKGTool.UI.Controls.AppTabControl();
+        tabTargetExfat = new PS5PKGTool.UI.Controls.AppTabPage();
+        lblOutExfat = new PS5PKGTool.UI.Controls.AppLabel();
+        txtOutExfat = new PS5PKGTool.UI.Controls.AppTextBox();
+        btnOutExfat = new PS5PKGTool.UI.Controls.AppButton();
+        chkOutExfat = new PS5PKGTool.UI.Controls.AppCheckBox();
+        lblImageCluster = new PS5PKGTool.UI.Controls.AppLabel();
+        cboImageCluster = new PS5PKGTool.UI.Controls.AppComboBox();
+        chkImageAmpr = new PS5PKGTool.UI.Controls.AppCheckBox();
+        tabTargetFfpkg = new PS5PKGTool.UI.Controls.AppTabPage();
+        lblOutFfpkg = new PS5PKGTool.UI.Controls.AppLabel();
+        txtOutFfpkg = new PS5PKGTool.UI.Controls.AppTextBox();
+        btnOutFfpkg = new PS5PKGTool.UI.Controls.AppButton();
+        chkOutFfpkg = new PS5PKGTool.UI.Controls.AppCheckBox();
+        lblImageBlock = new PS5PKGTool.UI.Controls.AppLabel();
+        cboImageBlock = new PS5PKGTool.UI.Controls.AppComboBox();
+        lblImageFragment = new PS5PKGTool.UI.Controls.AppLabel();
+        cboImageFragment = new PS5PKGTool.UI.Controls.AppComboBox();
+        lblImageDensity = new PS5PKGTool.UI.Controls.AppLabel();
+        cboImageDensity = new PS5PKGTool.UI.Controls.AppComboBox();
+        lblImageMinFree = new PS5PKGTool.UI.Controls.AppLabel();
+        nudImageMinFree = new PS5PKGTool.UI.Controls.AppNumericUpDown();
+        tabTargetFfpfsc = new PS5PKGTool.UI.Controls.AppTabPage();
+        lblOutFfpfsc = new PS5PKGTool.UI.Controls.AppLabel();
+        txtOutFfpfsc = new PS5PKGTool.UI.Controls.AppTextBox();
+        btnOutFfpfsc = new PS5PKGTool.UI.Controls.AppButton();
+        chkOutFfpfsc = new PS5PKGTool.UI.Controls.AppCheckBox();
+        lblImageLevel = new PS5PKGTool.UI.Controls.AppLabel();
+        nudImageLevel = new PS5PKGTool.UI.Controls.AppNumericUpDown();
+        lblImageGain = new PS5PKGTool.UI.Controls.AppLabel();
+        nudImageGain = new PS5PKGTool.UI.Controls.AppNumericUpDown();
+        tabTargetDebug = new PS5PKGTool.UI.Controls.AppTabPage();
+        lblOutDebug = new PS5PKGTool.UI.Controls.AppLabel();
+        txtOutDebug = new PS5PKGTool.UI.Controls.AppTextBox();
+        btnOutDebug = new PS5PKGTool.UI.Controls.AppButton();
+        chkOutDebug = new PS5PKGTool.UI.Controls.AppCheckBox();
+        lblDbgPasscode = new PS5PKGTool.UI.Controls.AppLabel();
+        txtDbgPasscode = new PS5PKGTool.UI.Controls.AppTextBox();
+        lblImageSdk = new PS5PKGTool.UI.Controls.AppLabel();
+        cboImageSdk = new PS5PKGTool.UI.Controls.AppComboBox();
+        lblImagePkgType = new PS5PKGTool.UI.Controls.AppLabel();
+        cboImagePkgType = new PS5PKGTool.UI.Controls.AppComboBox();
+        lblImageCompression = new PS5PKGTool.UI.Controls.AppLabel();
+        cboImageCompression = new PS5PKGTool.UI.Controls.AppComboBox();
+        lblImageKrakenLevel = new PS5PKGTool.UI.Controls.AppLabel();
+        cboImageKrakenLevel = new PS5PKGTool.UI.Controls.AppComboBox();
+        lblImagePlayGo = new PS5PKGTool.UI.Controls.AppLabel();
+        nudImagePlayGoChunks = new PS5PKGTool.UI.Controls.AppNumericUpDown();
+        lblImageKrakenThreads = new PS5PKGTool.UI.Controls.AppLabel();
+        nudImageKrakenThreads = new PS5PKGTool.UI.Controls.AppNumericUpDown();
+        lblImageTemp = new PS5PKGTool.UI.Controls.AppLabel();
+        txtImageTemp = new PS5PKGTool.UI.Controls.AppTextBox();
+        btnImageTempBrowse = new PS5PKGTool.UI.Controls.AppButton();
+        lblImageDrm = new PS5PKGTool.UI.Controls.AppLabel();
+        cboImageDrm = new PS5PKGTool.UI.Controls.AppComboBox();
+        lblImageBackend = new PS5PKGTool.UI.Controls.AppLabel();
+        cboImageBackend = new PS5PKGTool.UI.Controls.AppComboBox();
+        chkImageFakeSign = new PS5PKGTool.UI.Controls.AppCheckBox();
+        chkImageRightSprx = new PS5PKGTool.UI.Controls.AppCheckBox();
+        chkImageDeterministic = new PS5PKGTool.UI.Controls.AppCheckBox();
+        chkImageAdvancedOptions = new PS5PKGTool.UI.Controls.AppCheckBox();
+        tabTargetOptions = new PS5PKGTool.UI.Controls.AppTabPage();
+        lblImageOutput = new PS5PKGTool.UI.Controls.AppLabel();
+        txtImageOutput = new PS5PKGTool.UI.Controls.AppTextBox();
+        btnImageBrowseOutput = new PS5PKGTool.UI.Controls.AppButton();
+        chkImageOverwrite = new PS5PKGTool.UI.Controls.AppCheckBox();
+        lblImagePasscode = new PS5PKGTool.UI.Controls.AppLabel();
+        txtImagePasscode = new PS5PKGTool.UI.Controls.AppTextBox();
+        toolsFooter = new PS5PKGTool.UI.Controls.AppFooterBar();
+        lblImageStatus = new PS5PKGTool.UI.Controls.AppLabel();
+        btnImageRun = new PS5PKGTool.UI.Controls.AppButton();
+        btnImageCancel = new PS5PKGTool.UI.Controls.AppButton();
+        tabTasks = new PS5PKGTool.UI.Controls.AppTabPage();
+        tasksLayout = new PS5PKGTool.UI.Controls.AppTableLayoutPanel();
+        chkTaskAutoStart = new PS5PKGTool.UI.Controls.AppCheckBox();
+        btnTaskStart = new PS5PKGTool.UI.Controls.AppButton();
+        btnTaskCancel = new PS5PKGTool.UI.Controls.AppButton();
+        btnTaskRetry = new PS5PKGTool.UI.Controls.AppButton();
+        btnTaskRemove = new PS5PKGTool.UI.Controls.AppButton();
+        btnTaskOpen = new PS5PKGTool.UI.Controls.AppButton();
+        btnTaskClear = new PS5PKGTool.UI.Controls.AppButton();
+        lblTaskGroup = new PS5PKGTool.UI.Controls.AppLabel();
+        cboTaskGroup = new PS5PKGTool.UI.Controls.AppComboBox();
+        cboTaskFilter = new PS5PKGTool.UI.Controls.AppComboBox();
+        searchTasks = new PS5PKGTool.UI.Controls.AppSearchBox();
+        btnTaskToggleDetails = new PS5PKGTool.UI.Controls.AppButton();
+        chkTaskFollow = new PS5PKGTool.UI.Controls.AppCheckBox();
+        lblTaskSummary = new PS5PKGTool.UI.Controls.AppLabel();
+        splitTasks = new PS5PKGTool.UI.Controls.AppSplitContainer();
+        splitTasksPane1 = new PS5PKGTool.UI.Controls.AppSplitPane();
+        sectionTasksList = new PS5PKGTool.UI.Controls.AppSectionPanel();
+        gridTasks = new PS5PKGTool.UI.Controls.AppDataGridView();
         colTaskName = new DataGridViewTextBoxColumn();
         colTaskOperation = new DataGridViewTextBoxColumn();
         colTaskRoute = new DataGridViewTextBoxColumn();
@@ -735,45 +735,45 @@ partial class MainForm
         colTaskStage = new DataGridViewTextBoxColumn();
         colTaskProgress = new DataGridViewTextBoxColumn();
         colTaskElapsed = new DataGridViewTextBoxColumn();
-        contextTasks = new DarkUI.Controls.DarkContextMenu();
+        contextTasks = new PS5PKGTool.UI.Controls.AppContextMenu();
         menuTaskStart = new ToolStripMenuItem();
         menuTaskCancel = new ToolStripMenuItem();
         menuTaskRetry = new ToolStripMenuItem();
         menuTaskRemove = new ToolStripMenuItem();
-        menuTaskSeparator1 = new DarkUI.Controls.DarkToolStripSeparator();
+        menuTaskSeparator1 = new PS5PKGTool.UI.Controls.AppToolStripSeparator();
         menuTaskOpen = new ToolStripMenuItem();
         menuTaskShowSource = new ToolStripMenuItem();
         menuTaskReport = new ToolStripMenuItem();
         menuTaskClear = new ToolStripMenuItem();
-        splitTasksPane2 = new DarkUI.Controls.DarkSplitPane();
-        sectionTaskDetails = new DarkUI.Controls.DarkSectionPanel();
-        taskDetailLayout = new DarkUI.Controls.DarkTableLayoutPanel();
-        lblTaskStage = new DarkUI.Controls.DarkLabel();
-        lblTaskCurrentCaption = new DarkUI.Controls.DarkLabel();
-        barTaskCurrent = new DarkUI.Controls.DarkProgressBar();
-        lblTaskOverallCaption = new DarkUI.Controls.DarkLabel();
-        barTaskOverall = new DarkUI.Controls.DarkProgressBar();
-        lblTaskMessage = new DarkUI.Controls.DarkLabel();
-        lblTaskMeta = new DarkUI.Controls.DarkLabel();
-        lblTaskResult = new DarkUI.Controls.DarkLabel();
-        btnTaskDiagnostic = new DarkUI.Controls.DarkButton();
-        tabLog = new DarkUI.Controls.DarkTabPage();
-        txtLogView = new DarkUI.Controls.DarkRichTextBox();
-        lblLogLevel = new DarkUI.Controls.DarkLabel();
-        cboLogLevel = new DarkUI.Controls.DarkComboBox();
-        chkLogAutoScroll = new DarkUI.Controls.DarkCheckBox();
-        btnLogClear = new DarkUI.Controls.DarkButton();
-        btnLogOpenFolder = new DarkUI.Controls.DarkButton();
+        splitTasksPane2 = new PS5PKGTool.UI.Controls.AppSplitPane();
+        sectionTaskDetails = new PS5PKGTool.UI.Controls.AppSectionPanel();
+        taskDetailLayout = new PS5PKGTool.UI.Controls.AppTableLayoutPanel();
+        lblTaskStage = new PS5PKGTool.UI.Controls.AppLabel();
+        lblTaskCurrentCaption = new PS5PKGTool.UI.Controls.AppLabel();
+        barTaskCurrent = new PS5PKGTool.UI.Controls.AppProgressBar();
+        lblTaskOverallCaption = new PS5PKGTool.UI.Controls.AppLabel();
+        barTaskOverall = new PS5PKGTool.UI.Controls.AppProgressBar();
+        lblTaskMessage = new PS5PKGTool.UI.Controls.AppLabel();
+        lblTaskMeta = new PS5PKGTool.UI.Controls.AppLabel();
+        lblTaskResult = new PS5PKGTool.UI.Controls.AppLabel();
+        btnTaskDiagnostic = new PS5PKGTool.UI.Controls.AppButton();
+        tabLog = new PS5PKGTool.UI.Controls.AppTabPage();
+        txtLogView = new PS5PKGTool.UI.Controls.AppRichTextBox();
+        lblLogLevel = new PS5PKGTool.UI.Controls.AppLabel();
+        cboLogLevel = new PS5PKGTool.UI.Controls.AppComboBox();
+        chkLogAutoScroll = new PS5PKGTool.UI.Controls.AppCheckBox();
+        btnLogClear = new PS5PKGTool.UI.Controls.AppButton();
+        btnLogOpenFolder = new PS5PKGTool.UI.Controls.AppButton();
         colFileName = new ColumnHeader();
         colFileType = new ColumnHeader();
         colFilePath = new ColumnHeader();
         colFileSize = new ColumnHeader();
         imageSaveDialog = new SaveFileDialog();
         trophyCsvSaveDialog = new SaveFileDialog();
-        statusMain = new DarkUI.Controls.DarkStatusStrip();
-        statusLabel = new DarkUI.Controls.DarkToolStripStatusLabel();
-        statusSpring = new DarkUI.Controls.DarkToolStripStatusLabel();
-        statusCount = new DarkUI.Controls.DarkToolStripStatusLabel();
+        statusMain = new PS5PKGTool.UI.Controls.AppStatusStrip();
+        statusLabel = new PS5PKGTool.UI.Controls.AppToolStripStatusLabel();
+        statusSpring = new PS5PKGTool.UI.Controls.AppToolStripStatusLabel();
+        statusCount = new PS5PKGTool.UI.Controls.AppToolStripStatusLabel();
         folderBrowserDialog = new FolderBrowserDialog();
         packageOpenDialog = new OpenFileDialog();
         sourceImageOpenDialog = new OpenFileDialog();
@@ -922,9 +922,9 @@ partial class MainForm
         // 
         // menuFile
         // 
-        menuFile.BackColor = Color.FromArgb(60, 63, 65);
+        menuFile.BackColor = SystemColors.Control;
         menuFile.DropDownItems.AddRange(new ToolStripItem[] { menuAddFolder, menuOpenDump, menuOpenPackage, menuRecent, menuRefresh, menuSaveManifest, menuEmptyList, menuRemoveMissing, menuSeparator, menuSettings, menuExit });
-        menuFile.ForeColor = Color.FromArgb(220, 220, 220);
+        menuFile.ForeColor = SystemColors.ControlText;
         menuFile.Name = "menuFile";
         menuFile.Size = new Size(37, 20);
         menuFile.Text = "File";
@@ -1005,9 +1005,9 @@ partial class MainForm
         // 
         // menuHelp
         // 
-        menuHelp.BackColor = Color.FromArgb(60, 63, 65);
+        menuHelp.BackColor = SystemColors.Control;
         menuHelp.DropDownItems.AddRange(new ToolStripItem[] { menuAbout, menuHelpSeparator, menuHelpCheckUpdate, menuHelpKofi, menuHelpPayPal });
-        menuHelp.ForeColor = Color.FromArgb(220, 220, 220);
+        menuHelp.ForeColor = SystemColors.ControlText;
         menuHelp.Name = "menuHelp";
         menuHelp.Size = new Size(44, 20);
         menuHelp.Text = "Help";
@@ -1054,8 +1054,8 @@ partial class MainForm
         // 
         // menuLibraryReveal
         // 
-        menuLibraryReveal.BackColor = Color.FromArgb(60, 63, 65);
-        menuLibraryReveal.ForeColor = Color.FromArgb(220, 220, 220);
+        menuLibraryReveal.BackColor = SystemColors.Control;
+        menuLibraryReveal.ForeColor = SystemColors.ControlText;
         menuLibraryReveal.Name = "menuLibraryReveal";
         menuLibraryReveal.Size = new Size(260, 22);
         menuLibraryReveal.Text = "Reveal in Explorer";
@@ -1063,25 +1063,25 @@ partial class MainForm
         // 
         // menuLibrarySeparator1
         // 
-        menuLibrarySeparator1.BackColor = Color.FromArgb(60, 63, 65);
-        menuLibrarySeparator1.ForeColor = Color.FromArgb(220, 220, 220);
+        menuLibrarySeparator1.BackColor = SystemColors.Control;
+        menuLibrarySeparator1.ForeColor = SystemColors.ControlText;
         menuLibrarySeparator1.Margin = new Padding(0, 0, 0, 1);
         menuLibrarySeparator1.Name = "menuLibrarySeparator1";
         menuLibrarySeparator1.Size = new Size(257, 6);
         // 
         // menuLibraryCopy
         // 
-        menuLibraryCopy.BackColor = Color.FromArgb(60, 63, 65);
+        menuLibraryCopy.BackColor = SystemColors.Control;
         menuLibraryCopy.DropDownItems.AddRange(new ToolStripItem[] { menuLibraryCopyTitle, menuLibraryCopyTitleId, menuLibraryCopyContentId, menuLibraryCopyFileName, menuLibraryCopyPath });
-        menuLibraryCopy.ForeColor = Color.FromArgb(220, 220, 220);
+        menuLibraryCopy.ForeColor = SystemColors.ControlText;
         menuLibraryCopy.Name = "menuLibraryCopy";
         menuLibraryCopy.Size = new Size(260, 22);
         menuLibraryCopy.Text = "Copy";
         // 
         // menuLibraryCopyTitle
         // 
-        menuLibraryCopyTitle.BackColor = Color.FromArgb(60, 63, 65);
-        menuLibraryCopyTitle.ForeColor = Color.FromArgb(220, 220, 220);
+        menuLibraryCopyTitle.BackColor = SystemColors.Control;
+        menuLibraryCopyTitle.ForeColor = SystemColors.ControlText;
         menuLibraryCopyTitle.Name = "menuLibraryCopyTitle";
         menuLibraryCopyTitle.Size = new Size(162, 22);
         menuLibraryCopyTitle.Text = "Copy Title";
@@ -1089,8 +1089,8 @@ partial class MainForm
         // 
         // menuLibraryCopyTitleId
         // 
-        menuLibraryCopyTitleId.BackColor = Color.FromArgb(60, 63, 65);
-        menuLibraryCopyTitleId.ForeColor = Color.FromArgb(220, 220, 220);
+        menuLibraryCopyTitleId.BackColor = SystemColors.Control;
+        menuLibraryCopyTitleId.ForeColor = SystemColors.ControlText;
         menuLibraryCopyTitleId.Name = "menuLibraryCopyTitleId";
         menuLibraryCopyTitleId.Size = new Size(162, 22);
         menuLibraryCopyTitleId.Text = "Copy Title ID";
@@ -1098,8 +1098,8 @@ partial class MainForm
         // 
         // menuLibraryCopyContentId
         // 
-        menuLibraryCopyContentId.BackColor = Color.FromArgb(60, 63, 65);
-        menuLibraryCopyContentId.ForeColor = Color.FromArgb(220, 220, 220);
+        menuLibraryCopyContentId.BackColor = SystemColors.Control;
+        menuLibraryCopyContentId.ForeColor = SystemColors.ControlText;
         menuLibraryCopyContentId.Name = "menuLibraryCopyContentId";
         menuLibraryCopyContentId.Size = new Size(162, 22);
         menuLibraryCopyContentId.Text = "Copy Content ID";
@@ -1107,8 +1107,8 @@ partial class MainForm
         // 
         // menuLibraryCopyFileName
         // 
-        menuLibraryCopyFileName.BackColor = Color.FromArgb(60, 63, 65);
-        menuLibraryCopyFileName.ForeColor = Color.FromArgb(220, 220, 220);
+        menuLibraryCopyFileName.BackColor = SystemColors.Control;
+        menuLibraryCopyFileName.ForeColor = SystemColors.ControlText;
         menuLibraryCopyFileName.Name = "menuLibraryCopyFileName";
         menuLibraryCopyFileName.Size = new Size(162, 22);
         menuLibraryCopyFileName.Text = "Copy File Name";
@@ -1116,8 +1116,8 @@ partial class MainForm
         // 
         // menuLibraryCopyPath
         // 
-        menuLibraryCopyPath.BackColor = Color.FromArgb(60, 63, 65);
-        menuLibraryCopyPath.ForeColor = Color.FromArgb(220, 220, 220);
+        menuLibraryCopyPath.BackColor = SystemColors.Control;
+        menuLibraryCopyPath.ForeColor = SystemColors.ControlText;
         menuLibraryCopyPath.Name = "menuLibraryCopyPath";
         menuLibraryCopyPath.Size = new Size(162, 22);
         menuLibraryCopyPath.Text = "Copy Path";
@@ -1125,24 +1125,24 @@ partial class MainForm
         // 
         // menuLibraryRename
         // 
-        menuLibraryRename.BackColor = Color.FromArgb(60, 63, 65);
-        menuLibraryRename.ForeColor = Color.FromArgb(220, 220, 220);
+        menuLibraryRename.BackColor = SystemColors.Control;
+        menuLibraryRename.ForeColor = SystemColors.ControlText;
         menuLibraryRename.Name = "menuLibraryRename";
         menuLibraryRename.Size = new Size(260, 22);
         menuLibraryRename.Text = "Rename";
         // 
         // menuLibraryRenameAll
         // 
-        menuLibraryRenameAll.BackColor = Color.FromArgb(60, 63, 65);
-        menuLibraryRenameAll.ForeColor = Color.FromArgb(220, 220, 220);
+        menuLibraryRenameAll.BackColor = SystemColors.Control;
+        menuLibraryRenameAll.ForeColor = SystemColors.ControlText;
         menuLibraryRenameAll.Name = "menuLibraryRenameAll";
         menuLibraryRenameAll.Size = new Size(260, 22);
         menuLibraryRenameAll.Text = "Rename All";
         // 
         // menuLibraryRenameByPriority
         // 
-        menuLibraryRenameByPriority.BackColor = Color.FromArgb(60, 63, 65);
-        menuLibraryRenameByPriority.ForeColor = Color.FromArgb(220, 220, 220);
+        menuLibraryRenameByPriority.BackColor = SystemColors.Control;
+        menuLibraryRenameByPriority.ForeColor = SystemColors.ControlText;
         menuLibraryRenameByPriority.Name = "menuLibraryRenameByPriority";
         menuLibraryRenameByPriority.Size = new Size(260, 22);
         menuLibraryRenameByPriority.Text = "Rename by Install Order (packages)";
@@ -1150,9 +1150,9 @@ partial class MainForm
         // 
         // menuLibraryMove
         // 
-        menuLibraryMove.BackColor = Color.FromArgb(60, 63, 65);
+        menuLibraryMove.BackColor = SystemColors.Control;
         menuLibraryMove.DropDownItems.AddRange(new ToolStripItem[] { menuLibraryMoveTitle, menuLibraryMoveTitleId, menuLibraryMoveCategory, menuLibraryMoveRegion, menuLibraryMoveSource, menuLibraryMoveSeparator, menuLibraryMoveSingle });
-        menuLibraryMove.ForeColor = Color.FromArgb(220, 220, 220);
+        menuLibraryMove.ForeColor = SystemColors.ControlText;
         menuLibraryMove.Name = "menuLibraryMove";
         menuLibraryMove.Size = new Size(260, 22);
         menuLibraryMove.Text = "Move to Folder";
@@ -1206,8 +1206,8 @@ partial class MainForm
         // 
         // menuLibraryDelete
         // 
-        menuLibraryDelete.BackColor = Color.FromArgb(60, 63, 65);
-        menuLibraryDelete.ForeColor = Color.FromArgb(220, 220, 220);
+        menuLibraryDelete.BackColor = SystemColors.Control;
+        menuLibraryDelete.ForeColor = SystemColors.ControlText;
         menuLibraryDelete.Name = "menuLibraryDelete";
         menuLibraryDelete.Size = new Size(260, 22);
         menuLibraryDelete.Text = "Delete Package... (Recycle Bin)";
@@ -1215,16 +1215,16 @@ partial class MainForm
         // 
         // menuLibrarySeparator2
         // 
-        menuLibrarySeparator2.BackColor = Color.FromArgb(60, 63, 65);
-        menuLibrarySeparator2.ForeColor = Color.FromArgb(220, 220, 220);
+        menuLibrarySeparator2.BackColor = SystemColors.Control;
+        menuLibrarySeparator2.ForeColor = SystemColors.ControlText;
         menuLibrarySeparator2.Margin = new Padding(0, 0, 0, 1);
         menuLibrarySeparator2.Name = "menuLibrarySeparator2";
         menuLibrarySeparator2.Size = new Size(257, 6);
         // 
         // menuLibrarySaveArtwork
         // 
-        menuLibrarySaveArtwork.BackColor = Color.FromArgb(60, 63, 65);
-        menuLibrarySaveArtwork.ForeColor = Color.FromArgb(220, 220, 220);
+        menuLibrarySaveArtwork.BackColor = SystemColors.Control;
+        menuLibrarySaveArtwork.ForeColor = SystemColors.ControlText;
         menuLibrarySaveArtwork.Name = "menuLibrarySaveArtwork";
         menuLibrarySaveArtwork.Size = new Size(260, 22);
         menuLibrarySaveArtwork.Text = "Save Artwork...";
@@ -1232,8 +1232,8 @@ partial class MainForm
         // 
         // menuLibraryExport
         // 
-        menuLibraryExport.BackColor = Color.FromArgb(60, 63, 65);
-        menuLibraryExport.ForeColor = Color.FromArgb(220, 220, 220);
+        menuLibraryExport.BackColor = SystemColors.Control;
+        menuLibraryExport.ForeColor = SystemColors.ControlText;
         menuLibraryExport.Name = "menuLibraryExport";
         menuLibraryExport.Size = new Size(260, 22);
         menuLibraryExport.Text = "Export library (CSV)...";
@@ -1241,17 +1241,17 @@ partial class MainForm
         // 
         // menuLibrarySeparator3
         // 
-        menuLibrarySeparator3.BackColor = Color.FromArgb(60, 63, 65);
-        menuLibrarySeparator3.ForeColor = Color.FromArgb(220, 220, 220);
+        menuLibrarySeparator3.BackColor = SystemColors.Control;
+        menuLibrarySeparator3.ForeColor = SystemColors.ControlText;
         menuLibrarySeparator3.Margin = new Padding(0, 0, 0, 1);
         menuLibrarySeparator3.Name = "menuLibrarySeparator3";
         menuLibrarySeparator3.Size = new Size(257, 6);
         // 
         // menuLibraryGroupBy
         // 
-        menuLibraryGroupBy.BackColor = Color.FromArgb(60, 63, 65);
+        menuLibraryGroupBy.BackColor = SystemColors.Control;
         menuLibraryGroupBy.DropDownItems.AddRange(new ToolStripItem[] { menuLibraryGroupNone, menuLibraryGroupFamily, menuLibraryGroupTitleId, menuLibraryGroupCategory, menuLibraryGroupRegion, menuLibraryGroupSource, menuLibraryGroupFirmware });
-        menuLibraryGroupBy.ForeColor = Color.FromArgb(220, 220, 220);
+        menuLibraryGroupBy.ForeColor = SystemColors.ControlText;
         menuLibraryGroupBy.Name = "menuLibraryGroupBy";
         menuLibraryGroupBy.Size = new Size(260, 22);
         menuLibraryGroupBy.Text = "Group by";
@@ -1307,8 +1307,8 @@ partial class MainForm
         // 
         // menuLibraryDuplicates
         // 
-        menuLibraryDuplicates.BackColor = Color.FromArgb(60, 63, 65);
-        menuLibraryDuplicates.ForeColor = Color.FromArgb(220, 220, 220);
+        menuLibraryDuplicates.BackColor = SystemColors.Control;
+        menuLibraryDuplicates.ForeColor = SystemColors.ControlText;
         menuLibraryDuplicates.Name = "menuLibraryDuplicates";
         menuLibraryDuplicates.Size = new Size(260, 22);
         menuLibraryDuplicates.Text = "Find Duplicates";
@@ -1316,16 +1316,16 @@ partial class MainForm
         // 
         // menuLibrarySeparator5
         // 
-        menuLibrarySeparator5.BackColor = Color.FromArgb(60, 63, 65);
-        menuLibrarySeparator5.ForeColor = Color.FromArgb(220, 220, 220);
+        menuLibrarySeparator5.BackColor = SystemColors.Control;
+        menuLibrarySeparator5.ForeColor = SystemColors.ControlText;
         menuLibrarySeparator5.Margin = new Padding(0, 0, 0, 1);
         menuLibrarySeparator5.Name = "menuLibrarySeparator5";
         menuLibrarySeparator5.Size = new Size(257, 6);
         // 
         // menuLibraryGroupExport
         // 
-        menuLibraryGroupExport.BackColor = Color.FromArgb(60, 63, 65);
-        menuLibraryGroupExport.ForeColor = Color.FromArgb(220, 220, 220);
+        menuLibraryGroupExport.BackColor = SystemColors.Control;
+        menuLibraryGroupExport.ForeColor = SystemColors.ControlText;
         menuLibraryGroupExport.Name = "menuLibraryGroupExport";
         menuLibraryGroupExport.Size = new Size(260, 22);
         menuLibraryGroupExport.Text = "Export Group (CSV)...";
@@ -1333,8 +1333,8 @@ partial class MainForm
         // 
         // menuLibraryGroupArtwork
         // 
-        menuLibraryGroupArtwork.BackColor = Color.FromArgb(60, 63, 65);
-        menuLibraryGroupArtwork.ForeColor = Color.FromArgb(220, 220, 220);
+        menuLibraryGroupArtwork.BackColor = SystemColors.Control;
+        menuLibraryGroupArtwork.ForeColor = SystemColors.ControlText;
         menuLibraryGroupArtwork.Name = "menuLibraryGroupArtwork";
         menuLibraryGroupArtwork.Size = new Size(260, 22);
         menuLibraryGroupArtwork.Text = "Save Group Artwork...";
@@ -1472,12 +1472,12 @@ partial class MainForm
         // 
         // splitMain
         // 
-        splitMain.Controls.Add(splitMainPane1);
-        splitMain.Controls.Add(splitMainPane2);
+        splitMain.AddPane(splitMainPane1);
+        splitMain.AddPane(splitMainPane2);
         splitMain.Dock = DockStyle.Fill;
         splitMain.Location = new Point(0, 24);
         splitMain.Name = "splitMain";
-        splitMain.Orientation = DarkUI.Controls.DarkSplitContainer.DarkSplitOrientation.Horizontal;
+        splitMain.Orientation = System.Windows.Forms.Orientation.Horizontal;
         splitMain.Size = new Size(1384, 827);
         splitMain.TabIndex = 2;
         // 
@@ -1559,7 +1559,7 @@ partial class MainForm
         // 
         // tabWorkspaceGeneral
         // 
-        tabWorkspaceGeneral.BackColor = Color.FromArgb(60, 63, 65);
+        tabWorkspaceGeneral.BackColor = SystemColors.Control;
         tabWorkspaceGeneral.Controls.Add(tabsDetails);
         tabWorkspaceGeneral.Location = new Point(4, 32);
         tabWorkspaceGeneral.Name = "tabWorkspaceGeneral";
@@ -1590,7 +1590,7 @@ partial class MainForm
         // 
         // tabOverview
         // 
-        tabOverview.BackColor = Color.FromArgb(60, 63, 65);
+        tabOverview.BackColor = SystemColors.Control;
         tabOverview.Controls.Add(gridOverview);
         tabOverview.Controls.Add(btnOverviewCopySelected);
         tabOverview.Controls.Add(btnOverviewCopyAll);
@@ -1642,7 +1642,7 @@ partial class MainForm
         // 
         // tabArtwork
         // 
-        tabArtwork.BackColor = Color.FromArgb(60, 63, 65);
+        tabArtwork.BackColor = SystemColors.Control;
         tabArtwork.Controls.Add(splitArtwork);
         tabArtwork.Controls.Add(btnArtworkSaveAll);
         tabArtwork.Location = new Point(4, 32);
@@ -1654,8 +1654,8 @@ partial class MainForm
         // 
         // splitArtwork
         // 
-        splitArtwork.Controls.Add(splitArtworkPane1);
-        splitArtwork.Controls.Add(splitArtworkPane2);
+        splitArtwork.AddPane(splitArtworkPane1);
+        splitArtwork.AddPane(splitArtworkPane2);
         splitArtwork.Dock = DockStyle.Fill;
         splitArtwork.Location = new Point(0, 38);
         splitArtwork.Name = "splitArtwork";
@@ -1683,7 +1683,7 @@ partial class MainForm
         // 
         // pictureIcon
         // 
-        pictureIcon.BackColor = Color.FromArgb(45, 45, 48);
+        pictureIcon.BackColor = SystemColors.Control;
         pictureIcon.ContextMenuStrip = contextArtwork;
         pictureIcon.Dock = DockStyle.Fill;
         pictureIcon.Location = new Point(1, 25);
@@ -1701,8 +1701,8 @@ partial class MainForm
         // 
         // menuArtworkSaveThis
         // 
-        menuArtworkSaveThis.BackColor = Color.FromArgb(60, 63, 65);
-        menuArtworkSaveThis.ForeColor = Color.FromArgb(220, 220, 220);
+        menuArtworkSaveThis.BackColor = SystemColors.Control;
+        menuArtworkSaveThis.ForeColor = SystemColors.ControlText;
         menuArtworkSaveThis.Name = "menuArtworkSaveThis";
         menuArtworkSaveThis.Size = new Size(169, 22);
         menuArtworkSaveThis.Text = "Save This Image...";
@@ -1710,8 +1710,8 @@ partial class MainForm
         // 
         // menuArtworkSaveAll
         // 
-        menuArtworkSaveAll.BackColor = Color.FromArgb(60, 63, 65);
-        menuArtworkSaveAll.ForeColor = Color.FromArgb(220, 220, 220);
+        menuArtworkSaveAll.BackColor = SystemColors.Control;
+        menuArtworkSaveAll.ForeColor = SystemColors.ControlText;
         menuArtworkSaveAll.Name = "menuArtworkSaveAll";
         menuArtworkSaveAll.Size = new Size(169, 22);
         menuArtworkSaveAll.Text = "Save All Artwork...";
@@ -1753,7 +1753,7 @@ partial class MainForm
         // 
         // tabPic0
         // 
-        tabPic0.BackColor = Color.FromArgb(60, 63, 65);
+        tabPic0.BackColor = SystemColors.Control;
         tabPic0.Controls.Add(pictureBackground0);
         tabPic0.Location = new Point(4, 32);
         tabPic0.Name = "tabPic0";
@@ -1763,7 +1763,7 @@ partial class MainForm
         // 
         // pictureBackground0
         // 
-        pictureBackground0.BackColor = Color.FromArgb(45, 45, 48);
+        pictureBackground0.BackColor = SystemColors.Control;
         pictureBackground0.ContextMenuStrip = contextArtwork;
         pictureBackground0.Dock = DockStyle.Fill;
         pictureBackground0.Location = new Point(0, 0);
@@ -1775,7 +1775,7 @@ partial class MainForm
         // 
         // tabPic1
         // 
-        tabPic1.BackColor = Color.FromArgb(60, 63, 65);
+        tabPic1.BackColor = SystemColors.Control;
         tabPic1.Controls.Add(pictureBackground1);
         tabPic1.Location = new Point(4, 32);
         tabPic1.Name = "tabPic1";
@@ -1785,7 +1785,7 @@ partial class MainForm
         // 
         // pictureBackground1
         // 
-        pictureBackground1.BackColor = Color.FromArgb(45, 45, 48);
+        pictureBackground1.BackColor = SystemColors.Control;
         pictureBackground1.ContextMenuStrip = contextArtwork;
         pictureBackground1.Dock = DockStyle.Fill;
         pictureBackground1.Location = new Point(0, 0);
@@ -1797,7 +1797,7 @@ partial class MainForm
         // 
         // tabPic2
         // 
-        tabPic2.BackColor = Color.FromArgb(60, 63, 65);
+        tabPic2.BackColor = SystemColors.Control;
         tabPic2.Controls.Add(pictureBackground2);
         tabPic2.Location = new Point(4, 32);
         tabPic2.Name = "tabPic2";
@@ -1807,7 +1807,7 @@ partial class MainForm
         // 
         // pictureBackground2
         // 
-        pictureBackground2.BackColor = Color.FromArgb(45, 45, 48);
+        pictureBackground2.BackColor = SystemColors.Control;
         pictureBackground2.ContextMenuStrip = contextArtwork;
         pictureBackground2.Dock = DockStyle.Fill;
         pictureBackground2.Location = new Point(0, 0);
@@ -1828,7 +1828,7 @@ partial class MainForm
         // 
         // tabTrophies
         // 
-        tabTrophies.BackColor = Color.FromArgb(60, 63, 65);
+        tabTrophies.BackColor = SystemColors.Control;
         tabTrophies.Controls.Add(gridTrophies);
         tabTrophies.Controls.Add(lblTrophySummary);
         tabTrophies.Controls.Add(searchTrophy);
@@ -1875,8 +1875,8 @@ partial class MainForm
         // 
         // menuTrophySaveIcon
         // 
-        menuTrophySaveIcon.BackColor = Color.FromArgb(60, 63, 65);
-        menuTrophySaveIcon.ForeColor = Color.FromArgb(220, 220, 220);
+        menuTrophySaveIcon.BackColor = SystemColors.Control;
+        menuTrophySaveIcon.ForeColor = SystemColors.ControlText;
         menuTrophySaveIcon.Name = "menuTrophySaveIcon";
         menuTrophySaveIcon.Size = new Size(155, 22);
         menuTrophySaveIcon.Text = "Save Icon...";
@@ -1884,8 +1884,8 @@ partial class MainForm
         // 
         // menuTrophySaveAllIcons
         // 
-        menuTrophySaveAllIcons.BackColor = Color.FromArgb(60, 63, 65);
-        menuTrophySaveAllIcons.ForeColor = Color.FromArgb(220, 220, 220);
+        menuTrophySaveAllIcons.BackColor = SystemColors.Control;
+        menuTrophySaveAllIcons.ForeColor = SystemColors.ControlText;
         menuTrophySaveAllIcons.Name = "menuTrophySaveAllIcons";
         menuTrophySaveAllIcons.Size = new Size(155, 22);
         menuTrophySaveAllIcons.Text = "Save All Icons...";
@@ -1893,8 +1893,8 @@ partial class MainForm
         // 
         // menuTrophyExportCsv
         // 
-        menuTrophyExportCsv.BackColor = Color.FromArgb(60, 63, 65);
-        menuTrophyExportCsv.ForeColor = Color.FromArgb(220, 220, 220);
+        menuTrophyExportCsv.BackColor = SystemColors.Control;
+        menuTrophyExportCsv.ForeColor = SystemColors.ControlText;
         menuTrophyExportCsv.Name = "menuTrophyExportCsv";
         menuTrophyExportCsv.Size = new Size(155, 22);
         menuTrophyExportCsv.Text = "Export CSV...";
@@ -1994,7 +1994,7 @@ partial class MainForm
         // 
         // tabActivities
         // 
-        tabActivities.BackColor = Color.FromArgb(60, 63, 65);
+        tabActivities.BackColor = SystemColors.Control;
         tabActivities.Controls.Add(tabsUds);
         tabActivities.Controls.Add(lblActivitiesSummary);
         tabActivities.Controls.Add(searchUds);
@@ -2026,7 +2026,7 @@ partial class MainForm
         // 
         // tabUdsEvents
         // 
-        tabUdsEvents.BackColor = Color.FromArgb(60, 63, 65);
+        tabUdsEvents.BackColor = SystemColors.Control;
         tabUdsEvents.Controls.Add(splitUdsEvents);
         tabUdsEvents.Location = new Point(4, 32);
         tabUdsEvents.Name = "tabUdsEvents";
@@ -2037,12 +2037,12 @@ partial class MainForm
         // splitUdsEvents
         // 
         splitUdsEvents.BorderStyle = BorderStyle.FixedSingle;
-        splitUdsEvents.Controls.Add(splitUdsEventsPane1);
-        splitUdsEvents.Controls.Add(splitUdsEventsPane2);
+        splitUdsEvents.AddPane(splitUdsEventsPane1);
+        splitUdsEvents.AddPane(splitUdsEventsPane2);
         splitUdsEvents.Dock = DockStyle.Fill;
         splitUdsEvents.Location = new Point(0, 0);
         splitUdsEvents.Name = "splitUdsEvents";
-        splitUdsEvents.Orientation = DarkUI.Controls.DarkSplitContainer.DarkSplitOrientation.Horizontal;
+        splitUdsEvents.Orientation = System.Windows.Forms.Orientation.Horizontal;
         splitUdsEvents.Size = new Size(1360, 229);
         splitUdsEvents.TabIndex = 0;
         // 
@@ -2103,7 +2103,7 @@ partial class MainForm
         // 
         // tabUdsStats
         // 
-        tabUdsStats.BackColor = Color.FromArgb(60, 63, 65);
+        tabUdsStats.BackColor = SystemColors.Control;
         tabUdsStats.Controls.Add(gridUdsStats);
         tabUdsStats.Location = new Point(4, 32);
         tabUdsStats.Name = "tabUdsStats";
@@ -2132,7 +2132,7 @@ partial class MainForm
         // 
         // tabUdsEnums
         // 
-        tabUdsEnums.BackColor = Color.FromArgb(60, 63, 65);
+        tabUdsEnums.BackColor = SystemColors.Control;
         tabUdsEnums.Controls.Add(gridUdsEnums);
         tabUdsEnums.Location = new Point(4, 32);
         tabUdsEnums.Name = "tabUdsEnums";
@@ -2161,7 +2161,7 @@ partial class MainForm
         // 
         // tabUdsRules
         // 
-        tabUdsRules.BackColor = Color.FromArgb(60, 63, 65);
+        tabUdsRules.BackColor = SystemColors.Control;
         tabUdsRules.Controls.Add(gridUdsRules);
         tabUdsRules.Location = new Point(4, 32);
         tabUdsRules.Name = "tabUdsRules";
@@ -2229,7 +2229,7 @@ partial class MainForm
         // 
         // tabFiles
         // 
-        tabFiles.BackColor = Color.FromArgb(60, 63, 65);
+        tabFiles.BackColor = SystemColors.Control;
         tabFiles.Controls.Add(sectionFileBrowser);
         tabFiles.Controls.Add(lblFilesSummary);
         tabFiles.Controls.Add(btnFileExtractAll);
@@ -2255,8 +2255,8 @@ partial class MainForm
         // splitFileBrowser
         // 
         splitFileBrowser.BorderStyle = BorderStyle.FixedSingle;
-        splitFileBrowser.Controls.Add(splitFileBrowserPane1);
-        splitFileBrowser.Controls.Add(splitFileBrowserPane2);
+        splitFileBrowser.AddPane(splitFileBrowserPane1);
+        splitFileBrowser.AddPane(splitFileBrowserPane2);
         splitFileBrowser.Dock = DockStyle.Fill;
         splitFileBrowser.Location = new Point(1, 25);
         splitFileBrowser.Name = "splitFileBrowser";
@@ -2296,7 +2296,6 @@ partial class MainForm
         treeFiles.TabIndex = 0;
         treeFiles.TopNode = null;
         treeFiles.TreeViewNodeSorter = null;
-        treeFiles.UseCompatibleStateImageBehavior = false;
         treeFiles.AfterSelect += treeFiles_AfterSelect;
         // 
         // contextTreeFiles
@@ -2307,8 +2306,8 @@ partial class MainForm
         // 
         // menuTreeExpand
         // 
-        menuTreeExpand.BackColor = Color.FromArgb(60, 63, 65);
-        menuTreeExpand.ForeColor = Color.FromArgb(220, 220, 220);
+        menuTreeExpand.BackColor = SystemColors.Control;
+        menuTreeExpand.ForeColor = SystemColors.ControlText;
         menuTreeExpand.Name = "menuTreeExpand";
         menuTreeExpand.Size = new Size(154, 22);
         menuTreeExpand.Text = "Expand";
@@ -2316,8 +2315,8 @@ partial class MainForm
         // 
         // menuTreeCollapse
         // 
-        menuTreeCollapse.BackColor = Color.FromArgb(60, 63, 65);
-        menuTreeCollapse.ForeColor = Color.FromArgb(220, 220, 220);
+        menuTreeCollapse.BackColor = SystemColors.Control;
+        menuTreeCollapse.ForeColor = SystemColors.ControlText;
         menuTreeCollapse.Name = "menuTreeCollapse";
         menuTreeCollapse.Size = new Size(154, 22);
         menuTreeCollapse.Text = "Collapse";
@@ -2325,8 +2324,8 @@ partial class MainForm
         // 
         // menuTreeExpandAll
         // 
-        menuTreeExpandAll.BackColor = Color.FromArgb(60, 63, 65);
-        menuTreeExpandAll.ForeColor = Color.FromArgb(220, 220, 220);
+        menuTreeExpandAll.BackColor = SystemColors.Control;
+        menuTreeExpandAll.ForeColor = SystemColors.ControlText;
         menuTreeExpandAll.Name = "menuTreeExpandAll";
         menuTreeExpandAll.Size = new Size(154, 22);
         menuTreeExpandAll.Text = "Expand All";
@@ -2334,8 +2333,8 @@ partial class MainForm
         // 
         // menuTreeCollapseAll
         // 
-        menuTreeCollapseAll.BackColor = Color.FromArgb(60, 63, 65);
-        menuTreeCollapseAll.ForeColor = Color.FromArgb(220, 220, 220);
+        menuTreeCollapseAll.BackColor = SystemColors.Control;
+        menuTreeCollapseAll.ForeColor = SystemColors.ControlText;
         menuTreeCollapseAll.Name = "menuTreeCollapseAll";
         menuTreeCollapseAll.Size = new Size(154, 22);
         menuTreeCollapseAll.Text = "Collapse All";
@@ -2343,16 +2342,16 @@ partial class MainForm
         // 
         // menuTreeSeparator
         // 
-        menuTreeSeparator.BackColor = Color.FromArgb(60, 63, 65);
-        menuTreeSeparator.ForeColor = Color.FromArgb(220, 220, 220);
+        menuTreeSeparator.BackColor = SystemColors.Control;
+        menuTreeSeparator.ForeColor = SystemColors.ControlText;
         menuTreeSeparator.Margin = new Padding(0, 0, 0, 1);
         menuTreeSeparator.Name = "menuTreeSeparator";
         menuTreeSeparator.Size = new Size(151, 6);
         // 
         // menuTreeCopyPath
         // 
-        menuTreeCopyPath.BackColor = Color.FromArgb(60, 63, 65);
-        menuTreeCopyPath.ForeColor = Color.FromArgb(220, 220, 220);
+        menuTreeCopyPath.BackColor = SystemColors.Control;
+        menuTreeCopyPath.ForeColor = SystemColors.ControlText;
         menuTreeCopyPath.Name = "menuTreeCopyPath";
         menuTreeCopyPath.Size = new Size(154, 22);
         menuTreeCopyPath.Text = "Copy Path";
@@ -2360,8 +2359,8 @@ partial class MainForm
         // 
         // menuTreeExtract
         // 
-        menuTreeExtract.BackColor = Color.FromArgb(60, 63, 65);
-        menuTreeExtract.ForeColor = Color.FromArgb(220, 220, 220);
+        menuTreeExtract.BackColor = SystemColors.Control;
+        menuTreeExtract.ForeColor = SystemColors.ControlText;
         menuTreeExtract.Name = "menuTreeExtract";
         menuTreeExtract.Size = new Size(154, 22);
         menuTreeExtract.Text = "Extract Folder...";
@@ -2378,8 +2377,8 @@ partial class MainForm
         // splitFileContentPreview
         // 
         splitFileContentPreview.BorderStyle = BorderStyle.FixedSingle;
-        splitFileContentPreview.Controls.Add(splitFileContentPreviewPane1);
-        splitFileContentPreview.Controls.Add(splitFileContentPreviewPane2);
+        splitFileContentPreview.AddPane(splitFileContentPreviewPane1);
+        splitFileContentPreview.AddPane(splitFileContentPreviewPane2);
         splitFileContentPreview.Dock = DockStyle.Fill;
         splitFileContentPreview.Location = new Point(0, 0);
         splitFileContentPreview.Name = "splitFileContentPreview";
@@ -2403,7 +2402,6 @@ partial class MainForm
         fileListPanel.Name = "fileListPanel";
         fileListPanel.Padding = new Padding(0, 36, 0, 0);
         fileListPanel.Size = new Size(336, 273);
-        fileListPanel.Surface = DarkUI.Controls.DarkPanelSurface.MediumBackground;
         fileListPanel.TabIndex = 0;
         // 
         // searchFileFilter
@@ -2447,8 +2445,8 @@ partial class MainForm
         // 
         // menuFileOpenContained
         // 
-        menuFileOpenContained.BackColor = Color.FromArgb(60, 63, 65);
-        menuFileOpenContained.ForeColor = Color.FromArgb(220, 220, 220);
+        menuFileOpenContained.BackColor = SystemColors.Control;
+        menuFileOpenContained.ForeColor = SystemColors.ControlText;
         menuFileOpenContained.Name = "menuFileOpenContained";
         menuFileOpenContained.Size = new Size(238, 22);
         menuFileOpenContained.Text = "Open / Preview";
@@ -2456,8 +2454,8 @@ partial class MainForm
         // 
         // menuFileExtractContained
         // 
-        menuFileExtractContained.BackColor = Color.FromArgb(60, 63, 65);
-        menuFileExtractContained.ForeColor = Color.FromArgb(220, 220, 220);
+        menuFileExtractContained.BackColor = SystemColors.Control;
+        menuFileExtractContained.ForeColor = SystemColors.ControlText;
         menuFileExtractContained.Name = "menuFileExtractContained";
         menuFileExtractContained.Size = new Size(238, 22);
         menuFileExtractContained.Text = "Extract Selected File...";
@@ -2465,8 +2463,8 @@ partial class MainForm
         // 
         // menuFileExtractSelected
         // 
-        menuFileExtractSelected.BackColor = Color.FromArgb(60, 63, 65);
-        menuFileExtractSelected.ForeColor = Color.FromArgb(220, 220, 220);
+        menuFileExtractSelected.BackColor = SystemColors.Control;
+        menuFileExtractSelected.ForeColor = SystemColors.ControlText;
         menuFileExtractSelected.Name = "menuFileExtractSelected";
         menuFileExtractSelected.Size = new Size(238, 22);
         menuFileExtractSelected.Text = "Extract Selected (with folders)...";
@@ -2474,16 +2472,16 @@ partial class MainForm
         // 
         // menuFileCopySeparator
         // 
-        menuFileCopySeparator.BackColor = Color.FromArgb(60, 63, 65);
-        menuFileCopySeparator.ForeColor = Color.FromArgb(220, 220, 220);
+        menuFileCopySeparator.BackColor = SystemColors.Control;
+        menuFileCopySeparator.ForeColor = SystemColors.ControlText;
         menuFileCopySeparator.Margin = new Padding(0, 0, 0, 1);
         menuFileCopySeparator.Name = "menuFileCopySeparator";
         menuFileCopySeparator.Size = new Size(235, 6);
         // 
         // menuFileCopyPath
         // 
-        menuFileCopyPath.BackColor = Color.FromArgb(60, 63, 65);
-        menuFileCopyPath.ForeColor = Color.FromArgb(220, 220, 220);
+        menuFileCopyPath.BackColor = SystemColors.Control;
+        menuFileCopyPath.ForeColor = SystemColors.ControlText;
         menuFileCopyPath.Name = "menuFileCopyPath";
         menuFileCopyPath.Size = new Size(238, 22);
         menuFileCopyPath.Text = "Copy Path";
@@ -2491,8 +2489,8 @@ partial class MainForm
         // 
         // menuFileCopyName
         // 
-        menuFileCopyName.BackColor = Color.FromArgb(60, 63, 65);
-        menuFileCopyName.ForeColor = Color.FromArgb(220, 220, 220);
+        menuFileCopyName.BackColor = SystemColors.Control;
+        menuFileCopyName.ForeColor = SystemColors.ControlText;
         menuFileCopyName.Name = "menuFileCopyName";
         menuFileCopyName.Size = new Size(238, 22);
         menuFileCopyName.Text = "Copy Filename";
@@ -2500,16 +2498,16 @@ partial class MainForm
         // 
         // menuFileContainerSeparator
         // 
-        menuFileContainerSeparator.BackColor = Color.FromArgb(60, 63, 65);
-        menuFileContainerSeparator.ForeColor = Color.FromArgb(220, 220, 220);
+        menuFileContainerSeparator.BackColor = SystemColors.Control;
+        menuFileContainerSeparator.ForeColor = SystemColors.ControlText;
         menuFileContainerSeparator.Margin = new Padding(0, 0, 0, 1);
         menuFileContainerSeparator.Name = "menuFileContainerSeparator";
         menuFileContainerSeparator.Size = new Size(235, 6);
         // 
         // menuFileRevealContainer
         // 
-        menuFileRevealContainer.BackColor = Color.FromArgb(60, 63, 65);
-        menuFileRevealContainer.ForeColor = Color.FromArgb(220, 220, 220);
+        menuFileRevealContainer.BackColor = SystemColors.Control;
+        menuFileRevealContainer.ForeColor = SystemColors.ControlText;
         menuFileRevealContainer.Name = "menuFileRevealContainer";
         menuFileRevealContainer.Size = new Size(238, 22);
         menuFileRevealContainer.Text = "Reveal Container in Explorer";
@@ -2719,7 +2717,7 @@ partial class MainForm
         // 
         // tabExecutable
         // 
-        tabExecutable.BackColor = Color.FromArgb(60, 63, 65);
+        tabExecutable.BackColor = SystemColors.Control;
         tabExecutable.Controls.Add(tabsExecutable);
         tabExecutable.Controls.Add(lblExecutableSummary);
         tabExecutable.Controls.Add(searchExecutable);
@@ -2752,7 +2750,7 @@ partial class MainForm
         // 
         // tabExecModules
         // 
-        tabExecModules.BackColor = Color.FromArgb(60, 63, 65);
+        tabExecModules.BackColor = SystemColors.Control;
         tabExecModules.Controls.Add(gridModules);
         tabExecModules.Location = new Point(4, 32);
         tabExecModules.Name = "tabExecModules";
@@ -2781,7 +2779,7 @@ partial class MainForm
         // 
         // tabExecElf
         // 
-        tabExecElf.BackColor = Color.FromArgb(60, 63, 65);
+        tabExecElf.BackColor = SystemColors.Control;
         tabExecElf.Controls.Add(splitExecElf);
         tabExecElf.Location = new Point(4, 32);
         tabExecElf.Name = "tabExecElf";
@@ -2792,12 +2790,12 @@ partial class MainForm
         // splitExecElf
         // 
         splitExecElf.BorderStyle = BorderStyle.FixedSingle;
-        splitExecElf.Controls.Add(splitExecElfPane1);
-        splitExecElf.Controls.Add(splitExecElfPane2);
+        splitExecElf.AddPane(splitExecElfPane1);
+        splitExecElf.AddPane(splitExecElfPane2);
         splitExecElf.Dock = DockStyle.Fill;
         splitExecElf.Location = new Point(0, 0);
         splitExecElf.Name = "splitExecElf";
-        splitExecElf.Orientation = DarkUI.Controls.DarkSplitContainer.DarkSplitOrientation.Horizontal;
+        splitExecElf.Orientation = System.Windows.Forms.Orientation.Horizontal;
         splitExecElf.Size = new Size(1360, 213);
         splitExecElf.TabIndex = 0;
         // 
@@ -2857,7 +2855,7 @@ partial class MainForm
         // 
         // tabExecSelf
         // 
-        tabExecSelf.BackColor = Color.FromArgb(60, 63, 65);
+        tabExecSelf.BackColor = SystemColors.Control;
         tabExecSelf.Controls.Add(splitExecSelf);
         tabExecSelf.Location = new Point(4, 32);
         tabExecSelf.Name = "tabExecSelf";
@@ -2868,12 +2866,12 @@ partial class MainForm
         // splitExecSelf
         // 
         splitExecSelf.BorderStyle = BorderStyle.FixedSingle;
-        splitExecSelf.Controls.Add(splitExecSelfPane1);
-        splitExecSelf.Controls.Add(splitExecSelfPane2);
+        splitExecSelf.AddPane(splitExecSelfPane1);
+        splitExecSelf.AddPane(splitExecSelfPane2);
         splitExecSelf.Dock = DockStyle.Fill;
         splitExecSelf.Location = new Point(0, 0);
         splitExecSelf.Name = "splitExecSelf";
-        splitExecSelf.Orientation = DarkUI.Controls.DarkSplitContainer.DarkSplitOrientation.Horizontal;
+        splitExecSelf.Orientation = System.Windows.Forms.Orientation.Horizontal;
         splitExecSelf.Size = new Size(1360, 213);
         splitExecSelf.TabIndex = 0;
         // 
@@ -2991,7 +2989,7 @@ partial class MainForm
         // 
         // tabRaw
         // 
-        tabRaw.BackColor = Color.FromArgb(60, 63, 65);
+        tabRaw.BackColor = SystemColors.Control;
         tabRaw.Controls.Add(txtRawMetadata);
         tabRaw.Controls.Add(btnRawFormatted);
         tabRaw.Controls.Add(btnRawOriginal);
@@ -3046,7 +3044,7 @@ partial class MainForm
         // 
         // tabPackage
         // 
-        tabPackage.BackColor = Color.FromArgb(60, 63, 65);
+        tabPackage.BackColor = SystemColors.Control;
         tabPackage.Controls.Add(tabsPackage);
         tabPackage.Location = new Point(4, 32);
         tabPackage.Name = "tabPackage";
@@ -3073,7 +3071,7 @@ partial class MainForm
         // 
         // tabPkgContainer
         // 
-        tabPkgContainer.BackColor = Color.FromArgb(60, 63, 65);
+        tabPkgContainer.BackColor = SystemColors.Control;
         tabPkgContainer.Controls.Add(gridPkgHeader);
         tabPkgContainer.Location = new Point(4, 32);
         tabPkgContainer.Name = "tabPkgContainer";
@@ -3102,7 +3100,7 @@ partial class MainForm
         // 
         // tabPkgSegments
         // 
-        tabPkgSegments.BackColor = Color.FromArgb(60, 63, 65);
+        tabPkgSegments.BackColor = SystemColors.Control;
         tabPkgSegments.Controls.Add(gridPkgSegments);
         tabPkgSegments.Location = new Point(4, 32);
         tabPkgSegments.Name = "tabPkgSegments";
@@ -3131,7 +3129,7 @@ partial class MainForm
         // 
         // tabPkgEntries
         // 
-        tabPkgEntries.BackColor = Color.FromArgb(60, 63, 65);
+        tabPkgEntries.BackColor = SystemColors.Control;
         tabPkgEntries.Controls.Add(gridPkgEntries);
         tabPkgEntries.Location = new Point(4, 32);
         tabPkgEntries.Name = "tabPkgEntries";
@@ -3160,7 +3158,7 @@ partial class MainForm
         // 
         // tabMetadata
         // 
-        tabMetadata.BackColor = Color.FromArgb(60, 63, 65);
+        tabMetadata.BackColor = SystemColors.Control;
         tabMetadata.Controls.Add(tabsMetadata);
         tabMetadata.Location = new Point(4, 32);
         tabMetadata.Name = "tabMetadata";
@@ -3185,7 +3183,7 @@ partial class MainForm
         // 
         // tabPkgSfo
         // 
-        tabPkgSfo.BackColor = Color.FromArgb(60, 63, 65);
+        tabPkgSfo.BackColor = SystemColors.Control;
         tabPkgSfo.Controls.Add(gridParamSfo);
         tabPkgSfo.Location = new Point(4, 32);
         tabPkgSfo.Name = "tabPkgSfo";
@@ -3214,7 +3212,7 @@ partial class MainForm
         // 
         // tabPkgKeystone
         // 
-        tabPkgKeystone.BackColor = Color.FromArgb(60, 63, 65);
+        tabPkgKeystone.BackColor = SystemColors.Control;
         tabPkgKeystone.Controls.Add(gridKeystone);
         tabPkgKeystone.Location = new Point(4, 32);
         tabPkgKeystone.Name = "tabPkgKeystone";
@@ -3243,7 +3241,7 @@ partial class MainForm
         // 
         // tabPkgPlayGo
         // 
-        tabPkgPlayGo.BackColor = Color.FromArgb(60, 63, 65);
+        tabPkgPlayGo.BackColor = SystemColors.Control;
         tabPkgPlayGo.Controls.Add(tabsPlayGo);
         tabPkgPlayGo.Controls.Add(lblPlayGoSummary);
         tabPkgPlayGo.Location = new Point(4, 32);
@@ -3269,7 +3267,7 @@ partial class MainForm
         // 
         // tabPlayGoChunks
         // 
-        tabPlayGoChunks.BackColor = Color.FromArgb(60, 63, 65);
+        tabPlayGoChunks.BackColor = SystemColors.Control;
         tabPlayGoChunks.Controls.Add(gridPlayGoChunks);
         tabPlayGoChunks.Location = new Point(4, 32);
         tabPlayGoChunks.Name = "tabPlayGoChunks";
@@ -3298,7 +3296,7 @@ partial class MainForm
         // 
         // tabPlayGoScenarios
         // 
-        tabPlayGoScenarios.BackColor = Color.FromArgb(60, 63, 65);
+        tabPlayGoScenarios.BackColor = SystemColors.Control;
         tabPlayGoScenarios.Controls.Add(gridPlayGoScenarios);
         tabPlayGoScenarios.Location = new Point(4, 32);
         tabPlayGoScenarios.Name = "tabPlayGoScenarios";
@@ -3327,7 +3325,7 @@ partial class MainForm
         // 
         // tabPlayGoFiles
         // 
-        tabPlayGoFiles.BackColor = Color.FromArgb(60, 63, 65);
+        tabPlayGoFiles.BackColor = SystemColors.Control;
         tabPlayGoFiles.Controls.Add(gridPlayGoFiles);
         tabPlayGoFiles.Location = new Point(4, 32);
         tabPlayGoFiles.Name = "tabPlayGoFiles";
@@ -3368,7 +3366,7 @@ partial class MainForm
         // 
         // tabPkgSi
         // 
-        tabPkgSi.BackColor = Color.FromArgb(60, 63, 65);
+        tabPkgSi.BackColor = SystemColors.Control;
         tabPkgSi.Controls.Add(gridSi);
         tabPkgSi.Location = new Point(4, 32);
         tabPkgSi.Name = "tabPkgSi";
@@ -3397,7 +3395,7 @@ partial class MainForm
         // 
         // tabWorkspaceTools
         // 
-        tabWorkspaceTools.BackColor = Color.FromArgb(60, 63, 65);
+        tabWorkspaceTools.BackColor = SystemColors.Control;
         tabWorkspaceTools.Controls.Add(toolsLayout);
         tabWorkspaceTools.Location = new Point(4, 32);
         tabWorkspaceTools.Name = "tabWorkspaceTools";
@@ -3504,7 +3502,7 @@ partial class MainForm
         // 
         // tabTargetExfat
         // 
-        tabTargetExfat.BackColor = Color.FromArgb(60, 63, 65);
+        tabTargetExfat.BackColor = SystemColors.Control;
         tabTargetExfat.Controls.Add(lblOutExfat);
         tabTargetExfat.Controls.Add(txtOutExfat);
         tabTargetExfat.Controls.Add(btnOutExfat);
@@ -3580,7 +3578,7 @@ partial class MainForm
         // 
         // tabTargetFfpkg
         // 
-        tabTargetFfpkg.BackColor = Color.FromArgb(60, 63, 65);
+        tabTargetFfpkg.BackColor = SystemColors.Control;
         tabTargetFfpkg.Controls.Add(lblOutFfpkg);
         tabTargetFfpkg.Controls.Add(txtOutFfpkg);
         tabTargetFfpkg.Controls.Add(btnOutFfpkg);
@@ -3703,7 +3701,7 @@ partial class MainForm
         // 
         // tabTargetFfpfsc
         // 
-        tabTargetFfpfsc.BackColor = Color.FromArgb(60, 63, 65);
+        tabTargetFfpfsc.BackColor = SystemColors.Control;
         tabTargetFfpfsc.Controls.Add(lblOutFfpfsc);
         tabTargetFfpfsc.Controls.Add(txtOutFfpfsc);
         tabTargetFfpfsc.Controls.Add(btnOutFfpfsc);
@@ -3790,7 +3788,7 @@ partial class MainForm
         // 
         // tabTargetDebug
         // 
-        tabTargetDebug.BackColor = Color.FromArgb(60, 63, 65);
+        tabTargetDebug.BackColor = SystemColors.Control;
         tabTargetDebug.Controls.Add(lblOutDebug);
         tabTargetDebug.Controls.Add(txtOutDebug);
         tabTargetDebug.Controls.Add(btnOutDebug);
@@ -4109,7 +4107,7 @@ partial class MainForm
         // 
         // tabTargetOptions
         // 
-        tabTargetOptions.BackColor = Color.FromArgb(60, 63, 65);
+        tabTargetOptions.BackColor = SystemColors.Control;
         tabTargetOptions.Controls.Add(lblImageOutput);
         tabTargetOptions.Controls.Add(txtImageOutput);
         tabTargetOptions.Controls.Add(btnImageBrowseOutput);
@@ -4222,7 +4220,7 @@ partial class MainForm
         // 
         // tabTasks
         // 
-        tabTasks.BackColor = Color.FromArgb(60, 63, 65);
+        tabTasks.BackColor = SystemColors.Control;
         tabTasks.Controls.Add(tasksLayout);
         tabTasks.Location = new Point(4, 32);
         tabTasks.Name = "tabTasks";
@@ -4417,12 +4415,12 @@ partial class MainForm
         // splitTasks
         // 
         tasksLayout.SetColumnSpan(splitTasks, 14);
-        splitTasks.Controls.Add(splitTasksPane1);
-        splitTasks.Controls.Add(splitTasksPane2);
+        splitTasks.AddPane(splitTasksPane1);
+        splitTasks.AddPane(splitTasksPane2);
         splitTasks.Dock = DockStyle.Fill;
         splitTasks.Location = new Point(3, 41);
         splitTasks.Name = "splitTasks";
-        splitTasks.Orientation = DarkUI.Controls.DarkSplitContainer.DarkSplitOrientation.Horizontal;
+        splitTasks.Orientation = System.Windows.Forms.Orientation.Horizontal;
         splitTasks.Size = new Size(1370, 331);
         splitTasks.TabIndex = 1;
         // 
@@ -4530,8 +4528,8 @@ partial class MainForm
         // 
         // menuTaskStart
         // 
-        menuTaskStart.BackColor = Color.FromArgb(60, 63, 65);
-        menuTaskStart.ForeColor = Color.FromArgb(220, 220, 220);
+        menuTaskStart.BackColor = SystemColors.Control;
+        menuTaskStart.ForeColor = SystemColors.ControlText;
         menuTaskStart.Name = "menuTaskStart";
         menuTaskStart.Size = new Size(163, 22);
         menuTaskStart.Text = "Start Next";
@@ -4539,8 +4537,8 @@ partial class MainForm
         // 
         // menuTaskCancel
         // 
-        menuTaskCancel.BackColor = Color.FromArgb(60, 63, 65);
-        menuTaskCancel.ForeColor = Color.FromArgb(220, 220, 220);
+        menuTaskCancel.BackColor = SystemColors.Control;
+        menuTaskCancel.ForeColor = SystemColors.ControlText;
         menuTaskCancel.Name = "menuTaskCancel";
         menuTaskCancel.Size = new Size(163, 22);
         menuTaskCancel.Text = "Cancel";
@@ -4548,8 +4546,8 @@ partial class MainForm
         // 
         // menuTaskRetry
         // 
-        menuTaskRetry.BackColor = Color.FromArgb(60, 63, 65);
-        menuTaskRetry.ForeColor = Color.FromArgb(220, 220, 220);
+        menuTaskRetry.BackColor = SystemColors.Control;
+        menuTaskRetry.ForeColor = SystemColors.ControlText;
         menuTaskRetry.Name = "menuTaskRetry";
         menuTaskRetry.Size = new Size(163, 22);
         menuTaskRetry.Text = "Retry";
@@ -4557,8 +4555,8 @@ partial class MainForm
         // 
         // menuTaskRemove
         // 
-        menuTaskRemove.BackColor = Color.FromArgb(60, 63, 65);
-        menuTaskRemove.ForeColor = Color.FromArgb(220, 220, 220);
+        menuTaskRemove.BackColor = SystemColors.Control;
+        menuTaskRemove.ForeColor = SystemColors.ControlText;
         menuTaskRemove.Name = "menuTaskRemove";
         menuTaskRemove.Size = new Size(163, 22);
         menuTaskRemove.Text = "Remove";
@@ -4566,16 +4564,16 @@ partial class MainForm
         // 
         // menuTaskSeparator1
         // 
-        menuTaskSeparator1.BackColor = Color.FromArgb(60, 63, 65);
-        menuTaskSeparator1.ForeColor = Color.FromArgb(220, 220, 220);
+        menuTaskSeparator1.BackColor = SystemColors.Control;
+        menuTaskSeparator1.ForeColor = SystemColors.ControlText;
         menuTaskSeparator1.Margin = new Padding(0, 0, 0, 1);
         menuTaskSeparator1.Name = "menuTaskSeparator1";
         menuTaskSeparator1.Size = new Size(160, 6);
         // 
         // menuTaskOpen
         // 
-        menuTaskOpen.BackColor = Color.FromArgb(60, 63, 65);
-        menuTaskOpen.ForeColor = Color.FromArgb(220, 220, 220);
+        menuTaskOpen.BackColor = SystemColors.Control;
+        menuTaskOpen.ForeColor = SystemColors.ControlText;
         menuTaskOpen.Name = "menuTaskOpen";
         menuTaskOpen.Size = new Size(163, 22);
         menuTaskOpen.Text = "Open Output";
@@ -4583,8 +4581,8 @@ partial class MainForm
         // 
         // menuTaskShowSource
         // 
-        menuTaskShowSource.BackColor = Color.FromArgb(60, 63, 65);
-        menuTaskShowSource.ForeColor = Color.FromArgb(220, 220, 220);
+        menuTaskShowSource.BackColor = SystemColors.Control;
+        menuTaskShowSource.ForeColor = SystemColors.ControlText;
         menuTaskShowSource.Name = "menuTaskShowSource";
         menuTaskShowSource.Size = new Size(163, 22);
         menuTaskShowSource.Text = "Show Source";
@@ -4592,8 +4590,8 @@ partial class MainForm
         // 
         // menuTaskReport
         // 
-        menuTaskReport.BackColor = Color.FromArgb(60, 63, 65);
-        menuTaskReport.ForeColor = Color.FromArgb(220, 220, 220);
+        menuTaskReport.BackColor = SystemColors.Control;
+        menuTaskReport.ForeColor = SystemColors.ControlText;
         menuTaskReport.Name = "menuTaskReport";
         menuTaskReport.Size = new Size(163, 22);
         menuTaskReport.Text = "Export Report...";
@@ -4601,8 +4599,8 @@ partial class MainForm
         // 
         // menuTaskClear
         // 
-        menuTaskClear.BackColor = Color.FromArgb(60, 63, 65);
-        menuTaskClear.ForeColor = Color.FromArgb(220, 220, 220);
+        menuTaskClear.BackColor = SystemColors.Control;
+        menuTaskClear.ForeColor = SystemColors.ControlText;
         menuTaskClear.Name = "menuTaskClear";
         menuTaskClear.Size = new Size(163, 22);
         menuTaskClear.Text = "Clear Completed";
@@ -4748,7 +4746,7 @@ partial class MainForm
         // 
         // tabLog
         // 
-        tabLog.BackColor = Color.FromArgb(60, 63, 65);
+        tabLog.BackColor = SystemColors.Control;
         tabLog.Controls.Add(txtLogView);
         tabLog.Controls.Add(lblLogLevel);
         tabLog.Controls.Add(cboLogLevel);
@@ -4864,21 +4862,21 @@ partial class MainForm
         // 
         // statusLabel
         // 
-        statusLabel.BackColor = Color.FromArgb(60, 63, 65);
+        statusLabel.BackColor = SystemColors.Control;
         statusLabel.Name = "statusLabel";
         statusLabel.Size = new Size(39, 17);
         statusLabel.Text = "Ready";
         // 
         // statusSpring
         // 
-        statusSpring.BackColor = Color.FromArgb(60, 63, 65);
+        statusSpring.BackColor = SystemColors.Control;
         statusSpring.Name = "statusSpring";
         statusSpring.Size = new Size(1294, 17);
         statusSpring.Spring = true;
         // 
         // statusCount
         // 
-        statusCount.BackColor = Color.FromArgb(60, 63, 65);
+        statusCount.BackColor = SystemColors.Control;
         statusCount.Name = "statusCount";
         statusCount.Size = new Size(51, 17);
         statusCount.Text = "0 games";

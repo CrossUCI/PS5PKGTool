@@ -5,9 +5,9 @@ using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.Json;
-using DarkUI.Controls;
-using DarkUI.Config;
-using DarkUI.Forms;
+using PS5PKGTool.UI.Controls;
+
+
 using PS5PKGTool.Core.Assets;
 using PS5PKGTool.Core.Builders;
 using PS5PKGTool.Core.Models;
@@ -20,7 +20,7 @@ using UFS2Tool;
 
 namespace PS5PKGTool.Forms;
 
-public partial class MainForm : DarkForm
+public partial class MainForm : Form
 {
     private readonly AppStateStore _stateStore = new();
     private readonly Ps5LibraryScanner _scanner = new();
@@ -254,15 +254,11 @@ public partial class MainForm : DarkForm
             message.AppendLine($"  ... and {missing - names.Length:N0} more");
         message.AppendLine();
         message.Append("They are marked as Missing until the next Refresh. Use File > Remove Missing Items to drop them now.");
-        AppMessageBox.Show(this, "Missing library items", message.ToString(), AppMessageType.Warning, AppMessageButtons.OK);
+        MessageBox.Show(this, message.ToString(), "Missing library items", MessageBoxButtons.OK, MessageBoxIcon.Warning);
     }
 
     private void ApplyRuntimeSettings()
     {
-        Theme theme = ThemeManager.Presets.FirstOrDefault(candidate =>
-            string.Equals(candidate.Name, _settings.Theme, StringComparison.OrdinalIgnoreCase)) ?? ThemeManager.BuiltIn.Default;
-        ThemeManager.Apply(theme);
-
         int rowHeight = Math.Max(16, _settings.GridRowHeight);
         gridLibrary.RowTemplate.Height = rowHeight;
         gridLibrary.CellBorderStyle = _settings.ShowGridLines
@@ -581,6 +577,9 @@ public partial class MainForm : DarkForm
                              || !previous.LibraryHiddenColumns.SequenceEqual(form.Settings.LibraryHiddenColumns)
                              || !previous.LibrarySortKeys.SequenceEqual(form.Settings.LibrarySortKeys);
         _settings = form.Settings;
+        txtImageTemp.Text = string.IsNullOrWhiteSpace(_settings.TempDirectory)
+            ? Path.GetTempPath().TrimEnd(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar)
+            : _settings.TempDirectory;
         ApplyRuntimeSettings();
         ApplyDefaultGrouping();
         SyncFilterControls();
@@ -717,7 +716,7 @@ public partial class MainForm : DarkForm
             {
                 if (AppDialog.ShowInformation(
                         $"A newer version is available.\n\nInstalled: {current}\nLatest: {latest}\n\nOpen the download page?",
-                        "Check for updates", DarkDialogButton.YesNo) == DialogResult.Yes)
+                        "Check for updates", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     OpenExternalUrl(page);
             }
             else
@@ -1073,15 +1072,11 @@ public partial class MainForm : DarkForm
     /// </summary>
     private void BalanceFilePanes()
     {
-        // Three equal panes: the outer split gives 1:2, the inner split halves the 2.
-        // DarkSplitContainer.SetPanelSize clamps each weight to its 40px minimum, so the
-        // weights must stay above 40 or the outer 1:2 collapses to 1:1.
-        splitFileBrowser.SetPanelSize(0, 100);
-        splitFileBrowser.SetPanelSize(1, 200);
+        // Three equal panes: the outer split gives 1:2, and the inner split halves the 2.
+        splitFileBrowser.SetPanelSize(0, Math.Max(40, splitFileBrowser.Width / 3));
         if (splitFileContentPreview.Panels.Contains(splitFileContentPreviewPane2))
         {
-            splitFileContentPreview.SetPanelSize(0, 100);
-            splitFileContentPreview.SetPanelSize(1, 100);
+            splitFileContentPreview.SetPanelSize(0, Math.Max(40, splitFileContentPreview.Width / 2));
         }
     }
 
@@ -1155,7 +1150,7 @@ public partial class MainForm : DarkForm
         SetContainerPage(tabPkgSi, package);
     }
 
-    private void SetContainerPage(DarkUI.Controls.DarkTabPage page, bool present)
+    private void SetContainerPage(PS5PKGTool.UI.Controls.AppTabPage page, bool present)
     {
         bool attached = tabsPackage.TabPages.Contains(page);
         if (present && !attached) tabsPackage.TabPages.Add(page);
@@ -1919,7 +1914,7 @@ public partial class MainForm : DarkForm
         filter.Length == 0 ||
         values.Any(value => value is not null && value.Contains(filter, StringComparison.CurrentCultureIgnoreCase));
 
-    private DarkDataGridView ActiveUdsGrid() =>
+    private AppDataGridView ActiveUdsGrid() =>
         tabsUds.SelectedTab == tabUdsStats ? gridUdsStats
         : tabsUds.SelectedTab == tabUdsEnums ? gridUdsEnums
         : tabsUds.SelectedTab == tabUdsRules ? gridUdsRules
@@ -1927,7 +1922,7 @@ public partial class MainForm : DarkForm
 
     private void CopyActiveUdsGrid(bool copyAll)
     {
-        DarkDataGridView grid = ActiveUdsGrid();
+        AppDataGridView grid = ActiveUdsGrid();
         DataGridViewRow[] rows = (copyAll ? grid.Rows.Cast<DataGridViewRow>() : grid.SelectedRows.Cast<DataGridViewRow>()).ToArray();
         var builder = new StringBuilder();
         foreach (DataGridViewRow row in rows)
@@ -2158,6 +2153,13 @@ public partial class MainForm : DarkForm
         return result;
     }
 
+    private void SetDefaultOutputDirectory()
+    {
+        if (!string.IsNullOrWhiteSpace(_settings.OutputDirectory) &&
+            Directory.Exists(_settings.OutputDirectory))
+            folderBrowserDialog.SelectedPath = _settings.OutputDirectory;
+    }
+
     private async void menuFileExtractSelected_Click(object? sender, EventArgs e)
     {
         List<(string RelativePath, long Size)> files = SelectedFileTargets();
@@ -2167,6 +2169,7 @@ public partial class MainForm : DarkForm
             return;
         }
         folderBrowserDialog.Description = "Select a folder for the extracted files";
+        SetDefaultOutputDirectory();
         if (folderBrowserDialog.ShowDialog(this) != DialogResult.OK) return;
         await ExtractFilesAsync(files, folderBrowserDialog.SelectedPath);
     }
@@ -2181,6 +2184,7 @@ public partial class MainForm : DarkForm
             return;
         }
         folderBrowserDialog.Description = "Select a folder for the extracted files";
+        SetDefaultOutputDirectory();
         if (folderBrowserDialog.ShowDialog(this) != DialogResult.OK) return;
         await ExtractFilesAsync(files, folderBrowserDialog.SelectedPath);
     }
@@ -2194,6 +2198,7 @@ public partial class MainForm : DarkForm
             return;
         }
         folderBrowserDialog.Description = "Select a folder for the extracted package";
+        SetDefaultOutputDirectory();
         if (folderBrowserDialog.ShowDialog(this) != DialogResult.OK) return;
         await ExtractFilesAsync(files, folderBrowserDialog.SelectedPath);
     }
@@ -3112,6 +3117,7 @@ public partial class MainForm : DarkForm
                 files.Add((module.RelativePath, module.Size));
 
         folderBrowserDialog.Description = "Select a folder for eboot.bin and the modules";
+        SetDefaultOutputDirectory();
         if (folderBrowserDialog.ShowDialog(this) != DialogResult.OK) return;
         _ = ExtractFilesAsync(files, folderBrowserDialog.SelectedPath);
     }
@@ -3122,14 +3128,14 @@ public partial class MainForm : DarkForm
 
     private void CopyActiveExecGrid(bool copyAll)
     {
-        IReadOnlyList<DarkDataGridView> grids = tabsExecutable.SelectedTab == tabExecElf
+        IReadOnlyList<AppDataGridView> grids = tabsExecutable.SelectedTab == tabExecElf
             ? [gridElfPrograms, gridElfSections]
             : tabsExecutable.SelectedTab == tabExecSelf
                 ? [gridSelfHeader, gridSelfSegments]
                 : [gridModules];
 
         var builder = new StringBuilder();
-        foreach (DarkDataGridView grid in grids)
+        foreach (AppDataGridView grid in grids)
         {
             IEnumerable<DataGridViewRow> source = copyAll
                 ? grid.Rows.Cast<DataGridViewRow>()

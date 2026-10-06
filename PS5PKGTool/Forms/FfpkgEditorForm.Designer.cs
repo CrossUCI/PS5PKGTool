@@ -5,27 +5,27 @@ namespace PS5PKGTool.Forms;
 partial class FfpkgEditorForm
 {
     private System.ComponentModel.IContainer? components = null;
-    private DarkUI.Controls.DarkLabel lblImage = null!;
-    private DarkUI.Controls.DarkSplitContainer splitEditor = null!;
-    private DarkUI.Controls.DarkSplitPane splitEditorPane1 = null!;
-    private DarkUI.Controls.DarkSplitPane splitEditorPane2 = null!;
-    private DarkUI.Controls.DarkSectionPanel sectionEntries = null!;
-    private DarkUI.Controls.DarkDataGridView gridEntries = null!;
-    private DarkUI.Controls.DarkSectionPanel sectionChanges = null!;
-    private DarkUI.Controls.DarkListBox lstChanges = null!;
-    private DarkUI.Controls.DarkLabel lblTarget = null!;
-    private DarkUI.Controls.DarkTextBox txtTarget = null!;
-    private DarkUI.Controls.DarkButton btnReplace = null!;
-    private DarkUI.Controls.DarkButton btnAddFiles = null!;
-    private DarkUI.Controls.DarkButton btnAddFolder = null!;
-    private DarkUI.Controls.DarkButton btnNewDirectory = null!;
-    private DarkUI.Controls.DarkButton btnDelete = null!;
-    private DarkUI.Controls.DarkButton btnUndo = null!;
-    private DarkUI.Controls.DarkProgressBar progressEdit = null!;
-    private DarkUI.Controls.DarkLabel lblStatus = null!;
-    private DarkUI.Controls.DarkButton btnApply = null!;
-    private DarkUI.Controls.DarkButton btnCancelOperation = null!;
-    private DarkUI.Controls.DarkButton btnClose = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblImage = null!;
+    private PS5PKGTool.UI.Controls.AppSplitContainer splitEditor = null!;
+    private PS5PKGTool.UI.Controls.AppSplitPane splitEditorPane1 = null!;
+    private PS5PKGTool.UI.Controls.AppSplitPane splitEditorPane2 = null!;
+    private PS5PKGTool.UI.Controls.AppSectionPanel sectionEntries = null!;
+    private PS5PKGTool.UI.Controls.AppDataGridView gridEntries = null!;
+    private PS5PKGTool.UI.Controls.AppSectionPanel sectionChanges = null!;
+    private PS5PKGTool.UI.Controls.AppListBox lstChanges = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblTarget = null!;
+    private PS5PKGTool.UI.Controls.AppTextBox txtTarget = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnReplace = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnAddFiles = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnAddFolder = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnNewDirectory = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnDelete = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnUndo = null!;
+    private PS5PKGTool.UI.Controls.AppProgressBar progressEdit = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblStatus = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnApply = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnCancelOperation = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnClose = null!;
     private OpenFileDialog replacementOpenDialog = null!;
     private OpenFileDialog addFilesOpenDialog = null!;
     private FolderBrowserDialog addFolderDialog = null!;
@@ -40,27 +40,27 @@ partial class FfpkgEditorForm
     {
         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FfpkgEditorForm));
         components = new System.ComponentModel.Container();
-        lblImage = new DarkUI.Controls.DarkLabel();
-        splitEditor = new DarkUI.Controls.DarkSplitContainer();
-        splitEditorPane1 = new DarkUI.Controls.DarkSplitPane();
-        splitEditorPane2 = new DarkUI.Controls.DarkSplitPane();
-        sectionEntries = new DarkUI.Controls.DarkSectionPanel();
-        gridEntries = new DarkUI.Controls.DarkDataGridView();
-        sectionChanges = new DarkUI.Controls.DarkSectionPanel();
-        lstChanges = new DarkUI.Controls.DarkListBox();
-        lblTarget = new DarkUI.Controls.DarkLabel();
-        txtTarget = new DarkUI.Controls.DarkTextBox();
-        btnReplace = new DarkUI.Controls.DarkButton();
-        btnAddFiles = new DarkUI.Controls.DarkButton();
-        btnAddFolder = new DarkUI.Controls.DarkButton();
-        btnNewDirectory = new DarkUI.Controls.DarkButton();
-        btnDelete = new DarkUI.Controls.DarkButton();
-        btnUndo = new DarkUI.Controls.DarkButton();
-        progressEdit = new DarkUI.Controls.DarkProgressBar();
-        lblStatus = new DarkUI.Controls.DarkLabel();
-        btnApply = new DarkUI.Controls.DarkButton();
-        btnCancelOperation = new DarkUI.Controls.DarkButton();
-        btnClose = new DarkUI.Controls.DarkButton();
+        lblImage = new PS5PKGTool.UI.Controls.AppLabel();
+        splitEditor = new PS5PKGTool.UI.Controls.AppSplitContainer();
+        splitEditorPane1 = new PS5PKGTool.UI.Controls.AppSplitPane();
+        splitEditorPane2 = new PS5PKGTool.UI.Controls.AppSplitPane();
+        sectionEntries = new PS5PKGTool.UI.Controls.AppSectionPanel();
+        gridEntries = new PS5PKGTool.UI.Controls.AppDataGridView();
+        sectionChanges = new PS5PKGTool.UI.Controls.AppSectionPanel();
+        lstChanges = new PS5PKGTool.UI.Controls.AppListBox();
+        lblTarget = new PS5PKGTool.UI.Controls.AppLabel();
+        txtTarget = new PS5PKGTool.UI.Controls.AppTextBox();
+        btnReplace = new PS5PKGTool.UI.Controls.AppButton();
+        btnAddFiles = new PS5PKGTool.UI.Controls.AppButton();
+        btnAddFolder = new PS5PKGTool.UI.Controls.AppButton();
+        btnNewDirectory = new PS5PKGTool.UI.Controls.AppButton();
+        btnDelete = new PS5PKGTool.UI.Controls.AppButton();
+        btnUndo = new PS5PKGTool.UI.Controls.AppButton();
+        progressEdit = new PS5PKGTool.UI.Controls.AppProgressBar();
+        lblStatus = new PS5PKGTool.UI.Controls.AppLabel();
+        btnApply = new PS5PKGTool.UI.Controls.AppButton();
+        btnCancelOperation = new PS5PKGTool.UI.Controls.AppButton();
+        btnClose = new PS5PKGTool.UI.Controls.AppButton();
         replacementOpenDialog = new OpenFileDialog();
         addFilesOpenDialog = new OpenFileDialog();
         addFolderDialog = new FolderBrowserDialog();
@@ -86,8 +86,8 @@ partial class FfpkgEditorForm
         // 
         splitEditor.Dock = DockStyle.Fill;
         splitEditor.Location = new Point(10, 42);
-        splitEditor.Controls.Add(splitEditorPane1);
-        splitEditor.Controls.Add(splitEditorPane2);
+        splitEditor.AddPane(splitEditorPane1);
+        splitEditor.AddPane(splitEditorPane2);
         splitEditor.Name = "splitEditor";
         splitEditorPane1.Controls.Add(sectionEntries);
         splitEditorPane2.Controls.Add(sectionChanges);
@@ -208,7 +208,6 @@ partial class FfpkgEditorForm
         progressEdit.Location = new Point(18, 650);
         progressEdit.Name = "progressEdit";
         progressEdit.Size = new Size(1148, 22);
-        progressEdit.TextMode = DarkUI.Controls.DarkProgressBarMode.Percentage;
         // 
         // lblStatus
         // 
@@ -269,7 +268,7 @@ partial class FfpkgEditorForm
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
-        BackColor = Color.FromArgb(60, 63, 65);
+        BackColor = SystemColors.Control;
         CancelButton = btnClose;
         ClientSize = new Size(1184, 732);
         Controls.Add(splitEditor);

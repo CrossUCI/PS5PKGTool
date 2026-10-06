@@ -1,5 +1,5 @@
 using System.Runtime.InteropServices;
-using DarkUI.Forms;
+
 using PS5PKGTool.Core.Builders;
 using PS5PKGTool.Core.Models;
 using PS5PKGTool.Core.Services;
@@ -58,6 +58,7 @@ public partial class MainForm
         string output = form.OutputPath;
         Ps5ImageConversionTarget selected = form.Target;
         bool overwrite = form.Overwrite;
+        string? tempDirectory = _settings.TempDirectory;
         string sourceRoute = isDirectory ? "dump" : Ps5ImageConversionService.DetectSource(source) switch
         {
             Ps5ImageFormat.Exfat => "exFAT",
@@ -78,14 +79,15 @@ public partial class MainForm
                 var bridge = new Progress<Ps5ImageConversionProgress>(value =>
                     progress.Report(new PackageTaskProgress(value.Stage, 0, 0, value.Completed, value.Total, 0, 0,
                         string.Empty)));
-                await Ps5ImageConversionService.ConvertAsync(source, output, selected, overwrite, bridge, token)
+                await Ps5ImageConversionService.ConvertAsync(source, output, selected, overwrite, bridge, token,
+                        tempDirectory: tempDirectory)
                     .ConfigureAwait(false);
             },
             sourcePath: source, outputPath: output,
             operation: "Convert", sourceFormat: sourceRoute, targetFormat: targetRoute,
             stagePlan: PackageTaskPlans.ConvertImage,
             payload: Payload(("source", source), ("output", output), ("target", selected.ToString()),
-                ("overwrite", overwrite.ToString())),
+                ("overwrite", overwrite.ToString()), ("temp", tempDirectory)),
             onFinished: task =>
             {
                 statusLabel.Text = task.Status == PackageTaskStatus.Completed
@@ -209,8 +211,7 @@ public partial class MainForm
         }
 
         folderBrowserDialog.Description = "Select a folder for package extraction";
-        if (!string.IsNullOrEmpty(_settings.OutputDirectory) && Directory.Exists(_settings.OutputDirectory))
-            folderBrowserDialog.SelectedPath = _settings.OutputDirectory;
+        SetDefaultOutputDirectory();
         if (folderBrowserDialog.ShowDialog(this) != DialogResult.OK) return;
 
         string source = game.RootPath;
@@ -288,7 +289,7 @@ public partial class MainForm
         if (!IsUnderLibrary(destinationRoot) && !IsManualSource(destinationRoot))
             addToLibrary = AppDialog.ShowWarning(
                 $"Add this folder to the library so the moved items stay listed?\n\n{destinationRoot}",
-                "Move to folder", DarkDialogButton.YesNo) == DialogResult.Yes;
+                "Move to folder", MessageBoxButtons.YesNo) == DialogResult.Yes;
 
         string modeLabel = MoveModeLabel(mode);
         if (_settings.ConfirmMove && !ConfirmMovePreview(games, destinationRoot, mode, modeLabel)) return;
@@ -444,7 +445,7 @@ public partial class MainForm
             return false;
         }
         return AppDialog.ShowWarning(string.Join(Environment.NewLine, lines), "Move to folder",
-            DarkDialogButton.YesNo) == DialogResult.Yes;
+            MessageBoxButtons.YesNo) == DialogResult.Yes;
     }
 
     private static string? GroupFolder(Ps5GameInfo game, MoveMode mode)
@@ -626,7 +627,7 @@ public partial class MainForm
         string question = permanent
             ? $"Permanently delete {games.Count:N0} source(s)? This cannot be undone.\n\n{listed}"
             : $"Send {games.Count:N0} source(s) to the Recycle Bin?\n\n{listed}";
-        return AppDialog.ShowWarning(question, caption, DarkUI.Forms.DarkDialogButton.YesNo) == DialogResult.Yes;
+        return AppDialog.ShowWarning(question, caption, MessageBoxButtons.YesNo) == DialogResult.Yes;
     }
 
     private static void RemoveSettingPath(List<string> paths, string value) =>

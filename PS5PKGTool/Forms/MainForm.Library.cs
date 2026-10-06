@@ -3,8 +3,8 @@ using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Text;
-using DarkUI.Controls;
-using DarkUI.Forms;
+using PS5PKGTool.UI.Controls;
+
 using PS5PKGTool.Core.Models;
 using PS5PKGTool.Core.Services;
 using PS5PKGTool.Infrastructure;
@@ -343,7 +343,7 @@ public partial class MainForm
         if (AppDialog.ShowWarning(
                 "Clear the current library list?\n\nThe cached manifest is emptied, so the list stays empty until you refresh. " +
                 "Files on disk are not deleted.",
-                "Empty list", DarkDialogButton.YesNo) != DialogResult.Yes)
+                "Empty list", MessageBoxButtons.YesNo) != DialogResult.Yes)
             return;
 
         _scanCancellation?.Cancel();

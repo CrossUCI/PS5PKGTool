@@ -5,10 +5,10 @@ namespace PS5PKGTool.Forms;
 partial class TextPromptForm
 {
     private System.ComponentModel.IContainer? components = null;
-    private DarkUI.Controls.DarkLabel lblPrompt = null!;
-    private DarkUI.Controls.DarkTextBox txtValue = null!;
-    private DarkUI.Controls.DarkButton btnOk = null!;
-    private DarkUI.Controls.DarkButton btnCancel = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblPrompt = null!;
+    private PS5PKGTool.UI.Controls.AppTextBox txtValue = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnOk = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnCancel = null!;
 
     protected override void Dispose(bool disposing)
     {
@@ -19,10 +19,10 @@ partial class TextPromptForm
     private void InitializeComponent()
     {
         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TextPromptForm));
-        lblPrompt = new DarkUI.Controls.DarkLabel();
-        txtValue = new DarkUI.Controls.DarkTextBox();
-        btnOk = new DarkUI.Controls.DarkButton();
-        btnCancel = new DarkUI.Controls.DarkButton();
+        lblPrompt = new PS5PKGTool.UI.Controls.AppLabel();
+        txtValue = new PS5PKGTool.UI.Controls.AppTextBox();
+        btnOk = new PS5PKGTool.UI.Controls.AppButton();
+        btnCancel = new PS5PKGTool.UI.Controls.AppButton();
         SuspendLayout();
         // 
         // lblPrompt
@@ -64,7 +64,7 @@ partial class TextPromptForm
         AcceptButton = btnOk;
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
-        BackColor = Color.FromArgb(60, 63, 65);
+        BackColor = SystemColors.Control;
         CancelButton = btnCancel;
         ClientSize = new Size(460, 150);
         Controls.Add(lblPrompt);

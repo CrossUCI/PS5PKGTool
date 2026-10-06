@@ -5,15 +5,15 @@ namespace PS5PKGTool.Forms;
 partial class ConvertImageForm
 {
     private System.ComponentModel.IContainer? components = null;
-    private DarkUI.Controls.DarkLabel lblSource = null!;
-    private DarkUI.Controls.DarkLabel lblTarget = null!;
-    private DarkUI.Controls.DarkComboBox cboTarget = null!;
-    private DarkUI.Controls.DarkLabel lblOutput = null!;
-    private DarkUI.Controls.DarkTextBox txtOutput = null!;
-    private DarkUI.Controls.DarkButton btnBrowseOutput = null!;
-    private DarkUI.Controls.DarkCheckBox chkOverwrite = null!;
-    private DarkUI.Controls.DarkButton btnConvert = null!;
-    private DarkUI.Controls.DarkButton btnCancel = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblSource = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblTarget = null!;
+    private PS5PKGTool.UI.Controls.AppComboBox cboTarget = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblOutput = null!;
+    private PS5PKGTool.UI.Controls.AppTextBox txtOutput = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnBrowseOutput = null!;
+    private PS5PKGTool.UI.Controls.AppCheckBox chkOverwrite = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnConvert = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnCancel = null!;
     private SaveFileDialog saveFileDialog = null!;
 
     protected override void Dispose(bool disposing)
@@ -26,15 +26,15 @@ partial class ConvertImageForm
     {
         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConvertImageForm));
         components = new System.ComponentModel.Container();
-        lblSource = new DarkUI.Controls.DarkLabel();
-        lblTarget = new DarkUI.Controls.DarkLabel();
-        cboTarget = new DarkUI.Controls.DarkComboBox();
-        lblOutput = new DarkUI.Controls.DarkLabel();
-        txtOutput = new DarkUI.Controls.DarkTextBox();
-        btnBrowseOutput = new DarkUI.Controls.DarkButton();
-        chkOverwrite = new DarkUI.Controls.DarkCheckBox();
-        btnConvert = new DarkUI.Controls.DarkButton();
-        btnCancel = new DarkUI.Controls.DarkButton();
+        lblSource = new PS5PKGTool.UI.Controls.AppLabel();
+        lblTarget = new PS5PKGTool.UI.Controls.AppLabel();
+        cboTarget = new PS5PKGTool.UI.Controls.AppComboBox();
+        lblOutput = new PS5PKGTool.UI.Controls.AppLabel();
+        txtOutput = new PS5PKGTool.UI.Controls.AppTextBox();
+        btnBrowseOutput = new PS5PKGTool.UI.Controls.AppButton();
+        chkOverwrite = new PS5PKGTool.UI.Controls.AppCheckBox();
+        btnConvert = new PS5PKGTool.UI.Controls.AppButton();
+        btnCancel = new PS5PKGTool.UI.Controls.AppButton();
         saveFileDialog = new SaveFileDialog();
         SuspendLayout();
         // 
@@ -125,7 +125,7 @@ partial class ConvertImageForm
         AcceptButton = btnConvert;
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
-        BackColor = Color.FromArgb(60, 63, 65);
+        BackColor = SystemColors.Control;
         CancelButton = btnCancel;
         ClientSize = new Size(684, 216);
         Controls.Add(btnCancel);

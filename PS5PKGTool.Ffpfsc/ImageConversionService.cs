@@ -57,7 +57,7 @@ public static class Ps5ImageConversionService
         Ps5ImageConversionTarget target, bool overwrite = false,
         IProgress<Ps5ImageConversionProgress>? progress = null, CancellationToken cancellationToken = default,
         ExfatBuildOptions? exfatOptions = null, FfpfscBuildOptions? ffpfscOptions = null,
-        FfpkgBuildOptions? ffpkgOptions = null)
+        FfpkgBuildOptions? ffpkgOptions = null, string? tempDirectory = null)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(sourcePath);
         ArgumentException.ThrowIfNullOrWhiteSpace(outputPath);
@@ -115,7 +115,11 @@ public static class Ps5ImageConversionService
             throw new InvalidDataException(
                 $"Converting {sourceFormat} to {target} is not supported.");
 
-        string tempRoot = Path.Combine(Path.GetTempPath(), "PS5PKGTool", "convert", Guid.NewGuid().ToString("N"));
+        string workspaceRoot = string.IsNullOrWhiteSpace(tempDirectory)
+            ? Path.GetTempPath()
+            : Path.GetFullPath(tempDirectory);
+        Directory.CreateDirectory(workspaceRoot);
+        string tempRoot = Path.Combine(workspaceRoot, "PS5PKGTool", "convert", Guid.NewGuid().ToString("N"));
         string? tempOutput = null;
         try
         {

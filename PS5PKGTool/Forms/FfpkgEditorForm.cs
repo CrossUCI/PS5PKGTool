@@ -1,10 +1,10 @@
 using System.Data;
-using DarkUI.Forms;
+
 using UFS2Tool;
 
 namespace PS5PKGTool.Forms;
 
-public partial class FfpkgEditorForm : DarkForm
+public partial class FfpkgEditorForm : Form
 {
     private readonly string _imagePath;
     private readonly List<Ufs2EditOperation> _operations = [];
@@ -127,7 +127,7 @@ public partial class FfpkgEditorForm : DarkForm
         if (AppDialog.ShowWarning($"Queue deletion of {paths.Length:N0} selected item(s)?\n\n" +
                                        string.Join("\n", paths.Take(12)) +
                                        (paths.Length > 12 ? "\n..." : string.Empty),
-                "Queue FFPKG deletion?", DarkDialogButton.YesNo) != DialogResult.Yes) return;
+                "Queue FFPKG deletion?", MessageBoxButtons.YesNo) != DialogResult.Yes) return;
         foreach (string path in paths)
             Queue(Ufs2EditOperation.Delete(path), $"Delete  {path}");
     }
@@ -147,7 +147,7 @@ public partial class FfpkgEditorForm : DarkForm
                 $"Apply {_operations.Count:N0} queued change(s)?\n\n" +
                 "All changes extract and rebuild the FFPKG image beside the original. The original is replaced only after " +
                 "full verification. Large game images require substantial free space and time.",
-                "Apply FFPKG changes?", DarkDialogButton.YesNo) != DialogResult.Yes) return;
+                "Apply FFPKG changes?", MessageBoxButtons.YesNo) != DialogResult.Yes) return;
 
         _cancellation = new CancellationTokenSource();
         SetBusy(true);
@@ -207,7 +207,7 @@ public partial class FfpkgEditorForm : DarkForm
         }
         if (_operations.Count > 0 && AppDialog.ShowWarning(
                 $"Discard {_operations.Count:N0} queued FFPKG change(s)?", "Close FFPKG editor?",
-                DarkDialogButton.YesNo) != DialogResult.Yes)
+                MessageBoxButtons.YesNo) != DialogResult.Yes)
             e.Cancel = true;
     }
 

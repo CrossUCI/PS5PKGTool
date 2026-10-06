@@ -17,15 +17,15 @@ partial class AboutForm
     {
         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutForm));
         picAppIcon = new PictureBox();
-        lblTitle = new DarkUI.Controls.DarkLabel();
-        lblVersion = new DarkUI.Controls.DarkLabel();
-        lblCopyright = new DarkUI.Controls.DarkLabel();
-        lblCredits = new DarkUI.Controls.DarkLabel();
-        lblLicense = new DarkUI.Controls.DarkLabel();
-        btnGitHub = new DarkUI.Controls.DarkButton();
-        btnKofi = new DarkUI.Controls.DarkButton();
-        btnBug = new DarkUI.Controls.DarkButton();
-        btnClose = new DarkUI.Controls.DarkButton();
+        lblTitle = new PS5PKGTool.UI.Controls.AppLabel();
+        lblVersion = new PS5PKGTool.UI.Controls.AppLabel();
+        lblCopyright = new PS5PKGTool.UI.Controls.AppLabel();
+        lblCredits = new PS5PKGTool.UI.Controls.AppLabel();
+        lblLicense = new PS5PKGTool.UI.Controls.AppLabel();
+        btnGitHub = new PS5PKGTool.UI.Controls.AppButton();
+        btnKofi = new PS5PKGTool.UI.Controls.AppButton();
+        btnBug = new PS5PKGTool.UI.Controls.AppButton();
+        btnClose = new PS5PKGTool.UI.Controls.AppButton();
         ((System.ComponentModel.ISupportInitialize)picAppIcon).BeginInit();
         SuspendLayout();
         // 
@@ -151,13 +151,13 @@ partial class AboutForm
     }
 
     private PictureBox picAppIcon = null!;
-    private DarkUI.Controls.DarkLabel lblTitle = null!;
-    private DarkUI.Controls.DarkLabel lblVersion = null!;
-    private DarkUI.Controls.DarkLabel lblCopyright = null!;
-    private DarkUI.Controls.DarkLabel lblCredits = null!;
-    private DarkUI.Controls.DarkLabel lblLicense = null!;
-    private DarkUI.Controls.DarkButton btnGitHub = null!;
-    private DarkUI.Controls.DarkButton btnKofi = null!;
-    private DarkUI.Controls.DarkButton btnBug = null!;
-    private DarkUI.Controls.DarkButton btnClose = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblTitle = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblVersion = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblCopyright = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblCredits = null!;
+    private PS5PKGTool.UI.Controls.AppLabel lblLicense = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnGitHub = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnKofi = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnBug = null!;
+    private PS5PKGTool.UI.Controls.AppButton btnClose = null!;
 }

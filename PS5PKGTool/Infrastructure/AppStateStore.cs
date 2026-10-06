@@ -38,7 +38,6 @@ public sealed class AppSettings
     public Dictionary<string, float> LibraryColumnWeights { get; set; } = [];
 
     // Appearance
-    public string Theme { get; set; } = "Default (Charcoal)";
     public int GridRowHeight { get; set; } = 22;
     public bool ShowThumbnails { get; set; } = true;
     public bool ShowGridLines { get; set; } = true;

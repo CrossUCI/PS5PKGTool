@@ -1,10 +1,10 @@
 using System.Data;
-using DarkUI.Forms;
+
 using PS5PKGTool.Ffpfsc;
 
 namespace PS5PKGTool.Forms;
 
-public partial class ExfatEditorForm : DarkForm
+public partial class ExfatEditorForm : Form
 {
     private readonly string _imagePath;
     private readonly List<ExfatEditOperation> _operations = [];
@@ -128,7 +128,7 @@ public partial class ExfatEditorForm : DarkForm
         if (AppDialog.ShowWarning($"Queue deletion of {paths.Length:N0} selected item(s)?\n\n" +
                                        string.Join("\n", paths.Take(12)) +
                                        (paths.Length > 12 ? "\n..." : string.Empty),
-                "Queue exFAT deletion?", DarkDialogButton.YesNo) != DialogResult.Yes) return;
+                "Queue exFAT deletion?", MessageBoxButtons.YesNo) != DialogResult.Yes) return;
         foreach (string path in paths)
             Queue(ExfatEditOperation.Delete(path), $"Delete  {path}");
     }
@@ -149,7 +149,7 @@ public partial class ExfatEditorForm : DarkForm
                 "A single equal-size replacement uses an on-disk rollback journal. Size changes, additions, and " +
                 "deletions extract and rebuild the image beside the original. The original is replaced only after " +
                 "full verification. Large game images require substantial free space and time.",
-                "Apply exFAT changes?", DarkDialogButton.YesNo) != DialogResult.Yes) return;
+                "Apply exFAT changes?", MessageBoxButtons.YesNo) != DialogResult.Yes) return;
 
         _cancellation = new CancellationTokenSource();
         SetBusy(true);
@@ -207,7 +207,7 @@ public partial class ExfatEditorForm : DarkForm
         }
         if (_operations.Count > 0 && AppDialog.ShowWarning(
                 $"Discard {_operations.Count:N0} queued exFAT change(s)?", "Close exFAT editor?",
-                DarkDialogButton.YesNo) != DialogResult.Yes)
+                MessageBoxButtons.YesNo) != DialogResult.Yes)
             e.Cancel = true;
     }
 
